@@ -25,26 +25,35 @@ stalj@uek.krakow.pl
 
    <https://youtu.be/z49F119uv6g> 
 
-1. Search the Internet to find out what an array is. Describe the properties of an array. Explain how an array differs from a list.
+1. Many programming languages ​​provide both arrays and lists to store and manage collections of data. Despite their many similarities, they have key differences in terms of functionality, flexibility, and performance.
+
+   The main differences between an array and a list are presented in the table below. 
+
+   | FEATURE           | LISTS                         | ARRAYS                         |
+   |-------------------|-------------------------------|-------------------------------|
+   | Data Types        | Mixed                        | Single, fixed data type       |
+   | Flexibility       | Highly flexible              | Less flexible                |
+   | Performance       | Slower for numerical ops     | Faster for numerical ops      |
+   | Memory Efficiency | Less efficient               | More efficient               |
+   | Built-in Support  | Yes                          | Needs `array` or `numpy`     |
 
 **Notice that in subsequent tasks, a list will be used in place of an array for basic applications.**
 
 1. To visualize data, install the ‘Matplotlib’ library on your personal computer.
+
 1. Familiarise yourself with methods of visualizing data:
 
    <https://www.w3schools.com/python/matplotlib_intro.asp> 
 
    Then, using ‘matplotlib’, draw a line in a diagram from position (1, 3) to position (8, 10):
 
+   ```python
    import matplotlib.pyplot as plt
    xpoints = [1, 8]
    ypoints = [3, 10]
    plt.plot(xpoints, ypoints)
-   …
-
-   ![Obraz zawierający linia, Wykres, diagram, tekst
-
-Opis wygenerowany automatycznie](Aspose.Words.79ee0a06-2a21-4dc6-b8e6-a4728f8ad415.001.png)
+   plt.show()
+   ```
 
 ## One dimensional arrays
 
@@ -73,7 +82,7 @@ Opis wygenerowany automatycznie](Aspose.Words.79ee0a06-2a21-4dc6-b8e6-a4728f8ad4
    ...
    ```
 
-   > Tip: to read the last value of an array: array[len(array)-1] or array[-1]
+   > Tip: to read the last value of an array use array[len(array)-1] or array[-1]
 
 1. An array contains values: 1, 2, 3, 4, 5. Write a program that modifies the array values. Display the array after each change.
 
@@ -90,35 +99,166 @@ Opis wygenerowany automatycznie](Aspose.Words.79ee0a06-2a21-4dc6-b8e6-a4728f8ad4
    Array: [0,2,6,4,9]
    ```
 
-1. Write a program that displays the name of month for a given month number (1 to 12). Define a month(n) function that returns the name of month for the number n. Store month names in an array. Then, using defined function, display month names for the following month numbers: 1, 9, 12.
+1. Write a program that displays the name of the day of the week for a given day number. Then, using the defined function, display the name of the day of the week for the following day numbers: 1, 4, 7.
 
    ```python
-   def month(n):
-      month_name = ["January","February",…]
-      return month_name[…]
+   ###
+   # Returns the name of the day of the week for a given day number (1-Monday ... 7-Sunday)
+   #
+   def weekday(n):
+         weekdays = ["Monday", "Tuesday", "Wednesday",
+            "Thursday", "Friday", "Saturday", "Sunday"]
+      return weekdays[...]
    ```
 
-   Sample result:
-
-   ```
-   Enter month number: 10
-   Month name: October
-   ```
-
-1. An array contains integer numbers: [34,7,19,4,21,8]. Create a program that calculates and displays the number of even values in the array. Use the ‘for’ loop statement.
+1. Write a program that displays a shopping list, each product on a separate line.
 
    ```python
-   arr = [34,7,19,4,21,8]
-   even = 0
-   for a in arr:
+   ###
+   # Displays shopping list
+   #
+   shopping_list = [
+      "milk", "bread", "eggs", "butter", "cheese",
+      "tomatoes", "potatoes", "carrots", "onions", "garlic"
+   ]
+   for item in shopping_list:
+      print(...)
+   ```
+
+1. Write a program that displays a popular computer games, each game name on a separate line. Use the while statement. Additionally, number the list (display the next number before each list item) and sort the list alphabetically (use one of a Python built-in functions for sorting)
+
+   ```python
+   computer_games = [
+      "Minecraft", "Fortnite", "Cyberpunk 2077", "The Witcher 3",
+      "League of Legends", "Valorant", "Grand Theft Auto V", 
+      "Elden Ring", "Apex Legends", "Call of Duty: Warzone"
+   ]
+   ```
+
+1. The list contains vehicle registration numbers in Poland. Cars from Krakow have numbers starting with the letters 'KR' or 'KK'. Write a program that displays car registration numbers from Krakow. Number the list displayed.
+
+   ```python
+   ###
+   # Displays vehicle registration numbers from Krakow
+   #
+   polish_license_plates = [
+      'KR5233F', 'PO6987E', 'KR16179', 'BI7192L', 'KK12255',
+      'WA7930T', 'SK6922I', 'KK61108', 'KR90538', 'BI8052Q',
+      'KK54985', 'LU4864U'
+   ]
+   counter = 1
+   for car_number in polish_license_plates:
+      if car_number ...:
+         print(counter, ...)
+         counter += 1
+   ```
+
+1. The array contains the student's test results. A value of True indicates that the student answered the question correctly, while a value of False indicates an incorrect answer. Write a program that displays information about the test results:
+
+   * Number of questions:
+   * Number of correct answers:
+   * Number of incorrect answers:
+   * Percentage of correct answers:
+
+   ```python
+   ###
+   # Displays test statistics
+   #
+   test_results = [
+      False, True, False, True, True,
+      True, True, False, True, True,
+      False, True, True, True, False
+   ]
+
+   # calculates the number of test questions
+   question number = len(...)
+
+   # calculates the number of correct answers
+   correct_answers = 0
+   for answer in test_results:
       if ...:
-         even = even + 1
-   print(...)
+         correct_answer = ...
+   
+   # calculates the number of incorrect answers
+   ...
+
+   # calculates the percentage of correct answers
+   ...
+
+   print('TEST STATISTICS')
+   print('===============')
+   print('Number of questions:', ...)
+   print('Number of correct answers:', ...)
+   ...
+   ...
    ```
 
-1. In a certain company, 25 employees commute by car, 19 employees commute by public transport, 32 people commute by bike, and 7 people commute on foot. Write a program that displays this data in a bar chart. Remember to add a title for the chart and a description of the chart axes. Sample result:
+1. The weather station measures temperature once a day. The measurement results for each day in March are stored in an array. Write a program that analyzes the temperature based on the observations from March and displays the following report:
 
-   See a similar task from the BEFORE CLASS section.
+   ```
+   TEMPERATURE REPORT
+   Month: March
+   Number of measurements:
+   Average temperature in the month:
+   Minimum temperature:
+   Maximum temperature:
+   Number of days with negative temperature:
+   ```
+
+   ```python
+   ###
+   # The weather station report
+   #
+   temperatures = [
+    3, 7, 1, -2, 6, -4, 5, 1, 2, 3,
+    4, -1, 0, 2, -1, -2, 5, -2, 7, 2,
+    -1, 4, 1, -4, 2, 3, 6, 7, 5, 7
+   ]
+
+   # number of mesaurements
+   mesaurements = len(...)
+
+   # calculates average temperature
+   temp_total = 0
+   for temp in temperatures:
+      temp_total = ...
+   avg_temp = temp_total ...
+
+   # calculates min and max temperatures
+   min_temp = min(...)
+   max_temp = ...
+
+   # calculates number of days with negative temp
+   negative_temp = 0
+   i = 0
+   while i < ...:
+      if temperatures[...] < ...:
+         negative_temp ...
+      i = ...
+
+   # prints out month report
+   ...
+   ...
+   ...
+   ```
+
+1. Monthly expenses and their corresponding expense categories are included in the arrays below. Write a program that calculates which expense category was the most expensive.
+
+   ```python
+   categories = ["Food", "Transport", "Rent","Entertainment"]
+   expenses = [500, 150, 1000, 200]
+   ```
+
+1. The store has 10 types of goods in stock. The prices of the goods and the number of pieces of goods are given below. Write a program that calculates the value of all the goods available in the store.
+
+   ```python
+   # Prices of 10 products in the computer store (in currency units)
+   product_prices = [2999.99, 149.99, 499.99, 89.99, 1199.99, 349.99, 189.99, 99.99, 249.99, 999.99]
+
+   # Number of units available for each product
+   product_quantities = [5, 20, 10, 15, 7, 12, 25, 18, 9, 4]
+   ```
+
 
 ## Two dimensional arrays
 
