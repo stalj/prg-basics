@@ -84,6 +84,8 @@ stalj@uek.krakow.pl
 
 1. Write a program that generates and displays a random number between 1 and 6, similar to rolling a dice. Use one of the functions from the **random** module to generate a random integer within a given range.
 
+    <https://www.w3schools.com/python/ref_random_randint.asp>
+
     ```python
     import random
 
@@ -96,8 +98,6 @@ stalj@uek.krakow.pl
 1. Watch the videos on defining a function:
 
     <https://youtu.be/89cGQjB5R4M?feature=shared>
-
-    <https://youtu.be/NE97ylAnrz4?feature=shared>
 
 1. A function is defined using the def keyword, followed by the function name, parentheses, and a colon. Inside the parentheses, you can specify parameters that the function can accept. The function's code block is indented.
 
@@ -136,19 +136,44 @@ stalj@uek.krakow.pl
     * 5, 12, 13 (result is 30)
     * 7, 24, 25 (result is 84)
 
+    ```python
+    ###
+    # Calculates the area of a triangle based on the lengths
+    # of the triangle's sides
+    #
+    def triangle_area(a,b,c):
+        ...
+        return ...
+
+    print('The area of ​​a triangle with sides ... is ...')
+    print('The area of ​​a triangle with sides ... is ...')
+    print('The area of ​​a triangle with sides ... is ...')
+    ```
+
 1. Define a function that calculates and returns the sum of the digits in a number. Then write a program that reads a number from the keyboard and displays the sum of its digits.
+
+    **Steps of the algorithm to sum digits in a number:**
+    
+    1. Take an integer input from the user. The number can be positive, negative, or zero.
+    1. Handle Negative Numbers: Convert the number to its absolute value using the abs() function. This step ensures the algorithm correctly processes negative numbers by ignoring the negative sign.
+    1. Convert to String: Convert the number to a string using str(). This allows iteration over each digit in the number.
+    1. Iterate Over Digits:
+        * Loop through each character (digit) in the string representation of the number.
+        * Convert each character back to an integer.
+    1. Sum Digits: Add each integer value to a running total.
+    1. Output the Result: Return the sum of the digits
 
     ```python
     ###
     # Calculates the sum of the digits in a number
     #
-    def digit_sum(number):
+    def sum_digits(number):
         ...
         ...
         return ...
     
     any_number = int(input('Enter integer number: '))
-    result = digit_sum(...)
+    result = sum_digits(...)
     print('The sum of the digits in the number ... is ...')
     ```
 
@@ -203,6 +228,22 @@ stalj@uek.krakow.pl
 
 1. The ICAO (International Civil Aviation Organization) phonetic alphabet is used internationally for spelling out letters in radio communication. The icao.py program contains a function that returns the corresponding word for a given letter. Complete the program to spell out a name entered from the keyboard.
 
+1. Define a function time_string(hours, minutes, time_format) that, given the number of hours (0..23) and the number of minutes (0..59), returns a string specifying the time in the given format ('24' for 24-hour time and '12' for 12-hour time).
+
+    Then write a program that tests whether the function works correctly.
+
+    * time_string(15, 38, '24') returns '15:38'
+    * time_string(8, 3, '24') returns '08:03'
+    * time_string(0, 5 '24') returns '00:05'
+    * time_string(11, 15, '12') returns '11:15am'
+    * time_string(0, 7, '12') returns '12:07am'
+    * time_string(7, 30, '12') returns '7:30am'
+    * time_string(12, 46, '12') returns '12:46pm'
+    * time_string(13, 10, '12') returns '1:10pm'
+    * time_string(19, 02, '12') returns '7:02pm'
+
+    Hint: Use f-strings formatting. Search the Internet for 'Format numbers using f-strings'.
+
 ## 5. Dividing Program Code into Modules
 
 1. Familiarise yourself with dividing a program code into modules:
@@ -218,13 +259,138 @@ stalj@uek.krakow.pl
     * convert centimeters to inches
     * convert feet and inches to centimeters
 
-    YThen complete the main program to test the added functions.
+    Then complete the main program to test the added functions.
 
-1. In the module mykeyboard.py, define a function read_number() that returns an integer number entered from the keyboard. The function should print a text prompting user to enter data \'Enter a number: \'. Then, use the function to read two numbers from the keyboard. To test the function, use the \_\_name\_\_ variable. Display the sum of two entered numbers. Sample result:
+1. As you remember, the input() function allows you to read only a string from the keyboard. In the module keyboard.py, define your own functions that allow reading other types of data from the keyboard:
 
-    Enter a number: 34\
-    Enter a number: 7\
-    34 + 7 = 41
+    * input_string() that returns a string entered from the keyboard
+    * input_integer() that returns an integer number entered from the keyboard
+    * input_real() that returns a real number entered from the keyboard
+    * input_boolean() that returns a boolean value depending on the pressed y/n key
+    
+    ```python
+    ###
+    # Functions to read any data type from the keyboard
+    #
+    def input_string(message):
+        ... = input(message)
+        return ...
+
+    def input_integer(message):
+        ... = input(message)
+        return ...
+
+    def input_real(message):
+        ... = input(message)
+        return ...
+
+    def input_boolean(message):
+        ... = input(message)
+        return ...
+    ```
+
+    Then, write a program that allows you to enter and display employee data. Due to personal data protection, you can determine whether information about the employee's salary will be displayed.
+
+    ```python
+    ###
+    # Allows to enter and display employee data. Due to personal
+    # data protection, you can determine whether information about
+    # the employee's salary will be displayed
+    #
+    import ...
+
+    # Read employee's data from keyboard
+    first_name = input_string('Enter name: ')
+    last_name = ...
+    age = ...
+    salary = ...
+    is_salary_hidden = input_boolean('Hide salary? (y/n)')
+
+    # Display employee's record
+    print('DATA RECORD')
+    print('===========')
+    print('Name:', ...)
+    print(...)
+    print(...)
+    if ...:
+        print('Salary')
+    ```
+
+1. The following program draws a square with a specified side length using the turtle module.
+
+    ```python
+    import turtle
+
+    # Set up the screen
+    window = turtle.Screen()
+    window.bgcolor("lightgreen")
+
+    # Create the turtle
+    pen = turtle.Turtle()
+    pen.speed(5)
+
+    # Side length
+    side_length = 100
+
+    # Draw a square
+    for i in range(4):
+        pen.forward(side_length)
+        pen.right(90)
+
+    # Hide the turtle and finish
+    pen.hideturtle()
+    window.mainloop()
+    ```
+
+    Save the program in the file draw_figures.py. Then, run the program. Next, change the program so that the square is drawn using the draw_square(length) function with the only parameter being the length of the square's side. Place the defined function in a separate module figures.py. Finally, run the program again.
+
+    ```python
+    ###
+    # Draw a square
+    #
+    def draw_square(length)
+        ...
+        ...
+    ```
+
+1. In the figures.pt module, add the following function definitions:
+
+    * draw_trangle(length) to draw an isosceles triangle
+    * draw_rectangle(lenght_a, lenght_b) to draw a rectangle with sides a and b
+
+    Then, write a program which draws each of the figures (square, triangle, rectangle) twice, in different locations. To draw a figure in a different place, use the information below.
+
+    * pen.penup(): Lifts the pen so that the turtle can move without drawing.
+    * pen.goto(-100, 100): Moves the turtle to the coordinates (-100, 100). You can change these values to move the turtle to any location on the screen.
+    * pen.pendown(): Puts the pen down to start drawing again.
+
+    By using penup() and pendown(), you can control when the turtle draws on the screen and move it freely to any location.
+
+    ```python
+    ###
+    # Draws each of the figures (square, triangle, rectangle) twice,
+    # in different locations
+    #
+    import ...
+    import turtle
+
+    # Set up the screen
+    window = turtle.Screen()
+    window.bgcolor("lightgreen")
+
+    # Create the turtle
+    pen = turtle.Turtle()
+    pen.speed(5)   
+    
+    ## Draw figures
+    ...
+    ...
+    ...
+    
+    # Hide the turtle and finish
+    pen.hideturtle()
+    window.mainloop()
+    ```
 
 ## 7. Practice Makes Perfect
 
