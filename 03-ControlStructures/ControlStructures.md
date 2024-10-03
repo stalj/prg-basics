@@ -31,7 +31,7 @@ stalj@uek.krakow.pl
 
 1. The speed limit on a motorway in Poland is 140 km/h. The following program
     checks whether a car exceeded the speed limit. If so, a warning
-    is displayed. Complete the program.
+    is printed. Complete the program.
 
     ```python
     ###
@@ -45,7 +45,7 @@ stalj@uek.krakow.pl
         print('Warning: speed limit exceeded!!')
     ```
 
-1. A payment terminal in a store allows card payments. The customer has money in his bank account. The total value of purchases is given. The terminal displays a message whether the payment can be made or whether there are no funds in the customer's bank account. Write a program that acts as a payment terminal. Then, use the program and pay for the purchases below.
+1. A payment terminal in a store allows card payments. The customer has money in his bank account. The total value of purchases is given. The terminal prints a message whether the payment can be made or whether there are no funds in the customer's bank account. Write a program that acts as a payment terminal. Then, use the program and pay for the purchases below.
 
     140, 499, 500, 501, 720 (for the last two amounts, there are no funds)
 
@@ -149,7 +149,7 @@ stalj@uek.krakow.pl
     * You can use as many **elif** statements as needed.
     * Optionally, you can have an **else** statement at the end, which will execute if none of the conditions are true.
 
-1. Clothing sizes are often labeled with letter symbols. Write a program that prompts the user to enter a clothing size and then displays a verbal description of the clothing size, as below.
+1. Clothing sizes are often labeled with letter symbols. Write a program that prompts the user to enter a clothing size and then prints a verbal description of the clothing size, as below.
 
     * S: Small size
     * M: Medium size
@@ -223,13 +223,13 @@ stalj@uek.krakow.pl
     operator = input ...
     ```
 
-1. Write a program that calculates and displays the quarter of the year for a given month number (1..12). Then check the program's results for the months:
+1. Write a program that calculates and prints the quarter of the year for a given month number (1..12). Then check the program's results for the months:
 
     12, 10, 9, 1
 
     ```python
     ###
-    # Calculates and displays the quarter of the year for a given
+    # Calculates and prints the quarter of the year for a given
     # month number (1..12)
     #
     month = int(input('Enter month number (1..12): '))
@@ -242,7 +242,7 @@ stalj@uek.krakow.pl
     print('Month {...} is in quarter {...}')
     ```
 
-1. Write a program that checks what number was entered from the keyboard and displays one of the messages below. Then run the program and check the following numbers:
+1. Write a program that checks what number was entered from the keyboard and prints one of the messages below. Then run the program and check the following numbers:
 
     7, 1 ,0 ,-1 , -4
 
@@ -307,7 +307,7 @@ stalj@uek.krakow.pl
         print(f'At least one of the numbers {} and {} is not negative')
     ```
 
-1. Write a program that calculates and displays the number of days in a given month (1..12). Assume that February always has 28 days.
+1. Write a program that calculates and prints the number of days in a given month (1..12). Assume that February always has 28 days.
 
     ```python
     ###
@@ -369,7 +369,7 @@ stalj@uek.krakow.pl
         # code block to execute
     ```
 
-    Look at the following example, which takes every character from a string and displays it on the screen. Then run the program.
+    Look at the following example, which takes every character from a string and prints it on the screen. Then run the program.
 
     ```python
     city = 'Krakow'
@@ -384,18 +384,18 @@ stalj@uek.krakow.pl
         print(i)
     ```
 
-1. The following program displays the sentence "Practice makes perfect!" four times. Modify the program to display the text six times. Then run the program.
+1. The following program prints the sentence "Practice makes perfect!" four times. Modify the program to print the text six times. Then run the program.
 
     ```python
     for i in range(4):
         print('Practice makes perfect!')
     ```
 
-1. Write a program that displays the name of university where you are studying with an extra space between characters (add a space between each character).
+1. Write a program that prints the name of university where you are studying with an extra space between characters (add a space between each character).
 
     ```python
     ###
-    # Displays the name of university where you are studying
+    # Prints the name of university where you are studying
     # with an extra space between characters (add a space between
     # each character)
     #
@@ -520,7 +520,7 @@ stalj@uek.krakow.pl
 1. 
     ```python
     ###
-    # Displays a greeting
+    # Prints a greeting
     #
     name = ''
 
@@ -592,7 +592,7 @@ stalj@uek.krakow.pl
 
 
 
-1. The timer.py program takes a number from the user and counts down to zero. Modify the program so that the last five seconds of the counter are displayed in words, i.e. five, four, three, two, one.
+1. The timer.py program takes a number from the user and counts down to zero. Modify the program so that the last five seconds of the counter are printed in words, i.e. five, four, three, two, one.
 
 1. The atm.py program simulates a simple ATM where the user can deposit, withdraw, or check the balance. Analyze the program code and then run the program. Next, add two more functions to the program:
 
@@ -638,7 +638,7 @@ stalj@uek.krakow.pl
        print('Password too short (min. 12 chars)') 
     ```
 
-1. The electronic thermometer displays the temperature in degrees Celsius and verbal information according to the following criteria:
+1. The electronic thermometer prints the temperature in degrees Celsius and verbal information according to the following criteria:
 
     * It is extremely hot, for a temperature above 35 degrees,
     * It is hot, for a temperature above 30 degrees,
@@ -668,7 +668,7 @@ stalj@uek.krakow.pl
     * 3-6 hours: 15 PLN
     * Over 6 hours: 20 PLN
 
-    Write a program that asks for the number of hours of parking, then calculates and displays the correct fee.
+    Write a program that asks for the number of hours of parking, then calculates and prints the correct fee.
 
 1. Write a program that asks the user for their age and then checks which age group they belong to:
 
@@ -694,7 +694,7 @@ stalj@uek.krakow.pl
         print('Either {...} or {...} is not an adult')
     ```
 
-1. Most female names in Polish end with the letter \"a\". Write a program that displays the name entered from the keyboard, provided it is a female name. Sample result:
+1. Most female names in Polish end with the letter \"a\". Write a program that prints the name entered from the keyboard, provided it is a female name. Sample result:
 
     Enter name: Anna\
     Anna -- Polish female name
@@ -704,7 +704,7 @@ stalj@uek.krakow.pl
     Enter the dog\'s age in human years: 15\
     The dog\'s age in dog's years is 73 years.
 
-1. A computer program analyses the price of a product in an online store. If the product price decreases by at least 10%, the program displays a purchase recommendation:
+1. A computer program analyses the price of a product in an online store. If the product price decreases by at least 10%, the program prints a purchase recommendation:
 
     Buy the product!!\
     Product price reduced by 17%
@@ -722,7 +722,7 @@ stalj@uek.krakow.pl
     Product price: 40\
     Amount to pay: 170.00
 
-1. The speed of vehicles on highways in Poland is at least 40 km/h and not more than 140 km/h. Write a program that displays a message when the specified car speed, read from the keyboard, has been exceeded. Sample result:
+1. The speed of vehicles on highways in Poland is at least 40 km/h and not more than 140 km/h. Write a program that prints a message when the specified car speed, read from the keyboard, has been exceeded. Sample result:
 
     Enter car speed: 38\
     Warning: invalid car speed!!
@@ -740,13 +740,13 @@ stalj@uek.krakow.pl
     instagram = True\
     You are a good influencer!
 
-1. EAN-13 (European Article Number) is a barcode for marking goods. The first 3 digits (590) usually indicate goods manufactured in Poland. Write a program that checks whether the EAN-13 number entered from the keyboard consists of exactly 13 characters (digits). Display a message if the number is correct. Additionally, only when the article number is correct, display a message when the product was manufactured in Poland. Sample result:
+1. EAN-13 (European Article Number) is a barcode for marking goods. The first 3 digits (590) usually indicate goods manufactured in Poland. Write a program that checks whether the EAN-13 number entered from the keyboard consists of exactly 13 characters (digits). Print a message if the number is correct. Additionally, only when the article number is correct, print a message when the product was manufactured in Poland. Sample result:
 
     Enter EAN-13 article number: 5901230094938\
     Article number is correct\
     Article manufactured in Poland
 
-1. A washing machine allows you to wash a jacket, which takes 40 minutes, wash underwear, which takes 70 minutes, and wash shoes, which takes 20 minutes. In addition, it is possible to program an additional rinse (15 minutes) and an additional spin (9 minutes). The washing machine settings are saved in variables. Write a program that calculates and displays the total washing time. Sample result:
+1. A washing machine allows you to wash a jacket, which takes 40 minutes, wash underwear, which takes 70 minutes, and wash shoes, which takes 20 minutes. In addition, it is possible to program an additional rinse (15 minutes) and an additional spin (9 minutes). The washing machine settings are saved in variables. Write a program that calculates and prints the total washing time. Sample result:
 
     washing_product = \"shoes\"\
     rinse = True\
@@ -755,7 +755,7 @@ stalj@uek.krakow.pl
 
     ```python
     ###
-    # Calculates and displays the total washing time.
+    # Calculates and prints the total washing time.
     #
     # A washing machine allows you to wash a jacket, which takes
     # 40 minutes, wash underwear, which takes 70 minutes, and wash shoes,
@@ -781,7 +781,7 @@ stalj@uek.krakow.pl
     y = 2\
     Point P(5,2) is in the first quadrant of the coordinate system
 
-1. Yes-no question are often used in surveys to gauge people\'s attitudes with regard to specific ideas or beliefs. Write a program that displays a survey consisting of three questions. Save the answers to logical type variables. Then view the survey result. Sample result:
+1. Yes-no question are often used in surveys to gauge people\'s attitudes with regard to specific ideas or beliefs. Write a program that prints a survey consisting of three questions. Save the answers to logical type variables. Then view the survey result. Sample result:
 
     SURVEY
     Are you interested in computer science? (y/n): y\
@@ -814,7 +814,7 @@ stalj@uek.krakow.pl
     2 PLN coins: 1\
     1 PLN coins: 1
 
-1. Write a program that displays numbers from 1 to 30. If the number is divisible by 3 then the program displays the word \'THREE\'. Next, if the number is divisible by 5 then the program displays the word \'FIVE\'. Finally, if the number is divisible by both 3 and 5 then the program displays the word \'BINGO\'. Sample result:
+1. Write a program that prints numbers from 1 to 30. If the number is divisible by 3 then the program prints the word \'THREE\'. Next, if the number is divisible by 5 then the program prints the word \'FIVE\'. Finally, if the number is divisible by both 3 and 5 then the program prints the word \'BINGO\'. Sample result:
 
     1 2 THREE 4 FIVE THREE 7 \...
 
@@ -866,7 +866,7 @@ stalj@uek.krakow.pl
     Incorrect\...\
     Sorry, your payment card has been blocked.
 
-1. A computer numeric keyboard has the arrangement of the keys as below. The included program code displays the computer keyboard. Analyse the program in terms of the displayed results. Do you understand each program statement? Then make changes in your program code. Replace the 'for' with a 'while' statement.
+1. A computer numeric keyboard has the arrangement of the keys as below. The included program code prints the computer keyboard. Analyse the program in terms of the printed results. Do you understand each program statement? Then make changes in your program code. Replace the 'for' with a 'while' statement.
 
     7 8 9\
     4 5 6\
@@ -879,7 +879,7 @@ stalj@uek.krakow.pl
         print()
     ```
 
-1. Write a program that displays the first twenty words of the Fibonacci sequence. The sequence is defined as follows: the first term is equal to 0, the second is equal to 1, each subsequent term is the sum of the previous two. Sample result:
+1. Write a program that prints the first twenty words of the Fibonacci sequence. The sequence is defined as follows: the first term is equal to 0, the second is equal to 1, each subsequent term is the sum of the previous two. Sample result:
 
     <https://en.wikipedia.org/wiki/Fibonacci_number>
 
@@ -889,7 +889,7 @@ stalj@uek.krakow.pl
 
     Prime numbers: 2 3 5 7 11 ...
 
-1. Write a program that displays a lottery coupon (numbers from 1
+1. Write a program that prints a lottery coupon (numbers from 1
     to 49) in the format as below.
 
     1 8 15 22 29 36 43\
@@ -900,4 +900,4 @@ stalj@uek.krakow.pl
     6 13 20 27 34 41 48\
     7 14 21 28 35 42 49
 
-1. Write a program that displays 20 integer random numbers in the range of 5 to 10.
+1. Write a program that prints 20 integer random numbers in the range of 5 to 10.

@@ -40,8 +40,8 @@ stalj@uek.krakow.pl
     1. full_name
     1. print(full_name)
     1. len(full_name)
-    1. Enter commands to calculate and display the area of ​​a triangle with dimensions a=5 and h=4.
-    1. Enter commands to calculate and display the arithmetic mean of the numbers: 7, 12 and 31. Display the result with an accuracy of 2 decimal places.
+    1. Enter commands to calculate and print the area of ​​a triangle with dimensions a=5 and h=4.
+    1. Enter commands to calculate and print the arithmetic mean of the numbers: 7, 12 and 31. Print the result with an accuracy of 2 decimal places.
 
 1. Script mode is used to write and execute program code from a file, instead of typing commands interactively. To write and run your program in script mode:
 
@@ -163,7 +163,7 @@ stalj@uek.krakow.pl
     income_per_person = income / employees
     ```
 
-1. Below is a program that calculates the sum of two numbers. Modify the program to calculate the sum of three numbers. Notice the use of the function print(value1,value2,...), which allows the values to be displayed on the monitor screen.
+1. Below is a program that calculates the sum of two numbers. Modify the program to calculate the sum of three numbers. Notice the use of the function print(value1,value2,...), which allows the values to be printed on the monitor screen.
 
     ```python
     ###
@@ -201,12 +201,12 @@ stalj@uek.krakow.pl
     print("After swapping: x=", x, "y=", y)
     ```
 
-1. Write a program that, for a given speed in km/h, displays the speed in m/s.
+1. Write a program that, for a given speed in km/h, prints the speed in m/s.
 
     ```python
     ###
     # A program that, for a given speed in km/h,
-    # displays the speed in m/s
+    # prints the speed in m/s
     #
     speed_kmh = 70
     speed_ms = ...
@@ -242,14 +242,14 @@ stalj@uek.krakow.pl
     1. You are standing on a beach, by the sea, on the water line (calculate the distance for your height in m). You have probably been to the seaside many times. Can you believe that the horizon is only a few kilometers away?
     1. You are looking out of a hotel window located by the sea, the window is at a height of 20 meters.
 
-1. In the year 2022, the world population was approximately 8 billion. The Northern Hemisphere has 7.2 billion people. Write a program that calculates and displays:
+1. In the year 2022, the world population was approximately 8 billion. The Northern Hemisphere has 7.2 billion people. Write a program that calculates and prints:
 
     1. The number of people and percentage of the total population living in the Northern Hemisphere
     1. The number of people and percentage of the total population living in the Southern Hemisphere
 
     ```python
     ###
-    # A program that calculates and displays:
+    # A program that calculates and prints:
     # - the number of people and percentage of the total
     #   population living in the Northern Hemisphere
     # - the number of people and percentage of the total
@@ -265,12 +265,12 @@ stalj@uek.krakow.pl
     ...
     ```
 
-1. The following program calculates and displays the average grade of a student, but it contains several errors. Fix the program so that it works correctly.
+1. The following program calculates and prints the average grade of a student, but it contains several errors. Fix the program so that it works correctly.
 
     ```python
     ###
-    # A program that calculates and displays
-    the average grade of a student
+    # A program that calculates and prints
+    # the average grade of a student
     #
     math = 5
     art = 4
@@ -282,23 +282,23 @@ stalj@uek.krakow.pl
 
 ## 4. Output Formatting
 
-1. One of the basic functionalities of a computer program is displaying results on the computer screen. To display the results in a readable form, string (text) formatting available in programming languages is often used. In Python, it is called f-strings.
+1. One of the basic functionalities of a computer program is printing results on the computer screen. To print the results in a readable form, string (text) formatting available in programming languages is often used. In Python, it is called f-strings.
 
     <https://www.pythontutorial.net/python-basics/python-f-strings/>
     
     <https://docs.python.org/3/tutorial/inputoutput.html> 
 
-    Below is a program for displaying any text along with the value of a variable using f-strings:
+    Below is a program for printing any text along with the value of a variable using f-strings:
 
     ```python
     ###
-    # Displaying student's personal data
+    # Printing student's personal data
     #
     name = "Adam"
     print(f"My name is {name}.")
     ```
 
-    Modify the program to display the student's age and height in addition to the name, as below.
+    Modify the program to print the student's age and height in addition to the name, as below.
 
     ```
     My name is Adam.
@@ -306,12 +306,12 @@ stalj@uek.krakow.pl
     In 6 years I will be ... years old.  
     ```
 
-1. Write a program that calculates and displays the income of a family per person. To display the results in a readable form, use f-strings.
+1. Write a program that calculates and prints the income of a family per person. To print the results in a readable form, use f-strings.
 
     ```python
     ###
-    # Write a program that calculates and displays
-    # the income of a family per person. To display the results
+    # Write a program that calculates and prints
+    # the income of a family per person. To print the results
     # in a readable form, use f-strings.
     #
     father_income = 5450
@@ -322,7 +322,7 @@ stalj@uek.krakow.pl
     print(f'Total family income is ..., and income per person is ...')
     ```
 
-1. The variables a and b contain two numbers. Write a program that displays the following expression containing the values of these variables and the value of the expression.
+1. The variables a and b contain two numbers. Write a program that prints the following expression containing the values of these variables and the value of the expression.
 
     ```python
     a = 3
@@ -343,7 +343,7 @@ stalj@uek.krakow.pl
     ```python
     # A program that reads your first and last name from the keyboard.
     # Store this data in two separate variables.
-    # Then, display your full name i.e. first and last name separated by a single space.
+    # Then, print your full name i.e. first and last name separated by a single space.
     first_name = input('Enter your first name: ')
     last_name = input('Enter your last name: ')
     full_name = ... + ' ' + ...
@@ -388,14 +388,14 @@ stalj@uek.krakow.pl
     ...
     ```
 
-1. 23% VAT was paid from an amount. Write a program that reads an amount from the keyboard. Then, it calculates and displays both the amount and its VAT. Apply formatting with two decimal places. Sample result:
+1. 23% VAT was paid from an amount. Write a program that reads an amount from the keyboard. Then, it calculates and prints both the amount and its VAT. Apply formatting with two decimal places. Sample result:
 
     ```
     Amount  : 15.84
     VAT 23% :  3.64
     ```
 
-1. The price of the product on the price tag is given before and after the discount is applied. Write a program that allows you to enter the product price and discount. Display the product price, discount, discounted product price, and the difference between the product price before and after the discount. Display all prices with two decimal places. Sample result:
+1. The price of the product on the price tag is given before and after the discount is applied. Write a program that allows you to enter the product price and discount. Print the product price, discount, discounted product price, and the difference between the product price before and after the discount. Print all prices with two decimal places. Sample result:
 
     ```
     Enter price: 24.72
@@ -425,22 +425,22 @@ stalj@uek.krakow.pl
 
 1. Characters in a string are numbered (indexed) starting from 0. This means that the first character in the string has index 0, the second character has index 1, the third character has index 2, and so on. This rule is used in many programming languages.
 
-    Modify the following program to display the initials of your name and surname, contained in the variables name and surname.
+    Modify the following program to print the initials of your name and surname, contained in the variables name and surname.
 
     ```python
     ###
-    # A program that displays your initials
+    # A program that prints your initials
     #
     name = 'George'
     surname = ...
     print(name[0])
     ```
 
-1. Write a program that displays the abbreviation of the university name (i.e. KUE)
+1. Write a program that prints the abbreviation of the university name (i.e. KUE)
 
     ```python
     ###
-    # A program that displays a university abbreviation
+    # A program that prints a university abbreviation
     #   
     university = "Krakow University of Economics"
     ...
@@ -457,11 +457,11 @@ stalj@uek.krakow.pl
     "Mr. John May, born on 1998-02-16"
     ```
 
-    Display the employee's name, surname, initials and date of birth on separate lines. Complete the following program code.
+    Print the employee's name, surname, initials and date of birth on separate lines. Complete the following program code.
 
     ```python
     ###
-    # A program for displaying detailed information.
+    # A program for printing detailed information.
     #
     employee = "Mr. John May, born on 1998-02-16"
     print(f'Name: {employee[4:8]}')
@@ -470,7 +470,7 @@ stalj@uek.krakow.pl
     print(f'Initials: {...}')
     ```
 
-1. To improve readability, telephone numbers are often presented with a dash or space separating some digits. Write a program that displays a 9-digit telephone number entered from the keyboard as three groups of 3 digits each, separated by a dash character. Sample result:
+1. To improve readability, telephone numbers are often presented with a dash or space separating some digits. Write a program that prints a 9-digit telephone number entered from the keyboard as three groups of 3 digits each, separated by a dash character. Sample result:
 
     ```
     Enter phone number: 543097329
@@ -481,7 +481,7 @@ stalj@uek.krakow.pl
 
     ```python
     ###
-    # a program that displays a 9-digit telephone number
+    # a program that prints a 9-digit telephone number
     # entered from the keyboard as three groups of 3 digits each,
     # separated by a dash character.
     #
@@ -492,13 +492,13 @@ stalj@uek.krakow.pl
 
 1. In computer science, every written (graphic) character of human language (letters, digits, symbols, etc.) is encoded by assigning it a number. This allows characters to be stored, transmitted, and transformed using digital computers. To convert a character to its numerical representation, use the Python ord() function. 
 
-    Write a program to display numerical representations of the following characters:
+    Write a program to print numerical representations of the following characters:
 
     a, b, z, A, B, Z, 1, =, +, €
 
     ```python
     ###
-    # A program to display numerical representations of characters.
+    # A program to print numerical representations of characters.
     #
     print(f'a {ord('a')}')
     print(f'b {ord('b')}')
@@ -507,11 +507,11 @@ stalj@uek.krakow.pl
     ```
 
 
-1. Write a program that displays a numerical representation of each letter of your name. Sample result:
+1. Write a program that prints a numerical representation of each letter of your name. Sample result:
 
     ```python
     ###
-    # A program that displays a numerical representation of each letter of your name.
+    # A program that prints a numerical representation of each letter of your name.
     #
     name = 'John' # replace John with your name
     print(f'The letter {name[0]} has a code {ord(name[0])}')
@@ -564,29 +564,29 @@ stalj@uek.krakow.pl
 
     movie = "The Lord of the Rings: The Return of the King"
 
-    # display number of characters
+    # print number of characters
     print('Number of characters: ', len(movie))
 
-    # display title in capital letters
+    # print title in capital letters
     ...
 
-    # display title in small letters
+    # print title in small letters
     ...
 
-    # display how many times the vowel "e" appears in the title
+    # print how many times the vowel "e" appears in the title
     ...
 
-    # display where in the text is the word "Lord"
+    # print where in the text is the word "Lord"
     ...
 
-    # display where in the text is the word "dragon"
+    # print where in the text is the word "dragon"
     ...
     ```
 
 
 ## 7. Binary Operations
 
-1. People up to and including 26 years of age are exempt from paying taxes in Poland. Write a program that, based on the person's age entered from the keyboard, displays True if the person is exempt from paying taxes and displays False otherwise. Then, check if the program works correctly for the following data (age in years):
+1. People up to and including 26 years of age are exempt from paying taxes in Poland. Write a program that, based on the person's age entered from the keyboard, prints True if the person is exempt from paying taxes and prints False otherwise. Then, check if the program works correctly for the following data (age in years):
 
     38, 27, 26, 22, 18
 
@@ -595,8 +595,8 @@ stalj@uek.krakow.pl
     # People up to and including 26 years of age are exempt
     # from paying taxes in Poland. Write a program that,
     # based on the person's age entered from the keyboard,
-    # displays True if the person is exempt from paying taxes
-    # and displays False otherwise.
+    # prints True if the person is exempt from paying taxes
+    # and prints False otherwise.
     #
     age = int(input('Enter age: '))
     no_tax = age < ...
@@ -618,7 +618,7 @@ stalj@uek.krakow.pl
     print(f'Password length is valid: {password_ok}')
     ```
 
-1. Write a program that checks whether the number entered from the keyboard is even. Display True when the number is even and False when the number is odd. A number is even if the remainder when divided by 2 is 0. Then, check if the program works correctly for the following numbers:
+1. Write a program that checks whether the number entered from the keyboard is even. Print True when the number is even and False when the number is odd. A number is even if the remainder when divided by 2 is 0. Then, check if the program works correctly for the following numbers:
 
     24, 8, 31, 5
 
@@ -636,7 +636,7 @@ stalj@uek.krakow.pl
     print(f'Number is even: {even}')
     ```
 
-1. A tree may be cut down if its diameter is at least 50 cm. Write a program that, based on the circumference of the tree entered from the keyboard, calculates and displays the value True if the tree can be cut down, or display the value False otherwise. Sample result:
+1. A tree may be cut down if its diameter is at least 50 cm. Write a program that, based on the circumference of the tree entered from the keyboard, calculates and prints the value True if the tree can be cut down, or print the value False otherwise. Sample result:
 
     ```
     Enter tree circumference in cm: 120 
@@ -650,7 +650,7 @@ stalj@uek.krakow.pl
     Tree 3: 230
     Tree 4: 120
 
-1. Vehicle registration numbers in Krakow start with the letters KR or KK. Write a program that checks whether the vehicle registration number entered from the keyboard means a vehicle from Krakow. Display True whether a car is from Krakow or False otherwise. Sample result:
+1. Vehicle registration numbers in Krakow start with the letters KR or KK. Write a program that checks whether the vehicle registration number entered from the keyboard means a vehicle from Krakow. Print True whether a car is from Krakow or False otherwise. Sample result:
 
     ```python
     ###
@@ -658,7 +658,7 @@ stalj@uek.krakow.pl
     # with the letters KR or KK. Write a program that checks
     # whether the vehicle registration number entered
     # from the keyboard means a vehicle from Krakow.
-    # Display True whether a car is from Krakow or False otherwise.
+    # Print True whether a car is from Krakow or False otherwise.
     #
     car_number = input('Enter car registration number')
     is_krakow = car_number[0:2] == "KR" or ...
@@ -685,11 +685,11 @@ stalj@uek.krakow.pl
     ```
 
 
-1. Write a program that displays results of three dice rolls and the sum of dice rolled. Apply a random number generator.
+1. Write a program that prints results of three dice rolls and the sum of dice rolled. Apply a random number generator.
 
     ```python
     ###
-    # A program that displays results of three dice rolls
+    # A program that prints results of three dice rolls
     # and the sum of dice rolled.
     #
     import random
@@ -700,14 +700,14 @@ stalj@uek.krakow.pl
     print(...)
     ```
 
-1. In many games, the numbers one and six on dice have special meaning. Write a program that displays the number of dice rolled and the value True if the number rolled is 1 or 6. Sample result:
+1. In many games, the numbers one and six on dice have special meaning. Write a program that prints the number of dice rolled and the value True if the number rolled is 1 or 6. Sample result:
 
     ```
     Dice rolled: 4
     Special number (1 or 6): False
     ```
 
-1. Write a program that enables a user to challenge a computer. The computer throws dice. Then, the user then tries to guess the number from dice by entering a number from 1 to 6 from the keyboard. If the user has guessed the number from the dice, the computer displays True. Otherwise, the computer displays False.
+1. Write a program that enables a user to challenge a computer. The computer throws dice. Then, the user then tries to guess the number from dice by entering a number from 1 to 6 from the keyboard. If the user has guessed the number from the dice, the computer prints True. Otherwise, the computer prints False.
 
     ```python
     ###
@@ -715,8 +715,8 @@ stalj@uek.krakow.pl
     # The computer throws dice. Then, the user then tries to guess
     # the number from dice by entering a number from 1 to 6
     # from the keyboard. If the user has guessed the number
-    # from the dice, the computer displays True. Otherwise,
-    # the computer displays False.
+    # from the dice, the computer prints True. Otherwise,
+    # the computer prints False.
     #
     import random
     # COMPUTER TURN
@@ -746,10 +746,10 @@ stalj@uek.krakow.pl
     # determine radius and PI values
     # calculate area 
     # calculate circumference 
-    # display results
+    # print results
     ```
 
-1. Write a program, a temperature converter, that reads temperature in degrees Celsius from the keyboard. Then, the program calculates and displays the temperature in Kelvin and Fahrenheit.
+1. Write a program, a temperature converter, that reads temperature in degrees Celsius from the keyboard. Then, the program calculates and prints the temperature in Kelvin and Fahrenheit.
 
     ```python
     ###
@@ -764,11 +764,11 @@ stalj@uek.krakow.pl
 
 
 
-1. Write a program, a unit converter, that displays your height both in cm and in feet and inches. Use ue the division operator without remainder and the operator calculating the remainder of the division.
+1. Write a program, a unit converter, that prints your height both in cm and in feet and inches. Use ue the division operator without remainder and the operator calculating the remainder of the division.
 
     ```python
     ###
-    # A program that displays your height both in cm and in feet and inches.
+    # A program that prints your height both in cm and in feet and inches.
     #
     cm = 170
     feet = ...
@@ -788,13 +788,13 @@ stalj@uek.krakow.pl
     * Location Code (2 characters)
     * Branch Code (3 characters - optional)
 
-    Write a program that reads a SWIFT code from the keyboard and displays the bank code and the country code. Then, use the program to display information for the following SWIFT codes:  
+    Write a program that reads a SWIFT code from the keyboard and prints the bank code and the country code. Then, use the program to print information for the following SWIFT codes:  
     BPKOPLPW, CHASUS33, DEUTDEFF.
 
     ```python
     ###
     # A program that reads a SWIFT code from the keyboard
-    # and displays the bank code and country code.
+    # and prints the bank code and country code.
     #
     swift = input('...: ')
     print(f'Bank Code: {...}')
@@ -818,7 +818,7 @@ stalj@uek.krakow.pl
     print(...)
     ```
 
-1. The binary numeral system is a positional numeral system that requires only two digits to write numbers: 0 and 1. The hexadecimal numeral system is a positional numeral system that uses sixteen distinct symbols, most often the symbols "0" to "9" to represent values 0 to 9, and "A" to "F" (or alternatively "a" to "f") to represent values from ten to fifteen. Both are widely used in mathematics, computer science and digital electronics. Write a program that reads an integer number from the keyboard and displays that value as a binary and hexadecimal number. To convert a decimal number to binary or hexadecimal value, use the available Python functions. Sample result:
+1. The binary numeral system is a positional numeral system that requires only two digits to write numbers: 0 and 1. The hexadecimal numeral system is a positional numeral system that uses sixteen distinct symbols, most often the symbols "0" to "9" to represent values 0 to 9, and "A" to "F" (or alternatively "a" to "f") to represent values from ten to fifteen. Both are widely used in mathematics, computer science and digital electronics. Write a program that reads an integer number from the keyboard and prints that value as a binary and hexadecimal number. To convert a decimal number to binary or hexadecimal value, use the available Python functions. Sample result:
 
     ```
     Enter number: 125

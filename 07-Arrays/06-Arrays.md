@@ -31,7 +31,7 @@ stalj@uek.krakow.pl
 
    > **Notice that in subsequent tasks, a list will be used in place of an array for basic applications.**
 
-1. An array contains values: 2, 3, 7, 5, 4. Write a program that displays:
+1. An array contains values: 2, 3, 7, 5, 4. Write a program that prints:
    1. the array
    1. number of elements
    1. first value
@@ -58,7 +58,7 @@ stalj@uek.krakow.pl
 
    > Tip: to read the last value of an array use array[len(array)-1] or array[-1]
 
-1. An array contains values: 1, 2, 3, 4, 5. Write a program that modifies the array values. Display the array after each change.
+1. An array contains values: 1, 2, 3, 4, 5. Write a program that modifies the array values. Print the array after each change.
 
    1. subtract one from the first element of the array
    1. increase the last array element by 4
@@ -73,7 +73,7 @@ stalj@uek.krakow.pl
    Array: [0,2,6,4,9]
    ```
 
-1. Write a program that displays the name of the day of the week for a given day number. Then, using the defined function, display the name of the day of the week for the following day numbers: 1, 4, 7.
+1. Write a program that prints the name of the day of the week for a given day number. Then, using the defined function, print the name of the day of the week for the following day numbers: 1, 4, 7.
 
    ```python
    ###
@@ -88,11 +88,11 @@ stalj@uek.krakow.pl
    ...   
    ```
 
-1. Write a program that displays a shopping list, each product on a separate line.
+1. Write a program that prints a shopping list, each product on a separate line.
 
    ```python
    ###
-   # Displays shopping list
+   # Prints shopping list
    #
    shopping_list = [
       "milk", "bread", "eggs", "butter", "cheese",
@@ -102,7 +102,7 @@ stalj@uek.krakow.pl
       print(...)
    ```
 
-1. Write a program that displays a popular computer games, each game name on a separate line. Use the while statement. Additionally, number the list (display the next number before each list item) and sort the list alphabetically (use one of a Python built-in functions for sorting)
+1. Write a program that prints a popular computer games, each game name on a separate line. Use the while statement. Additionally, number the list (print the next number before each list item) and sort the list alphabetically (use one of a Python built-in functions for sorting)
 
    ```python
    computer_games = [
@@ -112,11 +112,11 @@ stalj@uek.krakow.pl
    ]
    ```
 
-1. The list contains vehicle registration numbers in Poland. Cars from Krakow have numbers starting with the letters 'KR' or 'KK'. Write a program that displays car registration numbers from Krakow. Number the list displayed.
+1. The list contains vehicle registration numbers in Poland. Cars from Krakow have numbers starting with the letters 'KR' or 'KK'. Write a program that prints car registration numbers from Krakow. Number the list printed.
 
    ```python
    ###
-   # Displays vehicle registration numbers from Krakow
+   # Prints vehicle registration numbers from Krakow
    #
    polish_license_plates = [
       'KR5233F', 'PO6987E', 'KR16179', 'BI7192L', 'KK12255',
@@ -130,7 +130,7 @@ stalj@uek.krakow.pl
          counter += 1
    ```
 
-1. The array contains the student's test results. A value of True indicates that the student answered the question correctly, while a value of False indicates an incorrect answer. Write a program that displays information about the test results:
+1. The array contains the student's test results. A value of True indicates that the student answered the question correctly, while a value of False indicates an incorrect answer. Write a program that prints information about the test results:
 
    * Number of questions:
    * Number of correct answers:
@@ -139,7 +139,7 @@ stalj@uek.krakow.pl
 
    ```python
    ###
-   # Displays test statistics
+   # Prints test statistics
    #
    test_results = [
       False, True, False, True, True,
@@ -170,7 +170,7 @@ stalj@uek.krakow.pl
    ...
    ```
 
-1. The weather station measures temperature once a day. The measurement results for each day in March are stored in an array. Write a program that analyzes the temperature based on the observations from March and displays the following report:
+1. The weather station measures temperature once a day. The measurement results for each day in March are stored in an array. Write a program that analyzes the temperature based on the observations from March and prints the following report:
 
    ```
    TEMPERATURE REPORT
@@ -310,7 +310,7 @@ stalj@uek.krakow.pl
 
 1. Tic-Tac-Toe is a simple yet fun game for two players. You play on a grid of nine squares arranged in three rows and three columns.
 
-   The array below shows a Tic-Tac-Toe board. Write a program that displays a board on the screen.
+   The array below shows a Tic-Tac-Toe board. Write a program that prints a board on the screen.
 
    ```python
    # 3x3 Tic-Tac-Toe board
@@ -328,7 +328,7 @@ stalj@uek.krakow.pl
 
    > Hint: end=" " means that the cursor is not moved to the next line; a space is printed instead 
 
-1. The data below represents monthly expenses divided into categories and weeks. Write a program that calculates and displays:
+1. The data below represents monthly expenses divided into categories and weeks. Write a program that calculates and prints:
 
    * total expenses for each category
    * total expenses for each week
@@ -350,7 +350,7 @@ stalj@uek.krakow.pl
    ...
    ...
 
-   # Display expenses
+   # Print expenses
    print('MONTHLY EXPENSES')
    print('----------------')
    print('Food:',...)
@@ -467,7 +467,7 @@ stalj@uek.krakow.pl
    ]
    ```
 
-   Create a program that replaces the values of the main diagonal with 1. Use a loop statement. Display the modified array. Sample result:
+   Create a program that replaces the values of the main diagonal with 1. Use a loop statement. Print the modified array. Sample result:
 
    ```
    1 0 0
@@ -477,7 +477,7 @@ stalj@uek.krakow.pl
 
 ## 4. Practice Makes Perfect
 
-1. Try to create the following arrays. Then, display the created array content.
+1. Try to create the following arrays. Then, print the created array content.
 
    ```python
    arr1 = [3,7,1,0,4]
@@ -496,9 +496,9 @@ stalj@uek.krakow.pl
    two dimensional array with five rows and two columns filled with False
    ```
 
-1. An array contains integer numbers: 34,7,19,4,21,8. Create a program that calculates and displays the number of even values in the array. Use the ‘while’ loop statement.
+1. An array contains integer numbers: 34,7,19,4,21,8. Create a program that calculates and prints the number of even values in the array. Use the ‘while’ loop statement.
 
-1. An array contains natural numbers: 15, 8, 31, 47, 2, 19. Create a program that displays the contents of the array in reverse order. Use any loop statement. Sample result:
+1. An array contains natural numbers: 15, 8, 31, 47, 2, 19. Create a program that prints the contents of the array in reverse order. Use any loop statement. Sample result:
 
    ```python
    existed array: 15 8 31 47 2 19 
@@ -512,11 +512,11 @@ stalj@uek.krakow.pl
    2nd power: 64 4 25 1 81
    ```
 
-1. An array contains numbers: -15, 8, -31, 47, -2, 19. Create a program that finds and displays the maximum and minimum number. Do not use available functions.
+1. An array contains numbers: -15, 8, -31, 47, -2, 19. Create a program that finds and prints the maximum and minimum number. Do not use available functions.
 
-1. An array contains values: 15, 8, 31, 47, 2, 19. Create a program that calculates and displays the array and the arithmetic mean of array values. Use the “for” loop statement.
+1. An array contains values: 15, 8, 31, 47, 2, 19. Create a program that calculates and prints the array and the arithmetic mean of array values. Use the “for” loop statement.
 
-1. An array contains values: 15, 8, 31, 47, 2, 19. Create a program that calculates and displays the array and the arithmetic mean of array values. Use the “while” loop statement.
+1. An array contains values: 15, 8, 31, 47, 2, 19. Create a program that calculates and prints the array and the arithmetic mean of array values. Use the “while” loop statement.
 
 1. An array contains a list of Polish names:
 
@@ -524,14 +524,14 @@ stalj@uek.krakow.pl
    Genowefa, Onufry, Celestyna, Alojzy, Pankracy
    ```
 
-   Create a program that displays the longest name (consisting of the largest number of characters). Sample result:
+   Create a program that prints the longest name (consisting of the largest number of characters). Sample result:
 
    ```
    Names: Genowefa Onufry Celestyna Alojzy Pankracy
    Longest name: Celestyna
    ```
 
-1. An array contains integer numbers: 2, 6, 4, 9, 7. Create a program that displays the array values graphically as below. Define a function star(n) that returns the given number of asterisks as a string. Use a defined function in the program.
+1. An array contains integer numbers: 2, 6, 4, 9, 7. Create a program that prints the array values graphically as below. Define a function star(n) that returns the given number of asterisks as a string. Use a defined function in the program.
 
    ```python
    2: **
@@ -550,7 +550,7 @@ stalj@uek.krakow.pl
    1. [3,2,1]   [3,2]
    ```
 
-   Display both arrays and the result of comparison. Sample result:
+   Print both arrays and the result of comparison. Sample result:
 
    ```python
    Array1: water book sky
@@ -558,11 +558,11 @@ stalj@uek.krakow.pl
    Comparison: arrays are the same
    ```
 
-1. Two arrays contain the following integer numbers [4,36,12,28,9,44,5] and [5,1,36]. Create a program that displays the numbers from the first array that do not appear in the second array.
+1. Two arrays contain the following integer numbers [4,36,12,28,9,44,5] and [5,1,36]. Create a program that prints the numbers from the first array that do not appear in the second array.
 
-1. Create a program that sorts elements of an array containing integer numbers. Apply the Bubble Sort sorting algorithm. Define a function bubblesort(array) that returns the sorted array. Try to sort and display any three arrays.
+1. Create a program that sorts elements of an array containing integer numbers. Apply the Bubble Sort sorting algorithm. Define a function bubblesort(array) that returns the sorted array. Try to sort and print any three arrays.
 
-1. Create a program that displays all unique elements in an array. Sample result:
+1. Create a program that prints all unique elements in an array. Sample result:
 
    ```python
    Array: 2 3 2 5 8 1 9 8
@@ -579,16 +579,16 @@ stalj@uek.krakow.pl
 
 1. A tuple in Python is an immutable, ordered collection of elements. Tuples are similar to lists, but unlike lists, once a tuple is created, its elements cannot be modified, added, or removed.
 
-   Write a program that creates a tuple containing a single word ‘computation’. Save a tuple in a variable. Then, display the type of the variable.
+   Write a program that creates a tuple containing a single word ‘computation’. Save a tuple in a variable. Then, print the type of the variable.
 
-1. Write a program that displays the tuple (10,20,30,40,50) in reverse order. Sample result:
+1. Write a program that prints the tuple (10,20,30,40,50) in reverse order. Sample result:
 
    ```python
    Tuple: 10,20,30,40,50
    Reverse order: 50,40,30,20,10
    ```
 
-1. Write a program that for the tuple ("Seven", [10, 20, 30], (5, 15, 25)) displays values:
+1. Write a program that for the tuple ("Seven", [10, 20, 30], (5, 15, 25)) prints values:
    1. “Seven”
    1. 30
 
@@ -620,7 +620,7 @@ stalj@uek.krakow.pl
    7,3,8,5,2
    ```
 
-   calculates and displays results. Sample result:
+   calculates and prints results. Sample result:
 
    ```
    Numbers: 7,3,8,5,2
@@ -630,7 +630,7 @@ stalj@uek.krakow.pl
    Numbers as a string: 7-3-8-5-2
    ```
 
-1. Write a program that, for the given array of real numbers, displays the number of elements that are greater than the given value entered from the keyboard.
+1. Write a program that, for the given array of real numbers, prints the number of elements that are greater than the given value entered from the keyboard.
 
 1. Write a program to separate even and odd numbers of a given array of integers. Put all even numbers first, and then odd numbers.
 
@@ -642,7 +642,7 @@ stalj@uek.krakow.pl
 
 1. Write a program that checks whether the first array is a subset of the second one (whether all elements of the first array appear in the second array).
 
-1. Define a function rand_elem(array) that returns a randomly selected array element. Using the function, display a few randomly selected array elements.
+1. Define a function rand_elem(array) that returns a randomly selected array element. Using the function, print a few randomly selected array elements.
 
 1. A variable contains text:
 
@@ -654,7 +654,7 @@ stalj@uek.krakow.pl
    1. A function that returns an ordered array of words, from longest to shortest
    1. A function that returns an alphabetically ordered array of words
 
-   Then, write a program, call the functions and display results. Sample result:
+   Then, write a program, call the functions and print results. Sample result:
 
    ```
    Text: An apple a day keeps the doctor away
@@ -698,13 +698,13 @@ stalj@uek.krakow.pl
    for n in x:
       y = ...
 
-   # display chart
+   # print chart
    ...
    ...
 
 1. Write a program that draws the function y = sin(x) for an angle value in the range 0-360 degrees.
 
-1. A two-dimensional array of size 2 by 4 contains integer numbers. Create a program that displays array values in rows and columns.
+1. A two-dimensional array of size 2 by 4 contains integer numbers. Create a program that prints array values in rows and columns.
 
 1. A two-dimensional array contains the following numbers:
 
@@ -717,7 +717,7 @@ stalj@uek.krakow.pl
 
    Create a program that calculates the sum of values in the last column.
 
-1. A function create_2d_arr(x,y) creates and returns two dimensional array with values of 0. Create a program and the function. Then create a two-dimensional array with dimensions of 3 by 5. Display the created array.
+1. A function create_2d_arr(x,y) creates and returns two dimensional array with values of 0. Create a program and the function. Then create a two-dimensional array with dimensions of 3 by 5. print the created array.
 
 1. An array contains values:
 
@@ -725,7 +725,7 @@ stalj@uek.krakow.pl
    [[0,0,0,0,0],0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]] 
    ```
    
-   Create a program that modifies the array values to create a multiplication table as below. Use loop statements. Display the array.
+   Create a program that modifies the array values to create a multiplication table as below. Use loop statements. Print the array.
 
    ```
    1  2  3  4  5
@@ -743,9 +743,9 @@ stalj@uek.krakow.pl
 
    Create a program that finds the smallest and largest values in the array and in which row and column they are located. 
 
-1. A two-dimensional array of the size 3 by 5 contains integer numbers. Create a program that swaps the first and the last row. Display array values in rows and columns before and after changes.
+1. A two-dimensional array of the size 3 by 5 contains integer numbers. Create a program that swaps the first and the last row. Print array values in rows and columns before and after changes.
 
-1. A two-dimensional array of the size 3 by 5 contains integer numbers. Create a program that swaps the first and the last column. Display array values in rows and columns before and after changes.
+1. A two-dimensional array of the size 3 by 5 contains integer numbers. Create a program that swaps the first and the last column. Print array values in rows and columns before and after changes.
 
 1. In mathematics, a matrix is a rectangular array or table of numbers, symbols, or expressions, arranged in rows and columns, e.g.:
 
@@ -758,7 +758,7 @@ stalj@uek.krakow.pl
    
    <https://en.wikipedia.org/wiki/Identity_matrix>
    
-   Then, create a function that displays a 2D array in rows and columns. Finally, create a program that displays three identity matrices with dimensions of 3, 5 and 8. Sample result:
+   Then, create a function that prints a 2D array in rows and columns. Finally, create a program that prints three identity matrices with dimensions of 3, 5 and 8. Sample result:
 
    ```
    1 0 0 0 0
@@ -772,14 +772,14 @@ stalj@uek.krakow.pl
 
    <https://en.wikipedia.org/wiki/Transpose> 
 
-   Then, create a program that displays transposed matrices, in rows and columns, for the following matrices.
+   Then, create a program that prints transposed matrices, in rows and columns, for the following matrices.
    1. 1 2 3\
       4 5 6\
       7 8 9
    1. 1 2 3 4 5\
       6 7 8 9 0
    1. 5 6 7 8
-1. Create a function that convert two-dimensional (2D) array into 1D. Then create a program that displays 1D array for the following 2D arrays.
+1. Create a function that convert two-dimensional (2D) array into 1D. Then create a program that prints 1D array for the following 2D arrays.
 
    1. 2 3\
       1 5 

@@ -13,7 +13,7 @@ stalj@uek.krakow.pl
 
     Every function has a name. To execute the code inside a function, you "call" the function by using its name followed by parentheses, including any arguments required by the function. 
 
-    For example, if you want to display information on the screen, you use the print() function, using its name and, in parentheses, the function's arguments, if any are required.
+    For example, if you want to print information on the screen, you use the print() function, using its name and, in parentheses, the function's arguments, if any are required.
 
     ```python
     print('Hello World')
@@ -25,7 +25,7 @@ stalj@uek.krakow.pl
 
     <https://docs.python.org/3/library/functions.html>
 
-    Using built-in Python functions, write a program that calculates and displays:
+    Using built-in Python functions, write a program that calculates and prints:
 
     * the largest number: 7,5,6,3,8,2
     * the smallest number: 4,7,2,3,9,8
@@ -60,7 +60,7 @@ stalj@uek.krakow.pl
 
     <https://docs.python.org/3/library/math.html>
 
-    Using functions and constants available in the \'math\' module, write a program that calculates and displays:
+    Using functions and constants available in the \'math\' module, write a program that calculates and prints:
 
     * square root of 7
     * natural logarithm of 5
@@ -79,13 +79,13 @@ stalj@uek.krakow.pl
     ...
     ```
 
-1. Write a program that generates and displays a random number between 1 and 6, similar to rolling a dice. Use one of the functions from the **random** module to generate a random integer within a given range.
+1. Write a program that generates and prints a random number between 1 and 6, similar to rolling a dice. Use one of the functions from the **random** module to generate a random integer within a given range.
 
     <https://www.w3schools.com/python/ref_random_randint.asp>
 
     ```python
     ###
-    # Generates and displays a random number between 1 and 6,
+    # Generates and prints a random number between 1 and 6,
     # similar to rolling a dice
     #
     import random
@@ -151,7 +151,7 @@ stalj@uek.krakow.pl
     print('The area of ​​a triangle with sides ... is ...')
     ```
 
-1. Define a function that calculates and returns the sum of the digits in a number. Then write a program that reads a number from the keyboard and displays the sum of its digits.
+1. Define a function that calculates and returns the sum of the digits in a number. Then write a program that reads a number from the keyboard and prints the sum of its digits.
 
     **Steps of the algorithm to sum digits in a number:**
     
@@ -290,24 +290,24 @@ stalj@uek.krakow.pl
         return ...
     ```
 
-    Then, write a program that allows you to enter and display employee data. Due to personal data protection, you can determine whether information about the employee's salary will be displayed.
+    Then, write a program that allows you to enter and print employee data. Due to personal data protection, you can determine whether information about the employee's salary will be printed.
 
     ```python
     ###
-    # Allows to enter and display employee data. Due to personal
+    # Allows to enter and print employee data. Due to personal
     # data protection, you can determine whether information about
-    # the employee's salary will be displayed
+    # the employee's salary will be printed
     #
     import ...
 
-    # Read employee's data from keyboard
+    # Reads employee's data from keyboard
     first_name = input_string('Enter name: ')
     last_name = ...
     age = ...
     salary = ...
     is_salary_hidden = input_boolean('Hide salary? (y/n)')
 
-    # Display employee's record
+    # Prints employee's record
     print('DATA RECORD')
     print('===========')
     print('Name:', ...)
@@ -395,7 +395,7 @@ stalj@uek.krakow.pl
 
 ## 7. Practice Makes Perfect
 
-1. Each month of a calendar year can be expressed by its name or by a number that indicates the position of the month in year. In a separate module, define a function month(n) that returns a month name based on the month number (values from 1 to 12). Then, write a program to display the name of the month 7. Import the module with the created function. Sample result:
+1. Each month of a calendar year can be expressed by its name or by a number that indicates the position of the month in year. In a separate module, define a function month(n) that returns a month name based on the month number (values from 1 to 12). Then, write a program to print the name of the month 7. Import the module with the created function. Sample result:
 
     ```
     Enter month number: 9
@@ -416,7 +416,7 @@ stalj@uek.krakow.pl
     Number 7 in the range <2,15>: yes
     ```
 
-1. The credit card number consists of 16 digits. In a separate module, define a function hide(card_number) that masks the card number. The function returns a character string in which only the first two and the last four digits of the card number are visible. The remaining digits of the card number are replaced with an asterisk. Then, create a program that masks some credit card digits. Import the module with the created function. Finally, display the credit card number. Sample result:
+1. The credit card number consists of 16 digits. In a separate module, define a function hide(card_number) that masks the card number. The function returns a character string in which only the first two and the last four digits of the card number are visible. The remaining digits of the card number are replaced with an asterisk. Then, create a program that masks some credit card digits. Import the module with the created function. Finally, print the credit card number. Sample result:
 
     ```
     f("5290312400019022") returns "52**********9022"
