@@ -618,4 +618,4 @@ stalj@uek.krakow.pl
 
 1. Define a function power(x, n) that calculates x^n. Apply recursion. Then, calculate 5^3.
 
-    > Tip: x^n = x * x^n-1
+    > Tip: x<sup>n</sup> = x * x<sup>n-1</sup>

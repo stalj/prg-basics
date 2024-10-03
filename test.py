@@ -1,21 +1,11 @@
-import turtle
+# 3x3 Tic-Tac-Toe board
+tic_tac_toe_board = [
+    ['X', 'O', 'X'],
+    [' ', 'X', 'O'],
+    ['O', ' ', 'X']
+]
 
-# Set up the screen
-window = turtle.Screen()
-window.bgcolor("lightgreen")
-
-# Create the turtle
-pen = turtle.Turtle()
-pen.speed(5)
-
-# Side length
-side_length = 100
-
-# Draw a square
-for _ in range(4):
-    pen.forward(side_length)
-    pen.right(90)
-
-# Hide the turtle and finish
-pen.hideturtle()
-window.mainloop()
+for row in tic_tac_toe_board:
+    for item in row:
+        print(item, end=" ")
+    print()

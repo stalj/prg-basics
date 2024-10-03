@@ -7,7 +7,7 @@ stalj@uek.krakow.pl
 
 # ARRAYS
 
-## 1. Lists
+## 2. One dimensional arrays
 
 1. Watch the video on using lists:
 
@@ -16,14 +16,6 @@ stalj@uek.krakow.pl
 1. Familiarise yourself with creating and manipulating Lists:
 
    <https://www.w3schools.com/python/python_lists.asp> 
-
-1. Watch the video on using tuples:
-
-   <https://youtu.be/NI26dqhs2Rk?feature=shared> 
-
-1. Watch the video on using two dimensional (2D) lists in Python:
-
-   <https://youtu.be/z49F119uv6g> 
 
 1. Many programming languages ​​provide both arrays and lists to store and manage collections of data. Despite their many similarities, they have key differences in terms of functionality, flexibility, and performance.
 
@@ -37,25 +29,7 @@ stalj@uek.krakow.pl
    | Memory Efficiency | Less efficient               | More efficient               |
    | Built-in Support  | Yes                          | Needs `array` or `numpy`     |
 
-**Notice that in subsequent tasks, a list will be used in place of an array for basic applications.**
-
-1. To visualize data, install the ‘Matplotlib’ library on your personal computer.
-
-1. Familiarise yourself with methods of visualizing data:
-
-   <https://www.w3schools.com/python/matplotlib_intro.asp> 
-
-   Then, using ‘matplotlib’, draw a line in a diagram from position (1, 3) to position (8, 10):
-
-   ```python
-   import matplotlib.pyplot as plt
-   xpoints = [1, 8]
-   ypoints = [3, 10]
-   plt.plot(xpoints, ypoints)
-   plt.show()
-   ```
-
-## One dimensional arrays
+   > **Notice that in subsequent tasks, a list will be used in place of an array for basic applications.**
 
 1. An array contains values: 2, 3, 7, 5, 4. Write a program that displays:
    1. the array
@@ -70,7 +44,7 @@ stalj@uek.krakow.pl
 
    ```python
    ###
-   # 
+   # Prints some array elements
    #
    arr = [2, 3, 7, 5, 4]
 
@@ -109,6 +83,9 @@ stalj@uek.krakow.pl
          weekdays = ["Monday", "Tuesday", "Wednesday",
             "Thursday", "Friday", "Saturday", "Sunday"]
       return weekdays[...]
+
+   ...
+   ...   
    ```
 
 1. Write a program that displays a shopping list, each product on a separate line.
@@ -259,71 +236,246 @@ stalj@uek.krakow.pl
    product_quantities = [5, 20, 10, 15, 7, 12, 25, 18, 9, 4]
    ```
 
+1. Very often, there is a need to organize the data contained in the array. Organized data allows for faster retrieval, analysis, and presentation of information. There are many sorting algorithms that organize data in the array. One of the simplest is bubble sort, which organizes data in ascending or descending order.
 
-## Two dimensional arrays
+   Watch the video on bubble sort algorithm:
 
-1. An array contains values: [[2,5,4],[9,0,3]]. Create a program that displays:
-   1. the array
-   1. size of the array (number of rows and columns)
-   1. value 5 from the array
-   1. value 3 from the array
-   1. second row of the array as below:
+   <https://youtu.be/hahrx5WUeNI?feature=shared>
 
-      9 0 3
+   Bubble Sort is one of the simplest sorting algorithms. It works by repeatedly stepping through the list or array, comparing adjacent elements, and swapping them if they are in the wrong order. This process is repeated until no more swaps are needed, which means the list is sorted.
 
-   Sample result:
+   Here is the bubble sort algorithm expressed in pseudocode, a universal notation that is independent of the programming language:
 
    ```python
-   [[2,5,4],[9,0,3]]
-   2 3
-   5
-   3
-   9 0 3
+   procedure bubbleSort(arr):
+      n = length(arr)
+      for i = 0 to n-1:
+         for j = 0 to n-i-2:
+            if arr[j] > arr[j+1]:
+                  swap arr[j] and arr[j+1]
+      return arr
    ```
 
-1. An array contains values: [[1,3,5],[8,7,2]]. Write a program that calculates and displays:
-
-   1. Sum of the first element in the first row and the last element in the last row
-   1. Sum of the elements in the middle column
-   1. Sum of the elements in the last row
-
-   Sample result:
+1. Define a function that sorts an array of numbers using the bubble sort algorithm. Use the information in the pseudocode provided earlier. Then, write a program that sorts the following collections of data:
 
    ```python
-   3
-   10
-   17
+   car_fuel_consumption = [7.2, 6.8, 7.5, 7.0, 7.1, 6.9, 7.3]
+   bank_transactions = [-150, -20, 300, -45, -60, 500, -120]
    ```
 
-1. An array contains values: [[3,9,2],[2,4,5],[7,1,6],[0,4,8]]. Create a program that calculates the sum of all odd numbers.
-
    ```python
-   arr = [[3,9,2],[2,4,5],[7,1,6],[0,4,8]]
-   sum_odd = 0
-   for row in arr:
-      for element in row:
-         if ...:
-            sum_odd = …
-   print(...)
+   ###
+   # Bubble sort
+   #
+   def bubble_sort(arr):
+
+      for i in n:
+         for ...:
+            if ...:
+
+      return arr
+
+   car_fuel_consumption = ...
+   print(car_fuel_consumption)
+   sorted_car_fuel_consumption = bubble_sort(car_fuel_consumption) 
+   print(sorted_car_fuel_consumption)
+
+   bank_transactions = ...
+   ...
+   ...
+   ...
    ```
 
-1. An array contains values: [[0,0,0],[0,0,0],[0,0,0]]. Create a program that replaces the values of the main diagonal with 1. Use a loop statement. Display the modified array. Sample result:
+1. Programming languages ​​often provide built-in functions for sorting collections of data. Data can be sorted in ascending or descending order. Look at the list of built-in functions below and find the one that allows you to sort collections of data.
+
+   <https://docs.python.org/3/library/functions.html>
+
+   Then write a program that uses the built-in function to sort the data below:
 
    ```python
+   # Sort the data from lowest to highest value
+   distances_traveled = [120, 150, 180, 90, 200, 175, 160]
+   # Sort the data in descending order, from highest to lowest value
+   daily_temperatures = [16, 17, 15, 14, 18, 19, 17, 15, 16, 18]
+   # Sort the data in ascending order
+   file_names = ["report.docx", "presentation.pptx", "data.csv", "photo.jpg", "notes.txt",
+      "invoice.pdf", "resume.docx", "budget.xlsx", "meeting.mp4", "schedule.pdf"]
+   ```
+
+## 3. Two dimensional arrays
+
+1. Watch the video on using two dimensional (2D) lists in Python:
+
+   <https://youtu.be/z49F119uv6g> 
+
+1. Tic-Tac-Toe is a simple yet fun game for two players. You play on a grid of nine squares arranged in three rows and three columns.
+
+   The array below shows a Tic-Tac-Toe board. Write a program that displays a board on the screen.
+
+   ```python
+   # 3x3 Tic-Tac-Toe board
+   tic_tac_toe_board = [
+      ['X', 'O', 'X'],
+      [' ', 'X', 'O'],
+      ['O', ' ', 'X']
+   ]
+
+   for row in tic_tac_toe_board:
+      for ... in ...:
+         print(..., end=" ")
+      print()
+   ```
+
+   > Hint: end=" " means that the cursor is not moved to the next line; a space is printed instead 
+
+1. The data below represents monthly expenses divided into categories and weeks. Write a program that calculates and displays:
+
+   * total expenses for each category
+   * total expenses for each week
+   * total expenses for a month
+
+   ```python
+   # Weekly expenses for different categories
+   # [Food, Transport, Utilities]
+   monthly_expenses = [
+      [200, 50, 100],  # Week 1
+      [180, 60, 110],  # Week 2
+      [220, 55, 105],  # Week 3
+      [210, 65, 95]    # Week 4
+   ]
+
+   # Calculates expenses
+   # Use loop statements
+   ...
+   ...
+   ...
+
+   # Display expenses
+   print('MONTHLY EXPENSES')
+   print('----------------')
+   print('Food:',...)
+   print('Transport:',...)
+   print('Utilities:',...)
+   print('Week 1:',...)
+   print('Week 2:',...)
+   print('Week 3:',...)
+   print('Week 4:',...)
+   print('---------------')
+   print('TOTAL:',...)
+   ```
+
+1. The data below contains weekly meal plan. Write a program that prints the weekly meal plan along with the day name as in the example below.
+
+   ```
+   WEEKLY MEAL PLAN
+   (Breakfast, Lunch, Dinner)
+   ==========================
+   Monday: Oatmeal, Grilled Checken Salad, Spaghetti
+   Tuesday: ...
+   Wednesday: ...
+   ...
+   ...
+   ...
+   ...
+   ```
+
+
+   ```python
+   # Weekly meal plan [Breakfast, Lunch, Dinner] for 7 days
+   meal_plan = [
+      ["Oatmeal", "Grilled Chicken Salad", "Spaghetti"],
+      ["Pancakes", "Sandwich", "Steak"],
+      ["Smoothie", "Chicken Wrap", "Salmon"],
+      ["Eggs", "Pasta", "Soup"],
+      ["Toast", "Burrito", "Pizza"],
+      ["Cereal", "Salad", "Fish Tacos"],
+      ["Bagel", "Rice and Beans", "Stir-fry"]
+   ]
+
+   # Returns a week day name
+   def weekday(n):
+      weekdays = ["Monday", "Tuesday", "Wednesday",
+         "Thursday", "Friday", "Saturday", "Sunday"]
+      return weekdays[n-1]
+
+   # Returns a string with day meal names
+   # separated by comma
+   def day_meal_plan(meal_plan, day_number):
+      ...
+      return ...
+
+   # Prints weekly meal plan
+   ...
+   ...
+   ...
+   ```
+
+1. The data below represents a cinema's seating arrangement. Write a program that:
+
+   * calculates how many seats are available
+   * calculates how many seats are booked
+   * informs what the status of a seat is in a given row and given place (available or booked)
+
+   ```python
+   # 5x5 cinema seating
+   # A = Available, B = Booked
+   cinema_seats = [
+      ['A', 'A', 'B', 'A', 'A'],
+      ['A', 'B', 'B', 'A', 'A'],
+      ['A', 'A', 'A', 'A', 'B'],
+      ['B', 'A', 'A', 'A', 'A'],
+      ['A', 'B', 'A', 'A', 'A']
+   ]
+
+   def seats_total(seats):
+      ...
+      return ...
+
+   def seats_available(seats):
+      ...
+      ...
+      return ...
+
+   def seats_booked(seats):
+      ...
+      ...
+      return ...
+
+   def seat_status(seats, row, place):
+      ...
+      ...
+      return ...
+
+   print('CINEMA INFORMATION TABLE')
+   print('Total seats:',...)
+   print('Seats available:',...)
+   print('Seats booked:', ...)
+   print('Seat in row 1, place 1:', ...)
+   print('Seat in row 5, place 5:', ...)
+   print('Seat in row 3, place 5:', ...)
+   ```
+
+
+
+1. The following array represents a square matrix and contains values:
+
+   ```python
+   [
+      [0,0,0],
+      [0,0,0],
+      [0,0,0]
+   ]
+   ```
+
+   Create a program that replaces the values of the main diagonal with 1. Use a loop statement. Display the modified array. Sample result:
+
+   ```
    1 0 0
    0 1 0
    0 0 1
    ```
 
-1. An array contains values: [[True,False],[True,True],[False,False]]. Create a program that changes values of an array to the opposite. Use a loop statement. Sample result:
-
-   ```python
-   Before: [[True,False],[True,True],[False,False]]
-   After:  [[False,True],[False,False],[True,True]]
-   ```
-
-
-## Practice Makes Perfect
+## 4. Practice Makes Perfect
 
 1. Try to create the following arrays. Then, display the created array content.
 
@@ -425,7 +577,9 @@ stalj@uek.krakow.pl
    Result: number 23 appears in the array
    ```
 
-1. Write a program that creates a tuple containing single word ‘computation’. Save a tuple in a variable. Then, display the type of the variable.
+1. A tuple in Python is an immutable, ordered collection of elements. Tuples are similar to lists, but unlike lists, once a tuple is created, its elements cannot be modified, added, or removed.
+
+   Write a program that creates a tuple containing a single word ‘computation’. Save a tuple in a variable. Then, display the type of the variable.
 
 1. Write a program that displays the tuple (10,20,30,40,50) in reverse order. Sample result:
 
@@ -508,6 +662,25 @@ stalj@uek.krakow.pl
    Words from the longest: doctor,apple,…
    Words ordered alphabetically: a,An,apple,away,…
    ```
+
+1. Familiarise yourself with methods of visualizing data:
+
+   <https://www.w3schools.com/python/matplotlib_intro.asp> 
+
+   Then, using ‘matplotlib’, draw a line in a diagram from position (1, 3) to position (8, 10). 
+
+   > Hint: to use 'matplotlib' in your programs, first you have to install the module by using the 'pip' command (python package manager).
+
+   <https://pythonguides.com/how-to-install-matplotlib-python/>
+
+   ```python
+   import matplotlib.pyplot as plt
+   xpoints = [1, 8]
+   ypoints = [3, 10]
+   plt.plot(xpoints, ypoints)
+   plt.show()
+   ```
+   
 
 1. Write a program that draws the graph of the function f(x)=x<sup>2</sup>-3. Sample result:
 
