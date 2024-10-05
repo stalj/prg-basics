@@ -204,7 +204,7 @@ stalj@uek.krakow.pl
     print('Total fuel consumption over a distance of ... km in driving mode ... is ... liters')
     ```
 
-1. Write a program that acts as a simple calculator. The program asks the user to enter a symbol of mathematical operation (+, -, *, /) and two numbers. The program should perform the appropriate mathematical operation on the given numbers and return the result. Then, using the program, calculate:
+1. Write a program that acts as a simple calculator. The program asks the user to enter a symbol of mathematical operation (+, -, *, /) and two numbers. Then, the program performs the appropriate mathematical operation on the given numbers and returns the result. Using the program, calculate:
 
     * 2 + 3
     * 2 * 4
@@ -221,6 +221,15 @@ stalj@uek.krakow.pl
     number1 = input ...
     number2 = input ...
     operator = input ...
+
+    if operator == ...:
+        result = ...
+    elif ...
+    ...
+    ...
+
+    # print result
+    print(f'{number1} {operator} {number2} = {result}')
     ```
 
 1. Write a program that calculates and prints the quarter of the year for a given month number (1..12). Then check the program's results for the months:
@@ -276,7 +285,7 @@ stalj@uek.krakow.pl
 
 1. The discount is available to children under 18, or people 65 or older. Write a program that checks whether a person of a given age is eligible for the discount. Then use the program to check if people of the age listed below are eligible for a discount.
 
-    72, 65, 64, 18, 17
+    72 (discount), 65 (discount), 64, 18, 17 (discount)
 
     ```python
     ###
