@@ -477,6 +477,10 @@ stalj@uek.krakow.pl
 
 ## 4. Practice Makes Perfect
 
+1. Read the chapter in your class textbook that covers the topics in this section.
+
+1. !!! Dodać zadanie: array = text.split()
+
 1. Try to create the following arrays. Then, print the created array content.
 
    ```python

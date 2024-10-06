@@ -272,56 +272,113 @@ stalj@uek.krakow.pl
 
 1. Regular expressions (regex) are sequences of characters that define a search pattern. They are used to find, match, and manipulate text. Regular expressions provide a powerful way to perform complex text processing, such as searching for specific patterns in a string, validating input, replacing text, or extracting information from large volumes of data.
 
-1. From the course textbook, read the Chapter 11 (Regular expressions).
+   ![Regular Expression Example](re.png)
+
+1. Use the interactive regular expression tutorial below to complete all the tasks in it.
+
+   <https://regexone.com/>
+
+
+1. Copy the text below into the Regex101 online editor:
+
+   <https://regex101.com/>
+
+   Then, for each of the following tasks, create a pattern that identifies the text chunks as described in the task.
+
+   * Find all dates in the format "month day, year" (e.g., "March 12, 1992")
+   * Locate all phone numbers in the format "XXX-XXX-XXXX" (e.g., "555-123-4567")
+   * Find all numbers written with commas as thousand separators (e.g., "1,234")
+   * Identify all fragments containing names starting with a capital letter (e.g., "Alice", "John", "Mike")
+   * Find whole numbers in the text (e.g., "30")
+
+   ```
+   Alice was born on March 12, 1992. Her brother, John, was born on June 5, 1988. They have a mutual friend named Mike, whose phone number is 555-123-4567. In their hometown, which has a population of 1,234 or 1,235 people, a holiday festival is held every year on December 25. Alice works in an office with 30 employees. Her phone number is 555-765-4321.
+   ```
+
+1. A file shopping.txt contains an email with shopping report. Write a program that calculates the total value of money spent.
+
+   ```python
+   ###
+   # Calculates the total value of money spent
+   #
+   import re # module for regular expressions
+
+   # file name with shopping report
+   email_file = 'shopping_email.txt'
+
+   # read the content of email
+   ...
+   ...
+   email = ... (email content)
+
+   # regular expression pattern
+   # for amounts
+   pattern = '....'
+
+   # extract numbers from email
+   # tip: findall() method returns an array
+   amounts = re.findall(pattern, email)
+
+   # calculate the total purchases
+   ...
+   for amount in amounts:
+      ...
+   
+   # print result
+   print(...)
+   ```
+
+1. Write a program that reads a name from the keyboard. Then the program checks if the entered name is correct, according to the following requirements:
+
+   * only letters
+   * at least 3 letters
+   * first letter uppercase, remaining lowercase
+
+   ```python
+   ###
+   # Checks the correctness of the entered name
+   #
+   import re
+
+   # read name from keyboard
+   name = ...
+
+   # pattern for a name
+   pattern = ...
+
+   # check if the name matches the pattern
+   match = re.match(pattern,name)
+
+   # print results
+   if match:
+      print(...)
+   else:
+      ... 
+   ```
+
+
+## 4. Practice Makes Perfect
+
+1. Read the chapter in your class textbook that covers the topics in this section.
+
+
+
+1. web scraping
+pobrać oryginalną stronę z internetu, np. z danymi liczbowymi, zadanie to wydobyć te informacje
+
+1. plik zawiera listę nazw plików, program zwracam pliki np. z podanym rozszerzeniem nazwy, albo ile jest plików zgodnych z wzorcem
+(plik to nie lista nazw plików, każdy w oddzielnym wierszu, ale 2-3 paragrafy w których podane nazwy plików, po przecinku)
+
+1. Zadanie 1-2 dot. obsługi plików CSV
+
+1. 
+
+
+
 
 1. Watch the video on how to deal with regular expressions:
 
    <https://youtu.be/nxjwB8up2gI?feature=shared> 
-
-1. Familiarise yourself with the Regular Expressions topic, available at the:
-
-   <https://www.w3schools.com/python/python_regex.asp>
-
-1. Copy-paste the following text to the website <https://regex101.com>  
-
-   Forests cover about 30,5% of Poland's land area based on international standards. Its overall percentage is still increasing. Forests of Poland are managed by the national program of reforestation (KPZL), aiming at an increase of forest-cover to 33% in 2050. The richness of Polish forest (per SoEF 2011 statistics) is more than twice as high as European average (with Germany and France at the top), containing 2.304 billion cubic meters of trees. The largest forest complex in Poland is Lower Silesian Wilderness. More than 1% of Poland's territory, 3,145 square kilometers (1,214 sq mi), is protected within 23 Polish national parks. Three more national parks are projected for Masuria, the Polish Jura, and the eastern Beskids. In addition, wetlands along lakes and rivers in central Poland are legally protected, as are coastal areas in the north. There are over 120 areas designated as landscape parks, along with numerous nature reserves and other protected areas (e.g. Natura 2000).
-
-   Then, create regular expression patterns that indicate in the text:
-
-   1. All words ‘Poland’
-   1. Country names (Poland, Germany and France)
-   1. Punctuation marks (dots and commas)
-   1. Numbers representing a year (four-digit numbers)
-   1. Capital letters
-   1. Vowels
-   1. Words with exactly five letters
-   1. Words with at least five letters
-   1. Words starting with capital letters
-
-
-   ```python
-   import re
-
-   text = "The cat sat on the mat. Concatenate these words."
-   matches = re.findall(r'\bcat\b', text)
-   print(matches)  # Output: ['cat']
-   ```
-
-   ```python
-   import re
-   text = "The meeting is scheduled for 05-10-2024 and another on 12-12-2023."
-   dates = re.findall(r'\b\d{2}-\d{2}-\d{4}\b', text)
-   print(dates)  # Output: ['05-10-2024', '12-12-2023']
-   ```
-
-   ```python
-   import re
-   text = "In the year 2024, 5 new products were launched."
-   numbers = re.findall(r'\d+', text)
-   print(numbers)  # Output: ['2024', '5']
-   ```
-
-## 4. Practice Makes Perfect
 
 1. Write a program that calculates the number of lines for any text file. The user enters the name of the file from the keyboard. Display the result of the calculation (the file name and the number of lines). Do not display the contents of the file. Sample result:
 

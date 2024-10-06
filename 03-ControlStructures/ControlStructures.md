@@ -616,6 +616,8 @@ stalj@uek.krakow.pl
 
 ## 6. Practice Makes Perfect
 
+1. Read the chapter in your class textbook that covers the topics in this section.
+
 1. The vowels.py program counts vowels in the text. Modify the program. Replace the 'for' statement with a 'while' statement. 
 
 1. A lamp in a room has three light bulbs. Switch one lights one bulb, and switch two lights the other two bulbs. Write a program that tells you how many bulbs are lit, depending on the state of switch one and switch two.

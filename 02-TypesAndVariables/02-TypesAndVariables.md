@@ -729,6 +729,8 @@ stalj@uek.krakow.pl
 
 ## 8. Practice Makes Perfect
 
+1. Read the chapter in your class textbook that covers the topics in this section.
+
 1. An algorithm is a step-by-step procedure or a set of rules designed to solve a problem. In computer science and mathematics, algorithms are critical because they provide a clear sequence of instructions that can be implemented to achieve a desired outcome.
 
     <https://www.programiz.com/dsa/algorithm>

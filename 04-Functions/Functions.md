@@ -395,6 +395,8 @@ stalj@uek.krakow.pl
 
 ## 7. Practice Makes Perfect
 
+1. Read the chapter in your class textbook that covers the topics in this section.
+
 1. Each month of a calendar year can be expressed by its name or by a number that indicates the position of the month in year. In a separate module, define a function month(n) that returns a month name based on the month number (values from 1 to 12). Then, write a program to print the name of the month 7. Import the module with the created function. Sample result:
 
     ```
@@ -616,6 +618,6 @@ stalj@uek.krakow.pl
 
 1. Define a function sum(n) that for the given natural number n calculates the sum of all natural numbers between 1 and n. Apply recursion. Then, create a program that calculates the sum of natural numbers in the range \<1,10\>.
 
-1. Define a function power(x, n) that calculates x^n. Apply recursion. Then, calculate 5^3.
+1. Define a function power(x, n) that calculates x<sup>n</sup>. Apply recursion. Then, calculate 5<sup>3</sup>.
 
     > Tip: x<sup>n</sup> = x * x<sup>n-1</sup>
