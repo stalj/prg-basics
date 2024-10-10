@@ -55,7 +55,7 @@ stalj@uek.krakow.pl
    5. Canada, Ottawa, 38250000
    ```
 
-1. The following program prints a list of countries from 'countries.txt' file.Modify the program to print a list of countries sorted alphabetically.
+1. The following program prints a list of countries from 'countries.txt' file. Modify the program to print a list of countries sorted alphabetically.
 
    > Tip. Before printing the contents of the array, sort it alphabetically using the built-in function sorted()
 
@@ -71,7 +71,7 @@ stalj@uek.krakow.pl
    # reads the entire file
    file_content = read_from_file('countries.txt')
 
-   # splits the entire contents into lines
+   # splits the entire file contents into lines
    # and stores them in an array
    file_lines = file_content.splitlines()
 
@@ -109,9 +109,9 @@ stalj@uek.krakow.pl
    > To calculate the number of words in a line, use the split() method, which splits a string into a list where each word is a list item. Then read the length of this list. Use the len() function. Finally, sum the number of words in each line.\
    <https://www.w3schools.com/python/ref_string_split.asp>
 
-1. The file it_company.csv contains a list of employees. Write a program that displays only employees with the position "Software Engineer".
+1. The file it_company.csv contains a list of employees. Write a program that displays only employees with the position "Software Engineer". Number the items on the printed list.
 
-   > Hint: You can check if a substring is contained within another string using the 'in' operator.
+   > Hint: You can check if a string is contained within another string using the 'in' operator.
 
    ```python
    ###
@@ -126,9 +126,10 @@ stalj@uek.krakow.pl
 
    with ... as ...:
       for line in ...:
-         if ... in ...:
+         if job_title in ...:
             print ...
    ```
+
 
 
 ## 2. Writing to File
@@ -157,14 +158,14 @@ stalj@uek.krakow.pl
    print(f"Movie details have been written to {file_name}.")
    ```
 
-   Program explanation:
+   Read the explanation of the program:
 
    * Variables: movie_title, director, and lead_actor hold the details of the movie.
    * Opening the file: with open(file_name, 'w') opens the file in write mode ('w'), creating or overwriting the file.
-   * Writing details: Uses the write() method to write each movie detail to the file, adding \n at the end of each line for formatting.
-   * Automatic file closing: The with statement ensures the file is properly closed after writing.
+   * Writing details: Uses the write() method to write each movie detail to the file, adding \n at the end of each line for formatting (move to next line).
+   * Automatic file closing: The 'with' statement ensures the file is properly closed after writing.
 
-1. Write a program that writes a list of the Seven Wonders of the World to a text file, in alphabetical order, with each name on a separate line. Then check in which folder the text file was created. See if its contents match the task.
+1. Write a program that writes a list of the Seven Wonders of the World to a text file, in alphabetical order, with each name on a separate line. Then, open the created file in the editor and check if its contents match the task.
 
    ```python
    ###
@@ -236,7 +237,7 @@ stalj@uek.krakow.pl
    with ... as ...:
       with ... as ...:
          for line in ...:
-            if ... in ...:
+            if job_title in ...:
                ... .write(...)
    ```
 
@@ -263,10 +264,12 @@ stalj@uek.krakow.pl
    while product != "0":
       product = input('Enter product name (0 stops): ')
       if product == '0':
-         ... # stops entering food names
+         ... # stops entering food names ('while' breaks)
       else:
          add_...
    ```
+
+1. Na podstawie pliku txt, zapisz części zawartości do plików o nazwach*1, *2, itd.
 
 ## 3. Using Regular Expressions
 
@@ -295,7 +298,7 @@ stalj@uek.krakow.pl
    Alice was born on March 12, 1992. Her brother, John, was born on June 5, 1988. They have a mutual friend named Mike, whose phone number is 555-123-4567. In their hometown, which has a population of 1,234 or 1,235 people, a holiday festival is held every year on December 25. Alice works in an office with 30 employees. Her phone number is 555-765-4321.
    ```
 
-1. A file shopping.txt contains an email with shopping report. Write a program that calculates the total value of money spent.
+1. A file report.txt contains an email with shopping report. Write a program that calculates the total value of money spent.
 
    ```python
    ###
@@ -304,7 +307,7 @@ stalj@uek.krakow.pl
    import re # module for regular expressions
 
    # file name with shopping report
-   email_file = 'shopping_email.txt'
+   email_file = 'report.txt'
 
    # read the content of email
    ...
@@ -327,165 +330,110 @@ stalj@uek.krakow.pl
    # print result
    print(...)
    ```
+1. Many applications require that you create an account with a username and password to use them. Often, applications specify requirements for the username and password. Write a program that checks whether a username and password entered from the keyboard meet the requirements below. Use regular expressions.
 
-1. Write a program that reads a name from the keyboard. Then the program checks if the entered name is correct, according to the following requirements:
-
-   * only letters
-   * at least 3 letters
-   * first letter uppercase, remaining lowercase
+   * username is at least 6 characters long
+   * username contains only lowercase letters
+   * password is at least 8 characters long
+   * password contains only letters (lowercase and uppercase), numbers, and the underscore character
 
    ```python
    ###
-   # Checks the correctness of the entered name
+   # Checks the correctness of username and password
    #
    import re
 
-   # read name from keyboard
-   name = ...
+   # read username and password from keyboard
+   username = ...
+   password = ...
 
-   # pattern for a name
-   pattern = ...
+   # pattern (criteria) for username and password
+   username_pattern = ...
+   password_pattern = ...
 
-   # check if the name matches the pattern
-   match = re.match(pattern,name)
+   # check if username and password are ok
+   username_match = re.match(username_pattern,username)
+   ...
 
    # print results
-   if match:
+   if ... and ...:
       print(...)
    else:
       ... 
    ```
 
-
 ## 4. Practice Makes Perfect
 
 1. Read the chapter in your class textbook that covers the topics in this section.
-
-
-
-1. web scraping
-pobrać oryginalną stronę z internetu, np. z danymi liczbowymi, zadanie to wydobyć te informacje
-
-1. plik zawiera listę nazw plików, program zwracam pliki np. z podanym rozszerzeniem nazwy, albo ile jest plików zgodnych z wzorcem
-(plik to nie lista nazw plików, każdy w oddzielnym wierszu, ale 2-3 paragrafy w których podane nazwy plików, po przecinku)
-
-1. Zadanie 1-2 dot. obsługi plików CSV
-
-1. 
-
-
-
 
 1. Watch the video on how to deal with regular expressions:
 
    <https://youtu.be/nxjwB8up2gI?feature=shared> 
 
-1. Write a program that calculates the number of lines for any text file. The user enters the name of the file from the keyboard. Display the result of the calculation (the file name and the number of lines). Do not display the contents of the file. Sample result:
+1. Note that some file operations may cause the program to stop working (e.g. there is no file on the disk with the given name). To prevent this, you can use the try-except block to handle exceptions, which are errors that can occur during the execution of a program. Exceptions might arise, for example, when attempting to divide by zero, accessing a non-existent file, or processing data in the wrong format.
 
-   File name: countries.txt
-   Number of lines: 14
-
-1. Find any text file on the Internet that contains at least 30 lines of text and download that file to your computer. Then, write a program that displays the first five lines from the file and then waits for the Enter key to be pressed. The program repeats displaying the next five lines from the file, waiting for the Enter key to be pressed each time.
-
-1. Find any text file on the Internet and download it to your computer. Then write a program that copies the contents of this file to the copy.txt file. Copy the contents of the file as a whole. Finally, open both files in any text editor and check that their contents are the same.
-
-1. Find any text file on the Internet and download it to your computer. Then, write a program that copies the contents of this file to the copylines.txt file. Copy the contents of the file line by line. Finally, open both files in any text editor and check that their contents are the same.
-
-1. Using any text editor, create the following two text files:
-
-   ```
-   MeatAndFish.txt
-
-   Skinless white meat
-   Tuna fish
-   Luncheon meat
-   Lean cuts of red meat
-
-   GrainsAndBread.txt
-
-   Bread
-   Rice
-   All purpose flour
-   Breakfast cereal
-   Pasta 
-   ```
-
-   Then, write a program that creates the allproducts.txt file, in which save the contents of the MeatAndFish.txt and the GrainsAndBread.txt files.
-
-1. Create a program that writes to a text file integer numbers in the range <1,50>, every number in a separate line.
-
-1. Create a program that writes 50 random integers between 100 and 999 to a text file, each number on a separate line.
-
-1. Create a program that saves to a text file integer numbers in the range <1,10> with their second and third power. Sample result:
-
-   ```
-   1,1,1
-   2,4,8
-   3,9,27
-   4,16,64
-   …
-   ```
-
-1. In any text editor, create a text file studentslist.txt containing the following data in the CSV format:
-
-   ```
-   first\_name,last\_name,age,gender,email
-   Decca,Blackstone,52,Male,dblackstone0@time.com
-   Elena,Rechert,27,Female,erechert1@ucoz.com
-   Bibbye,Norree,26,Female,bnorree2@reddit.com
-   Alasdair,McCoole,53,Male,amccoole3@foxnews.com
-   Hogan,Hatrey,26,Male,hhatrey4@zimbio.com
-   ```
-
-   Then, create a program that reads data from the CSV file and displays the first name, last name and email address of students under 30. Format the data as below. Sample result:
-
-   ```
-   Elena   Rechert  erechert1@ucoz.com
-   Bibbye  Norree   bnorree2@reddit.com
-   Hogan   Hatrey   hhatrey4@zimbio.com
-   ```
-
-   Tip: import and use the CSV module. 
-
-1. The announcement regarding the temperature forecast in degrees Celsius for the next three days was published on the Internet:
-
-   ```
-   "Tuesday: 22C, Wednesday: 21C, Thursday: 26C "
-   ```
-
-   Create a program that calculates the average temperature. Use regular expressions to extract the values of temperatures from the message.
+   The idea behind try-except is that you place the code that might cause an error inside the try block, and if an error occurs, the except block handles it without crashing the program.
 
    ```python
-   import re
-
-   message = "Tuesday: 22C, Wednesday: 21C, Thursday: 26C "
-   temperatures = re.findall("\d{2}",message)
-   # complete the program code
-   # ...
+   try:
+      # code that may raise exceptions
+   except ExceptionType:
+      # code to handle the exception
    ```
 
-1. Write a program that calculates the number of vowels in the text:
+   The program read_file.py. tries to print the contents of a file that is not on the disk. Read the contents of the program. Then run the program and see what happens. As you can see, the program stops when it encounters an error (attempting to open a nonexistent file).
+
+   Next, see the contents of the program read_file_try_except.py, which opens and reads the contents of a file inside a try-except block. Finally, run the program. As you can see, even when an error occurs (attempting to open a nonexistent file), the program continues to run.
+
+1. Write a program that displays the first five lines from the it_company.csv file and then prints 'Press Enter key...' in the next line and waits for the Enter key to be pressed. The program repeats printing the next five lines from the file, waiting for the Enter key to be pressed each time.
+
+1. The file email.txt contains a raw email. Write a program that uses regular expressions to fetch and print:
+
+   * sender email address
+   * recipient email address
+   * email subject
+   * email body
+
+   For each of the above commands, define a separate function (see below) that returns the value read from the email. Place the functions in a separate module called emails.
+
+   * email_sender()
+   * email_recipient()
+   * email_subject()
+   * email_body()
+
+1. Write a program that calculates the number of lines, characters and words for any text file. The user enters the name of the file from the keyboard. Use a try-except block to avoid interrupting your program when the user enters a filename that doesn't exist. Print the result of the calculation. Sample result:
 
    ```
-   To be, or not to be, that is the question
+   File name: books.txt
+   Number of lines: 14
+   Number of characters: 2540
+   Number of words: 703
    ```
 
-   Use regular expressions and the findall() method.
+1. Write a program that calculates the number of vowels in the text entered from the keyboard. Use regular expressions.
 
-1. Write a program that computes the number of words in the following text. Use regular expressions.
+1. The files.txt contains a list of file names. Write a program that prints only those file names whose extensions consist of exactly four characters (e.g. .html).
 
-   ```
-   To be, or not to be, that is the question
-   ```
-
-1. Find any text file on the Internet and download it to your computer. Then, write a program that displays all words with at least six letters from the file. Display each word on a separate line. Use regular expressions.
-
-1. The grades.txt file contains student’s grades. Create the file in any text editor with the content as below:
+1. Convenient processing of CSV documents is possible using the CSV module. Find on the Internet how to use this module. Then write a program that, based on the it_company.csv file, prints the first name, last name and email (in the given order, without Job Title) of people employed in the position of 'Graphic Designer'. Sample result:
 
    ```
-   Name: Peter
-   Grades: 3.5, 4.0, 5.0, 4.5, 3.5, 3.0, 5.0
+   GRAPHIC DESIGNERS
+   =================
+   Chris Martin,chris.martin@example.com
+   Jane Taylor,jane.taylor@example.com
+   ...
+   ...
    ```
+1. The clothing.csv contains a list of clothing in stock. Write a program that prints those products whose price is less than 60 and whose stock is less than 40.
 
-   Then, create a program that calculates the arithmetic mean of student’s grades.
+1.  Write a program that calculates, prints, and saves to a text file integers from 1 to 100 and their second and third powers. Sample result:
 
+      ```
+      1,1,1
+      2,4,8
+      3,9,27
+      ...
+      ...
+      ```
+
+1. aaaaa

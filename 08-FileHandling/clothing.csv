@@ -1,0 +1,11 @@
+Product_ID,Product_Name,Category,Size,Color,Price,Stock_Quantity
+1,T-shirt,Casual Wear,M,Blue,19.99,50
+2,T-shirt,Casual Wear,L,Black,19.99,30
+3,Jeans,Bottoms,32,Denim,49.99,40
+4,Jeans,Bottoms,34,Black,49.99,25
+5,Jacket,Outerwear,M,Green,89.99,15
+6,Jacket,Outerwear,L,Black,89.99,10
+7,Dress,Formal Wear,S,Red,79.99,20
+8,Dress,Formal Wear,M,Blue,79.99,18
+9,Sneakers,Shoes,42,White,59.99,35
+10,Sneakers,Shoes,44,Black,59.99,40

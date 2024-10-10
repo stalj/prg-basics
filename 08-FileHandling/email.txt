@@ -9,20 +9,23 @@ Message-ID: <20241008143214.DEF67890@mail.example.com>
 Date: Tue, 8 Oct 2024 14:32:14 +0200
 From: Jan Kowalski <jan.kowalski@example.com>
 To: Anna Nowak <anna.nowak@example.com>
-Subject: Zapytanie o raport
+Subject: Report request
 MIME-Version: 1.0
 Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: 7bit
 
-Cześć Anno,
+Hi Anna,
 
-Mam nadzieję, że wszystko u Ciebie w porządku. Chciałem zapytać,
-czy udało Ci się już przygotować raport dotyczący sprzedaży za wrzesień?
-Potrzebuję go do końca tygodnia, czyli do piątku, 11 października 2024 r.
+I hope everything is going well with you.
+I wanted to ask, have you managed to prepare
+the sales report for September yet?
 
-Proszę, daj znać, jak będziesz miała jakieś pytania.
+I need it by the end of the week, Friday,
+October 11, 2024.
 
-Pozdrawiam,
+Please let me know if you have any questions.
+
+Best regards,
 Jan Kowalski
 jan.kowalski@example.com
 +48 123 456 789
