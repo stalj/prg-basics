@@ -401,7 +401,7 @@ stalj@uek.krakow.pl
    * email_subject()
    * email_body()
 
-1. Write a program that calculates the number of lines, characters and words for any text file. The user enters the name of the file from the keyboard. Use a try-except block to avoid interrupting your program when the user enters a filename that doesn't exist. Print the result of the calculation. Sample result:
+1. Write a program that calculates the number of lines, characters and words for any text file. The user enters the name of the file from the keyboard. Use a try-except block to avoid interrupting your program when the user enters a filename that doesn't exist. Print the result of the calculation. To check if the program is working correctly, find 3 text files on the Internet and use them to test the program.Sample result:
 
    ```
    File name: books.txt
@@ -435,4 +435,13 @@ stalj@uek.krakow.pl
       ...
       ...
       ```
-  
+
+1. The file books.csv contains a list of books. Write a program that copies the book data from a given genre to its corresponding file. Use functions to divide the program into logical parts.
+
+   ```
+   Genre --> Filename
+   Fantasy --> books_fantasy.txt
+   Historical --> books_historical.txt
+   Romance --> books_romance.txt
+   Classic --> books_classic.txt  
+   ```
