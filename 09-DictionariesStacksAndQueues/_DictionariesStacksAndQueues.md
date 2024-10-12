@@ -336,7 +336,7 @@ stalj@uek.krakow.pl
 
 1. A stack is a linear data structure in which data is added to the top of the stack and is retrieved from the top of the stack. Familiarize yourself in more detail with this data structure. Explain the concept of LIFO.
 
-   ![Stack Data Structure](https://learnloner.com/wp-content/uploads/2023/05/Stack-Data-Structure.png.webp)
+   ![Stack Data Structure](https://media.geeksforgeeks.org/wp-content/uploads/20240606180325/What-is-Stack-(1).webp)
 
 1. The following functions are necessary to handle the stack:
 
@@ -526,6 +526,10 @@ stalj@uek.krakow.pl
    ...
    ```
 
+1. Define a function that takes a string as input and uses a stack to reverse it. Then, write a program to reverse any text entered from the keyboard.
+   
+   > Hint: Push each character of the string onto the stack, then pop characters to form the reversed string.
+
 1. Search the Internet and familiarise yourself with RPN (Reverse Polish Notation). Then, write a program that calculates RPN expressions. RPN can be conveniently evaluated using a stack structure. A user can enter from the keyboard any number, an operator (+ - \* / ) or the equal sign (=).
 
    1. If the entered value is a number, push the number on to the stack
@@ -544,7 +548,7 @@ stalj@uek.krakow.pl
 1. Define a function that returns true if the brackets `()`, `{}`, `[]` are used correctly in the given expression. Otherwise, the function returns false. Then write a program that checks the correctness of the expressions given below.
 
    ```python
-   [(2+3)*4+5]/6-{(7*8)+4}=
+   [(2+3)*4+5]/6-{(7*8)+[4]}=
    [(2+3]/4)
    ```
 
@@ -552,57 +556,33 @@ stalj@uek.krakow.pl
 
 1. A queue is a linear data structure in which new data is added to the end of the queue, and data is retrieved from the beginning of the queue for further processing. Familiarize yourself in more detail with this data structure. 
 
-   Following the example of stack.py, create a queue.py module in which define queue handling. Then, write a program that imports the queue.py module. Add and remove values from the queue. Display its content.
+   ![Queue Data Structure](https://media.geeksforgeeks.org/wp-content/uploads/20240606165428/Introduction-to-Queue-(2).webp)
 
-------------------
-------------------
-------------------
 
-### 3. **Reverse a String Using a Stack**
-   - **Task:** Create a function that takes a string as input and uses a stack to reverse it.
-   - **Hint:** Push each character of the string onto the stack, then pop characters to form the reversed string.
+1. Following the example of stack.py, create a queue.py module in which define queue handling. Then, write a program that imports the queue.py module. Add and remove values from the queue. Display its content.
 
----
+1. Using the queue.py module you created, write a program that manages a queue of files to print.
 
-### Queue Tasks (FIFO - First In, First Out)
+   ```python
+   import queue
 
-### 1. **Simulate a Printer Queue**
-   - **Task:** Implement a queue to simulate a printer queue. Users add print jobs to the queue, and the printer processes them in the order they were added.
-   - **Hint:** Use a list or `collections.deque` to represent the queue, and `append()` for adding jobs and `popleft()` for processing.
+   while True:
+      print('1. Add file to print')
+      print('2. Print file')
+      print('3. View list of files to print')
+      print('0. Quit')
+      menu = input('Select an option: ')
+      ...
+      ...
+      if menu == '1':
+         file_name = input('\nEnter file name to print: ')
+         # add new file to the end of the queue 
+      ...
+      ...
+      ...
 
-### 2. **Implement a Circular Queue**
-   - **Task:** Create a circular queue where elements wrap around when the queue is full.
-   - **Hint:** Use a list of fixed size and pointers to represent the circular behavior of the queue.
+      elif menu == '0':
+         break
+   ```
 
-### 3. **Check if a Queue is Palindrome**
-   - **Task:** Write a Python function that uses a queue to check if a given string is a palindrome (reads the same forwards and backwards).
-   - **Hint:** Use a queue to store characters and compare them in reverse order.
-
-### 4. **Simulate Task Scheduling Using a Queue**
-   - **Task:** Simulate task scheduling where each task has a priority and is added to a queue. Process the tasks in the order they are added.
-   - **Hint:** Use a priority queue (can be implemented using `heapq` in Python) or a regular queue if priorities are not needed.
-
-### 5. **Breadth-First Search (BFS) Using a Queue**
-   - **Task:** Implement the Breadth-First Search (BFS) algorithm using a queue to traverse a graph or tree.
-   - **Hint:** Use a queue to explore each level of the graph or tree before moving on to the next level.
-
-### 6. **Simulate Customer Support Line Using Queue**
-   - **Task:** Implement a queue to simulate a customer support system where customers are added to the queue and serviced in the order they arrive.
-   - **Hint:** Add customers to the queue using `append()` and serve them using `popleft()`.
-
-### 7. **Implement a Queue Using Stacks**
-   - **Task:** Create a queue using two stacks. The queue should support enqueue and dequeue operations.
-   - **Hint:** Use one stack for enqueue operations and the other stack for dequeue operations by reversing the elements.
-
-### 8. **Reverse a Queue Using Recursion**
-   - **Task:** Write a function to reverse a queue using recursion.
-   - **Hint:** Recursively dequeue elements and enqueue them back after reaching the base case.
-
-### 9. **Simulate a Ticket Counter Using a Queue**
-   - **Task:** Implement a queue to simulate a ticket counter where people are served in the order they arrive.
-   - **Hint:** Use a queue to represent the line of people, and dequeue them as they are served.
-
-### 10. **Track Page Access in a Cache Using a Queue (LRU Cache)**
-   - **Task:** Implement an LRU (Least Recently Used) cache using a queue to keep track of the pages accessed. Remove the least recently accessed page when the cache reaches its limit.
-   - **Hint:** Use a deque or ordered dictionary to maintain the order of page access.
-
+1. Write a program that supports customer service in an office. Use the queue module. Each new customer receives a ticket with an automatically assigned consecutive number and is added to the end of the queue. The next customer to be served is taken from the beginning of the queue.
