@@ -9,14 +9,18 @@ stalj@uek.krakow.pl
 
 ## 1. Dictionary
 
-1. Watch the video on using dictionaries in Python:
+1. A dictionary is a built-in data structure that stores data in key-value pairs. Each key is unique, and it maps to a specific value, allowing you to efficiently retrieve, update, and manage data. Dictionaries are mutable, meaning you can modify their content after they are created.
 
-   <https://youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-> 
+   Look at the dictionary below. It contains three elements, separated by commas. Each element in a dictionary consists of a key and a value, where the key acts as an identifier for accessing the associated value.
 
-1. Sprawdź w3schools jak wykonuje się następujące operacja na słowniku:
+   ```python
+   student = {'name':'John', 'age':25, 'major':'Computer Science'}
+   ```
+
+1. Familiarize yourself with the basic operations you can perform on a dictionary.
 
 
-Basic Dictionary Operations
+   **Basic Dictionary Operations**
 
    ```python
    # Create a dictionary
@@ -40,7 +44,8 @@ Basic Dictionary Operations
    print(student)
    ```
 
-Iterating Over a Dictionary
+   **Iterating Over a Dictionary**
+
    ```python
    # Create a dictionary
    fruits = {'apple': 3, 'banana': 5, 'orange': 2}
@@ -58,7 +63,7 @@ Iterating Over a Dictionary
       print(f"The count of {fruit} is {count}")
    ```
 
-Checking if a Key Exists
+   **Checking if a Key Exists**
 
    ```python
    # Create a dictionary
@@ -71,31 +76,7 @@ Checking if a Key Exists
       print("Name is not present.")
    ```
 
-1. Create a dictionary as in the example below. Note the structure of the dictionary (key-value) and the value types in the example below. What type of value was used in each of the six key-value pairs?
-
-   ```python
-   person = {
-      "name": "Marek",
-      "surname": "Banach",
-      "age": 25,
-      "hobby": ["swimming","excursions"],
-      "married": True,
-      "phone":{"landline":"123444321","mobile":"777888999"}
-   }
-   ```
-
-   Then, create a program that:
-
-   1. Displays contents of the dictionary
-   1. Displays name
-   1. Displays hobby
-   1. Changes surname to 'Nowak'
-   1. Changes person's marriage status
-   1. Adds gender: 'male'
-   1. Adds a new hobby: 'bicycle'
-   1. Adds work phone to existing phones: '313131444'
-
-1. Create a dictionary describing your mobile phone. Use at least 6 key-value pairs of data of different types. Then, using 'for' loop, display the contents of the dictionary. To read a key and value, use the items() method. Sample result:
+1. Create a dictionary describing your mobile phone. Use 6 key-value pairs of data. Then, using 'for' loop, display the contents of the dictionary. To read a key and value, use the items() method. Sample result:
 
    ```python
    mobile = {
@@ -110,7 +91,42 @@ Checking if a Key Exists
       print(f"{key} : {…}")
    ```
 
-1. Create an array with 5 dictionaries, each containing a country and its population. Then, using a ‘while’ loop, display the array contents. Sample result:
+1. Create a dictionary as in the example below. Do you know what type of value was used in each of the six key-value pairs?
+
+   ```python
+   person = {
+      "name": "Marek",
+      "surname": "Banach",
+      "age": 25,
+      "hobby": ["swimming","excursions"],
+      "married": True,
+      "phone":{"landline":"123444321","mobile":"777888999"}
+   }
+   ```
+
+   Then, create a program that:
+
+   1. Displays name
+   1. Displays hobby
+   1. Displays the entire contents of the dictionary
+   1. Changes surname to 'Nowak'
+   1. Changes person's marriage status
+   1. Adds gender: 'male'
+   1. Adds a new hobby: 'bicycle'
+   1. Adds work phone to existing phones: '313131444'
+   1. Displays the entire contents of the dictionary (iterate over dictionary items)
+
+
+1. Create an array with 5 dictionaries, each containing a country and its population. Then, print the array contents. Sample result:
+
+   ```
+   COUNTRY  POPULATION
+   Poland   38000000
+   …        …
+   …        …
+   …        …
+   …        …
+   ```
 
    ```python
    countries = [
@@ -122,13 +138,73 @@ Checking if a Key Exists
    ]
    ```
 
+1. Write a program that prints details of people from the phone book whose names start with the letter 'D'.
+
+   ```python
+   phone_book = {
+      'John': '555-1234',
+      'David': '555-5678',
+      'Bob': '555-8765',
+      'Charlie': '555-4321',
+      'Diana': '555-9876',
+      'Eve': '555-6543',
+      'Frank': '555-3456',
+      'Grace': '555-7890',
+      'Hank': '555-1111',
+      'Ivy': '555-2222',
+      'Jack': '555-3333',
+      'Daniel': '555-4444',
+      'Liam': '555-5555',
+      'Mia': '555-6666',
+      'Nina': '555-7777',
+      'Oscar': '555-8888',
+      'Paul': '555-9999',
+      'Dominic': '555-1010',
+      'Rachel': '555-2020',
+      'Sam': '555-3030'
+   }
+
+   ...
+   ...
+   ...
    ```
-   COUNTRY  POPULATION
-   Poland   38000000
-   …        …
-   …        …
-   …        …
-   …        …
+
+1. The following data contains information about the number of products available in a computer store. Write a program that prints:
+
+   * a list of products and the quantity
+   * the total number of products in the store
+
+   ```python
+   {
+   'Laptop': 15,
+   'Desktop PC': 10,
+   'Monitor': 25,
+   'Keyboard': 50,
+   'Mouse': 60,
+   'External Hard Drive': 30,
+   'Printer': 12,
+   'Router': 20,
+   'USB Flash Drive': 100,
+   'Graphics Card': 8
+   }
+   ```
+
+1. The data below contains a price list of items from a clothing store along with their prices. Due to a seasonal sale, the store is reducing the price of each item by 10%. Write a program that:
+
+   * prints a list of products and their prices before the discount
+   * prints the total value of the products before the discount
+   * modifies the price list according to the discount (round prices to two decimal places)
+   * prints a list of products and their prices after the 10% discount
+   * prints the total value of the products after the discount
+
+   ```python
+   price_list = {
+      'T-shirt': 19.99,
+      'Jeans': 49.99,
+      'Jacket': 89.99,
+      'Sneakers': 59.99,
+      'Hat': 15.99
+   }
    ```
 
 ## 2. JSON
@@ -219,7 +295,27 @@ Checking if a Key Exists
 
 ## 5. Practice Makes Perfect
 
-1. A dictionary contains course names along with the number of hours. Write a program that calculates and displays the total number of hours. Sample results:
+1. Read the chapter in your class textbook that covers the topics in this section.
+
+1. Watch the video on using dictionaries in Python:
+
+   <https://youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-> 
+
+1. Write a program to calculate the total cost of a shopping cart using a price list.
+
+   ```python
+   # Price list
+   prices = {'milk': 1.49, 'butter': 2.09, 'juice': 1.19, 'bread': 1.99}
+
+   # Shopping cart with quantities
+   cart = {'juice': 3, 'bread': 1, 'milk': 2}
+
+   # Calculate total cost
+   ...
+   ...
+   ```
+
+1. A dictionary contains course names along with the number of hours. Write a program that calculates and prints the total number of hours. Sample results:
 
    ```
    The total number of hours in the winter semester is …
@@ -687,3 +783,98 @@ for project, deadline in projects.items():
 ```
 
 These examples cover a wide range of real-world scenarios that will help you get comfortable using dictionaries for various tasks in Python.
+
+
+------------------
+------------------
+------------------
+
+Here are 10 Python tasks to help you learn how to work with stacks and queues:
+
+### Stack Tasks (LIFO - Last In, First Out)
+
+### 1. **Simulate a Browser's Back Button (Stack)**
+   - **Task:** Implement a stack to simulate a browser's back button. Each visited URL is pushed onto the stack. When the user clicks "Back," pop the last URL and return to the previous page.
+   - **Hint:** Use a list as a stack, where `append()` pushes and `pop()` pops the URLs.
+
+### 2. **Check for Balanced Parentheses**
+   - **Task:** Write a Python function that uses a stack to check if a string containing parentheses `()`, `{}`, `[]` is balanced.
+   - **Hint:** Use a stack to track opening parentheses, and match them with the closing ones.
+
+### 3. **Reverse a String Using a Stack**
+   - **Task:** Create a function that takes a string as input and uses a stack to reverse it.
+   - **Hint:** Push each character of the string onto the stack, then pop characters to form the reversed string.
+
+### 4. **Implement Stack Min Functionality**
+   - **Task:** Implement a stack that, in addition to the usual push and pop operations, also provides a `get_min()` function that returns the minimum element in the stack.
+   - **Hint:** Use two stacks: one for the elements and one for the minimum values.
+
+### 5. **Convert Infix Expression to Postfix (Using a Stack)**
+   - **Task:** Implement a function that converts an infix mathematical expression (e.g., `a + b * c`) to postfix (e.g., `a b c * +`) using a stack.
+   - **Hint:** Use operator precedence and parentheses handling with the stack.
+
+### 6. **Evaluate Postfix Expression Using Stack**
+   - **Task:** Given a postfix expression (e.g., `5 1 2 + 4 * + 3 -`), write a function to evaluate it using a stack.
+   - **Hint:** Push operands onto the stack, and when an operator is encountered, pop two operands to compute the result.
+
+### 7. **Undo Functionality Using a Stack**
+   - **Task:** Implement an undo function using a stack. Every operation pushes a change onto the stack, and "undo" pops the last change.
+   - **Hint:** Store the previous state in a stack and restore it when the user undoes an action.
+
+### 8. **Convert Decimal to Binary Using Stack**
+   - **Task:** Write a Python function that uses a stack to convert a decimal number to binary.
+   - **Hint:** Use division by 2 and push remainders onto the stack.
+
+### 9. **Sort Stack Using Another Stack**
+   - **Task:** Given a stack, sort it in ascending order using only one additional stack. No other data structures are allowed.
+   - **Hint:** Compare and push elements between two stacks to achieve sorting.
+
+### 10. **Design a Stack with Push, Pop, and Max Operations**
+   - **Task:** Implement a stack that supports pushing, popping, and a function `get_max()` that returns the maximum element in the stack.
+   - **Hint:** Maintain a separate stack to keep track of the maximum element at each level of the stack.
+
+---
+
+### Queue Tasks (FIFO - First In, First Out)
+
+### 1. **Simulate a Printer Queue**
+   - **Task:** Implement a queue to simulate a printer queue. Users add print jobs to the queue, and the printer processes them in the order they were added.
+   - **Hint:** Use a list or `collections.deque` to represent the queue, and `append()` for adding jobs and `popleft()` for processing.
+
+### 2. **Implement a Circular Queue**
+   - **Task:** Create a circular queue where elements wrap around when the queue is full.
+   - **Hint:** Use a list of fixed size and pointers to represent the circular behavior of the queue.
+
+### 3. **Check if a Queue is Palindrome**
+   - **Task:** Write a Python function that uses a queue to check if a given string is a palindrome (reads the same forwards and backwards).
+   - **Hint:** Use a queue to store characters and compare them in reverse order.
+
+### 4. **Simulate Task Scheduling Using a Queue**
+   - **Task:** Simulate task scheduling where each task has a priority and is added to a queue. Process the tasks in the order they are added.
+   - **Hint:** Use a priority queue (can be implemented using `heapq` in Python) or a regular queue if priorities are not needed.
+
+### 5. **Breadth-First Search (BFS) Using a Queue**
+   - **Task:** Implement the Breadth-First Search (BFS) algorithm using a queue to traverse a graph or tree.
+   - **Hint:** Use a queue to explore each level of the graph or tree before moving on to the next level.
+
+### 6. **Simulate Customer Support Line Using Queue**
+   - **Task:** Implement a queue to simulate a customer support system where customers are added to the queue and serviced in the order they arrive.
+   - **Hint:** Add customers to the queue using `append()` and serve them using `popleft()`.
+
+### 7. **Implement a Queue Using Stacks**
+   - **Task:** Create a queue using two stacks. The queue should support enqueue and dequeue operations.
+   - **Hint:** Use one stack for enqueue operations and the other stack for dequeue operations by reversing the elements.
+
+### 8. **Reverse a Queue Using Recursion**
+   - **Task:** Write a function to reverse a queue using recursion.
+   - **Hint:** Recursively dequeue elements and enqueue them back after reaching the base case.
+
+### 9. **Simulate a Ticket Counter Using a Queue**
+   - **Task:** Implement a queue to simulate a ticket counter where people are served in the order they arrive.
+   - **Hint:** Use a queue to represent the line of people, and dequeue them as they are served.
+
+### 10. **Track Page Access in a Cache Using a Queue (LRU Cache)**
+   - **Task:** Implement an LRU (Least Recently Used) cache using a queue to keep track of the pages accessed. Remove the least recently accessed page when the cache reaches its limit.
+   - **Hint:** Use a deque or ordered dictionary to maintain the order of page access.
+
+These tasks cover a range of real-world scenarios where stacks and queues are useful, and will help you understand their behavior and applications. Let me know if you would like further clarification or solutions for any of these tasks!
