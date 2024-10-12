@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Buddy",
+        "breed": "Golden Retriever",
+        "age": 5,
+        "weight_kg": 30,
+        "owner": "John Doe",
+        "vaccinated": true
+    },
+    {
+        "name": "Bella",
+        "breed": "Labrador Retriever",
+        "age": 3,
+        "weight_kg": 28,
+        "owner": "Jane Smith",
+        "vaccinated": true
+    },
+    {
+        "name": "Max",
+        "breed": "German Shepherd",
+        "age": 4,
+        "weight_kg": 35,
+        "owner": "Robert Johnson",
+        "vaccinated": true
+    },
+    {
+        "name": "Lucy",
+        "breed": "Beagle",
+        "age": 2,
+        "weight_kg": 10,
+        "owner": "Emily Davis",
+        "vaccinated": false
+    },
+    {
+        "name": "Charlie",
+        "breed": "Bulldog",
+        "age": 6,
+        "weight_kg": 22,
+        "owner": "Michael Brown",
+        "vaccinated": true
+    },
+    {
+        "name": "Molly",
+        "breed": "Poodle",
+        "age": 7,
+        "weight_kg": 12,
+        "owner": "Sophia Wilson",
+        "vaccinated": true
+    },
+    {
+        "name": "Rocky",
+        "breed": "Rottweiler",
+        "age": 3,
+        "weight_kg": 40,
+        "owner": "David Moore",
+        "vaccinated": true
+    },
+    {
+        "name": "Daisy",
+        "breed": "Shih Tzu",
+        "age": 4,
+        "weight_kg": 8,
+        "owner": "Isabella Martinez",
+        "vaccinated": false
+    }
+]

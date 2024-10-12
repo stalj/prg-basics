@@ -1,6 +1,6 @@
 import stack
 
-# previously visited websites
+# some previously visited websites
 stack.push('instagram.com')
 stack.push('uek.krakow.pl')
 stack.push('microsoft.com')

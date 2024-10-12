@@ -209,42 +209,134 @@ stalj@uek.krakow.pl
 
 ## 2. JSON
 
-1. 1. Watch the video on how to deal with JSON files in Python:
+1. JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is often used to transmit data between a server and a web application, as well as to store structured data.
 
-   <https://youtu.be/pTT7HMqDnJw?feature=shared> 
+   Note the key characteristics of JSON:
 
-1. Find any JSON file on the Internet and download it to your computer. Open the file in any character editor and read its contents. Then, write a program that displays the contents of the JSON file. Sample result:
+   * Readability: JSON is text-based, so it can be easily read by humans.
+   * Simplicity: It is built on key-value pairs.
+   * Language Agnostic: Although it derives from JavaScript, JSON is supported by many programming languages like Python, Java, PHP, C#, and more.
 
-   import json
+1. The computer.json file contains sample computer data. Open the json file in an editor and review its contents. Notice that the file contains a single dictionary of data.
 
-   with open("filename.json") as file:
-   `    `data = json.load(file)
-
-   for key,value in data.items():
-   `    `print(f"{key} : {value}")
-
-
-1. Create a dictionary that describes your favorite book or movie with at least five key-value pairs. Then, create a program that writes the dictionary data to the favourite.json file. Use the dump() method. Pay attention to the formatting of the data in the json file. Use the 'indent' parameter in the dump() method. Sample result:
+   Then, write a program that prints information about a computer.
 
    ```python
-   movie = {
-      "title":"…",
-      "year": …,
-      "actor":{"leading":"…","supporting":"…"},
-      "oscar":False,
-      …
-      …
-      …
-   }
+   import json
+
+   # Open the JSON file in read mode
+   with open('computer.json', 'r', encoding='utf-8') as file:
+      # Load the data from the JSON file into a variable
+      data = json.load(file)
+
+   # Print the JSON data
+   for ... , ... in data.items():
+      print(...,':',value)
    ```
 
-1. Write a program in which you create a dictionary containing student data. Try to describe a student in detail, using different data types that can be used in the dictionary. Then, save the data about student in the file student.json, in a readable form.
+1. The cities.json file contains data about selected cities in Poland. Open the json file in an editor and review its contents. Notice that the file contains an array of dictionaries.
+
+   Then, write a program that prints information about cities.
+
+   > Note: using the encoding='utf-8' parameter when opening the file is necessary because the json file also contains Polish characters in city names that must be processed correctly. Remember to always use this parameter when opening files that contain characters other than those in the Latin alphabet.
+
+   ```python
+   import json
+
+   # Open the JSON file in read mode
+   with open('cities.json', 'r', encoding='utf-8') as file:
+      # Load the data from the JSON file into a variable
+      data = json.load(file)
+
+   # Print the JSON data
+   for city in data:
+      for ... , ... in city. ...():
+         print(key,':',value)
+      print()
+   ```
+
+1. The file dogs.json contains data about dogs. Write a program that prints information about dogs younger than 5 years.
+
+1. The hotel's IT system contains a list of reserved rooms. The data is contained in the reservations.json file. Write a program that prints the summary information as stated below. Break your program into smaller parts defining functions.
+
+   * number of rooms
+   * number of paid reservations
+   * number of unpaid reservations
+   * total value of paid reservations
+   * total value of unpaid reservations
+
+1. The following program writes data to a json file. Analyze this program. Then, run the program and see if the json file is created. Display the created json file in the editor.
+
+   ```python
+   import json
+
+   data = {
+      "patient_record": {
+         "patient_id": "P001234",
+         "first_name": "John",
+         "last_name": "Doe",
+         "date_of_birth": "1985-05-15",
+         "gender": "Male",
+         "contact_info": {
+               "phone_number": "+1-555-123-4567",
+               "email": "johndoe@example.com",
+               "address": {
+                  "street": "123 Main St",
+                  "city": "New York",
+                  "state": "NY",
+                  "postal_code": "10001",
+                  "country": "USA"
+               }
+         },
+         "medical_history": {
+               "allergies": ["Penicillin", "Peanuts"],
+               "current_medications": ["Lisinopril 10mg", "Metformin 500mg"],
+               "past_illnesses": ["Hypertension", "Type 2 Diabetes"],
+               "surgeries": [
+                  {
+                     "surgery_type": "Appendectomy",
+                     "date": "2015-08-20"
+                  }
+               ]
+         }
+      }
+   }
+
+   # Specify the file path and name
+   file_name = "patient.json"
+
+   # Open the file in write mode and use json.dump() to write the data to the file
+   with open(file_name, 'w') as file:
+      json.dump(data, file, indent=4)
+
+   print("Data has been written to", file_name)
+   ```
+
+1. Create a dictionary that describes your favorite book or movie with at least five key-value pairs. Then, create a program that writes the dictionary data to the favourite.json file.
+
+1. Write a program that takes data from the keyboard about a purchased product:
+
+   * name
+   * price (real number with two decimal places)
+   * paid (yes/no)
+
+   The program then saves the product data in the product.json file. Pay attention to the correct data types describing the product (string, float, bool).
+
+   ```python
+   product = {}
+   
+   # read product data from keyboard
+   ...
+
+   # save product data to json file
+   ...
+   ```
 
 ## 3, Stack
 
 1. A stack is a linear data structure in which data is added to the top of the stack and is retrieved from the top of the stack. Familiarize yourself in more detail with this data structure. Explain the concept of LIFO.
 
-1. Video explaining stacks !!!!!!!!!
+   ![Stack Data Structure](https://learnloner.com/wp-content/uploads/2023/05/Stack-Data-Structure.png.webp)
 
 1. The following functions are necessary to handle the stack:
 
@@ -284,14 +376,7 @@ stalj@uek.krakow.pl
    Binary number: 10010 
    ```
 
-
-## 4. Queue
-
-1. A queue is a linear data structure in which new data is added to the end of the queue, and data is retrieved from the beginning of the queue for further processing. Familiarize yourself in more detail with this data structure. Explain the concept of FIFO.
-
-1. Video explaining queues !!!!!!!!!
-
-1. Following the example of stack.py, create a queue.py module in which define queue handling. Then write a program that imports the queue.py module. Add and remove values from the queue. Display its content.
+1. A back.py program simulates the Back key in a web browser (displaying the previously viewed web site). Complete the program.
 
 ## 5. Practice Makes Perfect
 
@@ -301,16 +386,16 @@ stalj@uek.krakow.pl
 
    <https://youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-> 
 
-1. Write a program to calculate the total cost of a shopping cart using a price list.
+1. Write a program to translate words from English to Polish. The user enters a word in English from the keyboard. The program displays the translation of the word or information that the translation is unavailable.
 
    ```python
-   # Price list
-   prices = {'milk': 1.49, 'butter': 2.09, 'juice': 1.19, 'bread': 1.99}
-
-   # Shopping cart with quantities
-   cart = {'juice': 3, 'bread': 1, 'milk': 2}
-
-   # Calculate total cost
+   translations = {
+      'computer': 'komputer',
+      'mouse': 'myszka',
+      'keyboard': 'klawiatura',
+      'printer': 'drukarka'
+   }
+   ...
    ...
    ...
    ```
@@ -329,6 +414,16 @@ stalj@uek.krakow.pl
    }
    ```
 
+1. Write a program that counts how many times each word appears in a paragraph. 
+
+   > Hint: Check the dictionary to see if the next word appears in it. If so, increase the number of times the word appears by 1. You can easily split a paragraph into individual words using the split() method. Search the Internet for how to use it.
+
+   ```python
+   paragraph = "cat dog mouse cat rat cat mouse"
+   ...
+   ...
+   ```
+
 1. The program contains two dictionaries with personal data:
 
    ```python
@@ -344,13 +439,21 @@ stalj@uek.krakow.pl
    }
    ```
 
-   Write a program that creates a dictionary called ‘person’ containing data from the two given dictionaries (five key-value pairs). Display the contents of the ‘person’ dictionary.
+   Write a program that creates a dictionary called ‘person’ containing data from the two other dictionaries (five key-value pairs). Print the contents of the ‘person’ dictionary.
 
 1. A program contains two functions:
-   1. hotel\_list(hotels) that returns a list of hotels names, separated by a comma sign
-   1. avg\_price(hotels) that returns the average room price for a given list of hotels, rounded to an integer value
+   1. hotel_list(hotels) that returns a list of hotel names, separated by a comma sign
+   1. avg_price(hotels) that returns the average room price for a given list of hotels, rounded to an integer value
 
-Write a program that calculates and displays the average price for a room in hotels in Krakow and Sopot and indicates in which cities hotels are cheaper.
+   Write a program that calculates and displays the average price for a room in hotels in Krakow and Sopot and indicates in which cities hotels are cheaper. Sample result:
+
+   ```
+   Hotels in Krakow: …,…,…,…
+   Average hotel price in Krakow: …
+   Hotels in Sopot: …,…,…,…
+   Average hotel price in Sopot: …
+   Cheaper hotels in: …
+   ```
 
    ```python
    hotels_in_Krakow = [
@@ -368,36 +471,60 @@ Write a program that calculates and displays the average price for a room in hot
    ]
    ```
 
-   Sample result:
+1. Write a program to calculate the total cost of a shopping cart using a price list.
 
-   ```
-   Hotels in Krakow: …,…,…,…
-   Average hotel price in Krakow: …
-   Hotels in Sopot: …,…,…,…
-   Average hotel price in Sopot: …
-   Cheaper hotels in: …
+   ```python
+   # Price list
+   prices = {'milk': 1.49, 'butter': 2.09, 'juice': 1.19, 'bread': 1.99}
+
+   # Shopping cart with quantities
+   cart = {'juice': 3, 'bread': 1, 'milk': 2}
+
+   # Calculate total cost
+   ...
+   ...
    ```
 
-1. The website http://api.nbp.pl contains data on exchange rates published by the National Bank of Poland. The service provides data in json or xml formats. Display the last ten Euro exchange rates in json format in the browser window. Save the data to the euro.json file. Then, write a program that displays the data from the euro.json file in the following format:
+1. A traffic camera records passing vehicles. The camera saves their registration numbers in the file vehicle.txt. Write a program that calculates and prints how many registered cars come from each province of Poland. The list of provinces and the corresponding first letters of the vehicle registration numbers are contained in the file province.csv.
+
+   > Hint: use the dictionary containing the letters corresponding to the provinces and the numbers of vehicles whose first letters of the registration number match the letters of the province.
+
+1. Watch the video on how to deal with JSON files in Python:
+
+   <https://youtu.be/pTT7HMqDnJw?feature=shared> 
+
+
+1. The website <https://api.nbp.pl/en.html> contains data on exchange rates published by the National Bank of Poland. The service provides data both in json and xml formats. Display the last ten Euro exchange rates in json format in a web browser. Then, save the data to the euro.json file. Finally, write a program that displays the data from the euro.json file in the following format:
 
    ```
    Date            Buying Rate     Selling Rate
    ============================================
    2019-10-25      3.8150          3.9820
    ...
-   ```             ...             ...
-
-1. The products.csv file contains data about the products sold. Create the file in a text editor.
-
-   ```
-   Product,Quantity,Price
-   milk,8,4.25
-   cheese,5,17.90
-   bread,21,6.15
-   juice,12,5.90
+   ...
+   ...
    ```
 
-   Then, write a program to convert data from CSV to JSON. The program reads product data from the CSV file and writes the data to a JSON file.
+1. Write a program to record voting. Voting results are saved in the voting.json file with the structure below. The program takes a person's name from the keyboard and increases the number of votes for that person by 1. If this is a new person, they are added to the list with a vote count of 1. You can run the program multiple times to add additional votes to the json file.
+
+   ```python
+   {
+      person_name: number of votes,
+      person_name: number of votes,
+      ...
+      ...
+   }
+
+   # Read the contents of the json file
+   ...
+   
+   # Vote for a person
+   person_name = input('Name of the person you are voting for:')
+   ...
+ 
+   # Save voting data to json file
+   ...
+   ```
 
 1. Search the Internet and familiarise yourself with RPN (Reverse Polish Notation). Then, write a program that calculates RPN expressions. RPN can be conveniently evaluated using a stack structure. A user can enter from the keyboard any number, an operator (+ - \* / ) or the equal sign (=).
 
@@ -414,424 +541,26 @@ Write a program that calculates and displays the average price for a room in hot
    |(2 + 3) \* ( 4 + 5) =|2 3 + 4 5 + \* =|
    |8 / (3 + 1) \* (3 - 2 + 4) = |8 3 1 + / 3 2 – 4 + \* =|
 
+1. Define a function that returns true if the brackets `()`, `{}`, `[]` are used correctly in the given expression. Otherwise, the function returns false. Then write a program that checks the correctness of the expressions given below.
 
+   ```python
+   [(2+3)*4+5]/6-{(7*8)+4}=
+   [(2+3]/4)
+   ```
 
---------------------
---------------------
---------------------
+   > Use a stack. Read the next characters of the expression. Skip all but the brackets. If it is an opening bracket, put it on the stack. If it is a closing bracket, pop the item from the stack and compare whether it is a matching opening bracket.
 
+1. A queue is a linear data structure in which new data is added to the end of the queue, and data is retrieved from the beginning of the queue for further processing. Familiarize yourself in more detail with this data structure. 
 
-
-Here are the 10 real-life tasks with their corresponding Python code examples that use dictionaries:
-
-### 1. **Store and Access Employee Information**
-
-**Task:** Create a dictionary to store employee details such as name, position, and salary. Retrieve and display the position of a specific employee.
-
-```python
-# Dictionary storing employee details
-employees = {
-    'John': {'position': 'Manager', 'salary': 60000},
-    'Alice': {'position': 'Engineer', 'salary': 50000},
-    'Bob': {'position': 'Intern', 'salary': 20000}
-}
-
-# Accessing the position of a specific employee
-employee_name = 'Alice'
-if employee_name in employees:
-    print(f"{employee_name}'s position is {employees[employee_name]['position']}.")
-else:
-    print(f"No details available for {employee_name}.")
-```
-
-### 2. **Count Word Frequency in a Text**
-
-**Task:** Count how many times each word appears in a paragraph.
-
-```python
-text = "the cat and the dog the cat"
-words = text.split()
-word_count = {}
-
-for word in words:
-    word_count[word] = word_count.get(word, 0) + 1
-
-print(word_count)
-```
-
-### 3. **Product Price List**
-
-**Task:** Create a dictionary that stores product prices, update a product's price, and look up the price by product name.
-
-```python
-# Product price list
-products = {
-    'apple': 1.2,
-    'banana': 0.5,
-    'orange': 0.8
-}
-
-# Update price of an existing product
-products['banana'] = 0.6
-
-# Look up the price of a product
-product_name = 'apple'
-if product_name in products:
-    print(f"The price of {product_name} is ${products[product_name]:.2f}.")
-else:
-    print(f"{product_name} is not available.")
-```
-
-### 4. **Phone Book Application**
-
-**Task:** Build a phone book with contacts, allowing adding, removing, and searching contacts.
-
-```python
-# Phone book dictionary
-phone_book = {'John': '555-1234', 'Alice': '555-5678'}
-
-# Add a new contact
-phone_book['Bob'] = '555-8765'
-
-# Remove a contact
-phone_book.pop('Alice', None)
-
-# Search for a contact
-contact_name = 'John'
-if contact_name in phone_book:
-    print(f"{contact_name}'s phone number is {phone_book[contact_name]}.")
-else:
-    print(f"{contact_name} is not found.")
-```
-
-### 5. **Group Students by Grade**
-
-**Task:** Group students into a dictionary where the grade is the key and the value is a list of students with that grade.
-
-```python
-students = [('John', 'A'), ('Alice', 'B'), ('Bob', 'A'), ('Mary', 'C')]
-
-# Group students by grade
-grades = {}
-for name, grade in students:
-    if grade not in grades:
-        grades[grade] = []
-    grades[grade].append(name)
-
-print(grades)
-```
-
-### 6. **Shopping Cart Total**
-
-**Task:** Calculate the total cost of a shopping cart using a separate price dictionary.
-
-```python
-# Price dictionary
-prices = {'apple': 1.2, 'banana': 0.5, 'orange': 0.8}
-
-# Shopping cart with quantities
-cart = {'apple': 3, 'banana': 2}
-
-# Calculate total cost
-total_cost = sum(prices[item] * quantity for item, quantity in cart.items())
-print(f"Total cost: ${total_cost:.2f}")
-```
-
-### 7. **Track Inventory Levels**
-
-**Task:** Create an inventory dictionary and update it when items are added or sold.
-
-```python
-# Inventory dictionary
-inventory = {'apple': 50, 'banana': 100, 'orange': 75}
-
-# Add stock
-inventory['apple'] += 10
-
-# Sell stock
-inventory['banana'] -= 5
-
-# Display current inventory
-print(inventory)
-```
-
-### 8. **Translate Words Using a Dictionary**
-
-**Task:** Create a translation dictionary and allow users to input an English word to get its French translation.
-
-```python
-# Dictionary of translations (English to French)
-translations = {'apple': 'pomme', 'banana': 'banane', 'orange': 'orange'}
-
-# Input word to translate
-word = input("Enter an English word: ").lower()
-
-# Get the French translation
-translation = translations.get(word, 'Translation not available')
-print(f"The French word for {word} is {translation}.")
-```
-
-### 9. **Voting System**
-
-**Task:** Simulate a simple voting system where candidates are the keys, and vote counts are the values.
-
-```python
-# Voting system
-votes = {'John': 0, 'Alice': 0, 'Bob': 0}
-
-# Cast a vote
-vote = 'Alice'
-if vote in votes:
-    votes[vote] += 1
-
-# Display vote counts
-print(votes)
-```
-
-### 10. **Store Weather Data**
-
-**Task:** Store weather data in a dictionary and allow users to look up the temperature by city.
-
-```python
-# Weather data dictionary
-weather = {'New York': 22, 'London': 18, 'Paris': 20, 'Berlin': 16}
-
-# User input for city
-city = input("Enter a city name: ").title()
-
-# Get temperature for the city
-temperature = weather.get(city, 'City not found')
-print(f"The temperature in {city} is {temperature}°C.")
-```
-
-These examples illustrate various real-life scenarios where dictionaries can be used effectively in Python.
-
-
-
-
-
-Here are 10 more real-life examples with Python code to practice using dictionaries:
-
-### 11. **Track Attendance of Students**
-
-**Task:** Create a dictionary to store students' attendance. Mark attendance as "Present" or "Absent" and allow updating for individual students.
-
-```python
-# Dictionary to track attendance
-attendance = {'John': 'Present', 'Alice': 'Absent', 'Bob': 'Present'}
-
-# Update attendance for a student
-attendance['Alice'] = 'Present'
-
-# Display attendance for all students
-for student, status in attendance.items():
-    print(f"{student}: {status}")
-```
-
-### 12. **Store and Update Bank Account Balances**
-
-**Task:** Simulate a bank system where you store customer names as keys and their bank balances as values. Allow depositing and withdrawing amounts.
-
-```python
-# Dictionary storing bank balances
-bank_accounts = {'John': 1000, 'Alice': 2000, 'Bob': 1500}
-
-# Deposit money
-bank_accounts['John'] += 500
-
-# Withdraw money
-bank_accounts['Alice'] -= 300
-
-# Display all account balances
-for customer, balance in bank_accounts.items():
-    print(f"{customer}: ${balance}")
-```
-
-### 13. **Catalog of Books in a Library**
-
-**Task:** Create a dictionary to store books in a library where the key is the book title, and the value is the status of whether the book is "Available" or "Checked Out."
-
-```python
-# Library book catalog
-library = {
-    'To Kill a Mockingbird': 'Available',
-    '1984': 'Checked Out',
-    'Moby Dick': 'Available'
-}
-
-# Check out a book
-library['Moby Dick'] = 'Checked Out'
-
-# Display all books and their availability
-for book, status in library.items():
-    print(f"'{book}' is {status}.")
-```
-
-### 14. **Store Movie Ratings**
-
-**Task:** Create a dictionary where movie titles are the keys and their ratings (out of 10) are the values. Allow users to update the rating of a movie.
-
-```python
-# Movie ratings dictionary
-movies = {'Inception': 9, 'Titanic': 8, 'Avatar': 7}
-
-# Update rating for a movie
-movies['Avatar'] = 8
-
-# Display all movie ratings
-for movie, rating in movies.items():
-    print(f"{movie}: {rating}/10")
-```
-
-### 15. **Track Grocery Stock Levels**
-
-**Task:** Store grocery items as keys and their stock levels as values. Allow updating stock when items are sold or restocked.
-
-```python
-# Grocery stock levels
-grocery_stock = {'Milk': 20, 'Bread': 50, 'Eggs': 100}
-
-# Restock an item
-grocery_stock['Milk'] += 10
-
-# Sell an item
-grocery_stock['Bread'] -= 5
-
-# Display current stock levels
-for item, stock in grocery_stock.items():
-    print(f"{item}: {stock} units")
-```
-
-### 16. **Store User Preferences for a Website**
-
-**Task:** Create a dictionary that stores user preferences (e.g., dark mode, font size) for a website. Allow updating user preferences.
-
-```python
-# User preferences dictionary
-user_preferences = {'theme': 'dark', 'font_size': 'medium'}
-
-# Update user preference
-user_preferences['font_size'] = 'large'
-
-# Display current preferences
-for setting, value in user_preferences.items():
-    print(f"{setting}: {value}")
-```
-
-### 17. **Shopping Cart with Multiple Items per Product**
-
-**Task:** Store items in a shopping cart where each item has multiple details (quantity and price). Calculate the total cost of the cart.
-
-```python
-# Shopping cart dictionary
-cart = {
-    'apple': {'quantity': 3, 'price': 1.2},
-    'banana': {'quantity': 2, 'price': 0.5}
-}
-
-# Calculate total cost
-total_cost = sum(item['quantity'] * item['price'] for item in cart.values())
-print(f"Total cost: ${total_cost:.2f}")
-```
-
-### 18. **Store Favorite Sports Teams for Multiple People**
-
-**Task:** Create a dictionary where people's names are keys, and their favorite sports teams are values. Allow updating their favorite teams.
-
-```python
-# Favorite sports teams dictionary
-favorite_teams = {'John': 'Lakers', 'Alice': 'Patriots', 'Bob': 'Yankees'}
-
-# Update favorite team for a person
-favorite_teams['John'] = 'Warriors'
-
-# Display favorite teams
-for person, team in favorite_teams.items():
-    print(f"{person}'s favorite team is {team}.")
-```
-
-### 19. **Store Shopping Wishlist**
-
-**Task:** Create a dictionary to store a wishlist where item names are the keys, and the value is whether the item has been bought or not ("Yes" or "No").
-
-```python
-# Shopping wishlist dictionary
-wishlist = {'Laptop': 'No', 'Phone': 'Yes', 'Headphones': 'No'}
-
-# Mark an item as bought
-wishlist['Laptop'] = 'Yes'
-
-# Display wishlist status
-for item, status in wishlist.items():
-    print(f"{item}: Bought - {status}")
-```
-
-### 20. **Track Project Deadlines**
-
-**Task:** Create a dictionary where the project names are the keys, and the deadlines are the values. Allow updating deadlines as the project progresses.
-
-```python
-# Project deadlines dictionary
-projects = {'Project A': '2024-12-01', 'Project B': '2024-11-15'}
-
-# Update deadline for a project
-projects['Project A'] = '2024-12-15'
-
-# Display project deadlines
-for project, deadline in projects.items():
-    print(f"{project} deadline is {deadline}.")
-```
-
-These examples cover a wide range of real-world scenarios that will help you get comfortable using dictionaries for various tasks in Python.
-
+   Following the example of stack.py, create a queue.py module in which define queue handling. Then, write a program that imports the queue.py module. Add and remove values from the queue. Display its content.
 
 ------------------
 ------------------
 ------------------
-
-Here are 10 Python tasks to help you learn how to work with stacks and queues:
-
-### Stack Tasks (LIFO - Last In, First Out)
-
-### 1. **Simulate a Browser's Back Button (Stack)**
-   - **Task:** Implement a stack to simulate a browser's back button. Each visited URL is pushed onto the stack. When the user clicks "Back," pop the last URL and return to the previous page.
-   - **Hint:** Use a list as a stack, where `append()` pushes and `pop()` pops the URLs.
-
-### 2. **Check for Balanced Parentheses**
-   - **Task:** Write a Python function that uses a stack to check if a string containing parentheses `()`, `{}`, `[]` is balanced.
-   - **Hint:** Use a stack to track opening parentheses, and match them with the closing ones.
 
 ### 3. **Reverse a String Using a Stack**
    - **Task:** Create a function that takes a string as input and uses a stack to reverse it.
    - **Hint:** Push each character of the string onto the stack, then pop characters to form the reversed string.
-
-### 4. **Implement Stack Min Functionality**
-   - **Task:** Implement a stack that, in addition to the usual push and pop operations, also provides a `get_min()` function that returns the minimum element in the stack.
-   - **Hint:** Use two stacks: one for the elements and one for the minimum values.
-
-### 5. **Convert Infix Expression to Postfix (Using a Stack)**
-   - **Task:** Implement a function that converts an infix mathematical expression (e.g., `a + b * c`) to postfix (e.g., `a b c * +`) using a stack.
-   - **Hint:** Use operator precedence and parentheses handling with the stack.
-
-### 6. **Evaluate Postfix Expression Using Stack**
-   - **Task:** Given a postfix expression (e.g., `5 1 2 + 4 * + 3 -`), write a function to evaluate it using a stack.
-   - **Hint:** Push operands onto the stack, and when an operator is encountered, pop two operands to compute the result.
-
-### 7. **Undo Functionality Using a Stack**
-   - **Task:** Implement an undo function using a stack. Every operation pushes a change onto the stack, and "undo" pops the last change.
-   - **Hint:** Store the previous state in a stack and restore it when the user undoes an action.
-
-### 8. **Convert Decimal to Binary Using Stack**
-   - **Task:** Write a Python function that uses a stack to convert a decimal number to binary.
-   - **Hint:** Use division by 2 and push remainders onto the stack.
-
-### 9. **Sort Stack Using Another Stack**
-   - **Task:** Given a stack, sort it in ascending order using only one additional stack. No other data structures are allowed.
-   - **Hint:** Compare and push elements between two stacks to achieve sorting.
-
-### 10. **Design a Stack with Push, Pop, and Max Operations**
-   - **Task:** Implement a stack that supports pushing, popping, and a function `get_max()` that returns the maximum element in the stack.
-   - **Hint:** Maintain a separate stack to keep track of the maximum element at each level of the stack.
 
 ---
 
@@ -877,4 +606,3 @@ Here are 10 Python tasks to help you learn how to work with stacks and queues:
    - **Task:** Implement an LRU (Least Recently Used) cache using a queue to keep track of the pages accessed. Remove the least recently accessed page when the cache reaches its limit.
    - **Hint:** Use a deque or ordered dictionary to maintain the order of page access.
 
-These tasks cover a range of real-world scenarios where stacks and queues are useful, and will help you understand their behavior and applications. Let me know if you would like further clarification or solutions for any of these tasks!

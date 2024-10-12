@@ -1,0 +1,17 @@
+{
+    "manufacturer": "Dell",
+    "model": "XPS 15",
+    "processor": "Intel Core i7-11800H",
+    "cores": 8,
+    "threads": 16,
+    "memory_size_GB": 16,
+    "memory_type": "DDR4",
+    "storage_type": "SSD",
+    "storage_capacity_GB": 512,
+    "graphics_card": "NVIDIA RTX 3050 Ti",
+    "display_size_inches": 15.6,
+    "display_resolution": "1920x1080",
+    "weight_kg": 1.8,
+    "operating_system": "Windows 11 Pro",
+    "color": "Silver"
+}

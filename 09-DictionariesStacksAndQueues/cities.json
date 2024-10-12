@@ -1,0 +1,62 @@
+[
+    {
+        "city": "Warsaw",
+        "population": 1790658,
+        "voivodeship": "Mazowieckie",
+        "area_km2": 517.24
+    },
+    {
+        "city": "Kraków",
+        "population": 779115,
+        "voivodeship": "Małopolskie",
+        "area_km2": 326.85
+    },
+    {
+        "city": "Łódź",
+        "population": 672185,
+        "voivodeship": "Łódzkie",
+        "area_km2": 293.25
+    },
+    {
+        "city": "Wrocław",
+        "population": 643782,
+        "voivodeship": "Dolnośląskie",
+        "area_km2": 292.82
+    },
+    {
+        "city": "Poznań",
+        "population": 532048,
+        "voivodeship": "Wielkopolskie",
+        "area_km2": 261.91
+    },
+    {
+        "city": "Gdańsk",
+        "population": 470907,
+        "voivodeship": "Pomorskie",
+        "area_km2": 262.0
+    },
+    {
+        "city": "Szczecin",
+        "population": 398255,
+        "voivodeship": "Zachodniopomorskie",
+        "area_km2": 300.55
+    },
+    {
+        "city": "Bydgoszcz",
+        "population": 340727,
+        "voivodeship": "Kujawsko-pomorskie",
+        "area_km2": 175.98
+    },
+    {
+        "city": "Lublin",
+        "population": 339850,
+        "voivodeship": "Lubelskie",
+        "area_km2": 147.47
+    },
+    {
+        "city": "Katowice",
+        "population": 290553,
+        "voivodeship": "Śląskie",
+        "area_km2": 164.67
+    }
+]

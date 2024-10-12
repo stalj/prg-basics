@@ -1,0 +1,59 @@
+{
+    "reservations": [
+        {
+            "reservation_id": "R123456",
+            "guest_name": "John Doe",
+            "room_number": 101,
+            "room_type": "Single",
+            "check_in": "2024-10-15",
+            "check_out": "2024-10-18",
+            "nights": 3,
+            "price_per_night": 100.00,
+            "paid": true
+        },
+        {
+            "reservation_id": "R123457",
+            "guest_name": "Jane Smith",
+            "room_number": 202,
+            "room_type": "Double",
+            "check_in": "2024-10-16",
+            "check_out": "2024-10-19",
+            "nights": 3,
+            "price_per_night": 150.00,
+            "paid": false
+        },
+        {
+            "reservation_id": "R123458",
+            "guest_name": "Emily Davis",
+            "room_number": 303,
+            "room_type": "Suite",
+            "check_in": "2024-10-14",
+            "check_out": "2024-10-17",
+            "nights": 3,
+            "price_per_night": 250.00,
+            "paid": true
+        },
+        {
+            "reservation_id": "R123459",
+            "guest_name": "Michael Brown",
+            "room_number": 404,
+            "room_type": "Double",
+            "check_in": "2024-10-18",
+            "check_out": "2024-10-21",
+            "nights": 3,
+            "price_per_night": 150.00,
+            "paid": false
+        },
+        {
+            "reservation_id": "R123460",
+            "guest_name": "Sophia Wilson",
+            "room_number": 105,
+            "room_type": "Single",
+            "check_in": "2024-10-19",
+            "check_out": "2024-10-22",
+            "nights": 3,
+            "price_per_night": 100.00,
+            "paid": true
+        }
+    ]
+}
