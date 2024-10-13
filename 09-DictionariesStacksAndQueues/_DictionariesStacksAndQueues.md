@@ -207,159 +207,111 @@ stalj@uek.krakow.pl
    }
    ```
 
-## 2. JSON
+## 2. Set
 
-1. JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is often used to transmit data between a server and a web application, as well as to store structured data.
+1. A set is an unordered collection of unique elements. Sets are useful when you want to store a collection of items and ensure that there are no duplicates. Unlike lists or arrays, sets do not maintain the order of the elements, and you cannot access elements by index. They support fast membership tests, union, intersection, difference, and other set operations.
 
-   Note the key characteristics of JSON:
+   Set Operations:
+   * & (Intersection): Finds common elements between sets.
+   * | (Union): Combines all elements from both sets (removes duplicates).
+   * - (Difference): Finds elements present in one set but not the other.
+   * ^ (Symmetric Difference): Finds elements present in either set but not in both.
+   * .issubset(): Checks if one set is a subset of another.
 
-   * Readability: JSON is text-based, so it can be easily read by humans.
-   * Simplicity: It is built on key-value pairs.
-   * Language Agnostic: Although it derives from JavaScript, JSON is supported by many programming languages like Python, Java, PHP, C#, and more.
-
-1. The computer.json file contains sample computer data. Open the json file in an editor and review its contents. Notice that the file contains a single dictionary of data.
-
-   Then, write a program that prints information about a computer.
-
-   ```python
-   import json
-
-   # Open the JSON file in read mode
-   with open('computer.json', 'r', encoding='utf-8') as file:
-      # Load the data from the JSON file into a variable
-      data = json.load(file)
-
-   # Print the JSON data
-   for ... , ... in data.items():
-      print(...,':',value)
-   ```
-
-1. The cities.json file contains data about selected cities in Poland. Open the json file in an editor and review its contents. Notice that the file contains an array of dictionaries.
-
-   Then, write a program that prints information about cities.
-
-   > Note: using the encoding='utf-8' parameter when opening the file is necessary because the json file also contains Polish characters in city names that must be processed correctly. Remember to always use this parameter when opening files that contain characters other than those in the Latin alphabet.
+1. The following program removes duplicate email addresses. Complete and run the program.
 
    ```python
-   import json
-
-   # Open the JSON file in read mode
-   with open('cities.json', 'r', encoding='utf-8') as file:
-      # Load the data from the JSON file into a variable
-      data = json.load(file)
-
-   # Print the JSON data
-   for city in data:
-      for ... , ... in city. ...():
-         print(key,':',value)
-      print()
+   emails = ["john@example.com", "jane@example.com", "john@example.com", "alex@example.com"]
+   unique_emails = set(...)  # Removes duplicates
+   print(unique_emails)
    ```
 
-1. The file dogs.json contains data about dogs. Write a program that prints information about dogs younger than 5 years.
-
-1. The hotel's IT system contains a list of reserved rooms. The data is contained in the reservations.json file. Write a program that prints the summary information as stated below. Break your program into smaller parts defining functions.
-
-   * number of rooms
-   * number of paid reservations
-   * number of unpaid reservations
-   * total value of paid reservations
-   * total value of unpaid reservations
-
-1. The following program writes data to a json file. Analyze this program. Then, run the program and see if the json file is created. Display the created json file in the editor.
+1. The following program identifies students who are absent. Complete and run the program.
 
    ```python
-   import json
+   all_students = {"Alice", "John", "Sara", "Bob"}
+   attended_students = {"Alice", "Bob"}
 
-   data = {
-      "patient_record": {
-         "patient_id": "P001234",
-         "first_name": "John",
-         "last_name": "Doe",
-         "date_of_birth": "1985-05-15",
-         "gender": "Male",
-         "contact_info": {
-               "phone_number": "+1-555-123-4567",
-               "email": "johndoe@example.com",
-               "address": {
-                  "street": "123 Main St",
-                  "city": "New York",
-                  "state": "NY",
-                  "postal_code": "10001",
-                  "country": "USA"
-               }
-         },
-         "medical_history": {
-               "allergies": ["Penicillin", "Peanuts"],
-               "current_medications": ["Lisinopril 10mg", "Metformin 500mg"],
-               "past_illnesses": ["Hypertension", "Type 2 Diabetes"],
-               "surgeries": [
-                  {
-                     "surgery_type": "Appendectomy",
-                     "date": "2015-08-20"
-                  }
-               ]
-         }
-      }
-   }
-
-   # Specify the file path and name
-   file_name = "patient.json"
-
-   # Open the file in write mode and use json.dump() to write the data to the file
-   with open(file_name, 'w') as file:
-      json.dump(data, file, indent=4)
-
-   print("Data has been written to", file_name)
+   absent_students = ... - ...  # Difference
+   print(absent_students)
    ```
 
-1. Create a dictionary that describes your favorite book or movie with at least five key-value pairs. Then, create a program that writes the dictionary data to the favourite.json file.
-
-1. Write a program that takes data from the keyboard about a purchased product:
-
-   * name
-   * price (real number with two decimal places)
-   * paid (yes/no)
-
-   The program then saves the product data in the product.json file. Pay attention to the correct data types describing the product (string, float, bool).
+1. The program below finds spam in received emails. Complete the program that displays those received email addresses that are on the spam list.
 
    ```python
-   product = {}
-   
-   # read product data from keyboard
-   ...
+   emails_received = {"john@example.com", "spam1@example.com", "spam2@example.com", "jane@example.com"}
+   spam_list = {"spam1@example.com", "spam2@example.com"}
 
-   # save product data to json file
-   ...
+   spam_emails = ... ... ...  # Intersection
+   print("Spam emails:", spam_emails)
    ```
 
-## 3, Stack
+1. Two contact lists retrieved from a database contain email addresses. Write a program that combines these lists and simultaneously removes duplicates.
 
-1. A stack is a linear data structure in which data is added to the top of the stack and is retrieved from the top of the stack. Familiarize yourself in more detail with this data structure. Explain the concept of LIFO.
+   ```python
+   contacts_A = {"john@example.com", "alice@example.com", "bob@example.com"}
+   contacts_B = {"bob@example.com", "michael@example.com", "sara@example.com"}
+
+   merged_contacts = ... ... ...  # Union
+   print("Merged contacts:", merged_contacts)
+   ```
+
+1. In an operating system, each user has some permissions. The user wants to perform some action that requires specific permissions. Write a program that checks whether the user has the required persmission.
+
+   ```python
+   required_permissions = {"read", "write", "execute"}
+   user_permissions = {"read", "write"}
+
+   has_permissions = ...   # subset
+   print(has_permissions)  # Will return False because "execute" is missing.
+   ```
+
+## 3. Stack
+
+1. A stack is a linear data structure that follows the Last In, First Out (LIFO) principle. This means the last element added to the stack is the first one to be removed. Think of a stack as a pile of plates — the last plate you place on the top is the first one you'll take off.
 
    ![Stack Data Structure](https://media.geeksforgeeks.org/wp-content/uploads/20240606180325/What-is-Stack-(1).webp)
 
-1. The following functions are necessary to handle the stack:
-
-   ```
-   push() - to put an item on the stack
-   pop() - to pull an item from the stack
-   empty()  - to remove all items from the stack
-   ```
-
-   In the stack.py file you can find a simple implementation of the stack using a Python list. Note the definition of the defined functions. What actions do these functions perform? Then write a program, in which, import the module stack.py and do the following:
+   In the stack_example.py file you can find a simple example of how to create and manipulate a stack. Analyze and run the program. Then, modify a program in which perform the following operations:
    
-      1. Display stack
-      1. Put the number 2 on the stack
-      1. Put the number 14 on the stack
-      1. Put the number 9 on the stack
-      1. Display stack
-      1. Get element from stack
-      1. Display stack
-      1. Put the number 31 on the stack
-      1. Put the number 6 on the stack
-      1. Display stack
-      1. Get two elements from stack
-      1. Display stack
+      1. Put 2 on the stack
+      1. Put 3 on the stack
+      1. Put 7 on the stack
+      1. Put 4 on the stack
+      1. Put 1 on the stack
+      1. Put 9 on the stack
+      1. Put 8 on the stack
+      1. Sum the last two numbers of the stack and print result
+      1. Calculate the sum of the remaining stack elements and print the result. Use a 'while' loop.
+      
+1. A back.py program simulates the Back key in a web browser (recording the name of new website or displaying the previously visited web site). Complete the program.
+
+1. Define a function that returns true if the brackets `()`, `{}`, `[]` are used correctly in the given expression. Otherwise, the function returns false. Then write a program that checks the correctness of the expressions given below.
+
+   > Use a stack. Read the next characters of the expression. Skip all but the brackets. If it is an opening bracket, put it on the stack. If it is a closing bracket, get the item from the stack and compare whether it is a matching opening bracket.
+
+   ```python
+   import queue
+
+   expression1 = "[(2+3)*4+5]/6-{(7*8)+[4]}" # brackets ok
+   expression2 = "[(2+3]/4)"                 # brackets not correct
+   expression3 = "(2-3*4+(5/6)"              # brackets not correct
+
+   def brackets_ok(expression):
+      ...
+      ...
+      ...
+      return #True if brackets in expression are ok of False otherwise
+
+   if brackets_ok(expression1):
+      print(...)
+   else
+      ...
+
+   if brackets_ok(expression2):
+   ...
+   ...
+   ```
 
 1. Write a program that converts any natural number to a binary number. Use the stack. To convert a number, divide the number by 2, each time taking the remainder of the division and putting the remainder on the stack. Repeat the division until the number you are dividing is zero. Then pop and display all values from the stack. Sample result for number 18:
 
@@ -376,7 +328,45 @@ stalj@uek.krakow.pl
    Binary number: 10010 
    ```
 
-1. A back.py program simulates the Back key in a web browser (displaying the previously viewed web site). Complete the program.
+## 4. Queue
+
+1. A queue is a linear data structure that follows the First In, First Out (FIFO) principle. This means that the first element added to the queue will be the first one to be removed. A queue operates similarly to a real-life queue, such as a line of people waiting for a service — the person who arrives first is served first.
+
+   ![Queue Data Structure](https://media.geeksforgeeks.org/wp-content/uploads/20240606165428/Introduction-to-Queue-(2).webp)
+
+   In the queue_example.py file you can find a simple example of how to create and manipulate a queue. Analyze and run the program.
+
+1. Using a queue, write a program that manages a queue of files to print.
+
+   ```python
+   import queue
+
+   # creates a queue of files to print
+   files_to_print = queue.Queue()
+
+   while True:
+      print('1. Add file to print')
+      print('2. Print file')
+      print('0. Quit')
+      menu = input('Select an option: ')
+      ...
+      ...
+      
+      if menu == '1':
+         file_name = input('Enter file name to print: ')
+         # add new file to the end of the queue 
+      ...
+
+      elif ...:
+         if # print queue not empty
+            file_to_print = ...
+            print(f'File {file_to_print} is currently being printed. Please wait!')
+         else:
+            print(...)
+
+      elif menu == '0':
+         break
+   ```
 
 ## 5. Practice Makes Perfect
 
@@ -545,44 +535,127 @@ stalj@uek.krakow.pl
    |(2 + 3) \* ( 4 + 5) =|2 3 + 4 5 + \* =|
    |8 / (3 + 1) \* (3 - 2 + 4) = |8 3 1 + / 3 2 – 4 + \* =|
 
-1. Define a function that returns true if the brackets `()`, `{}`, `[]` are used correctly in the given expression. Otherwise, the function returns false. Then write a program that checks the correctness of the expressions given below.
+1. Write a program that supports customer service in an office. Use the queue. Each new customer receives a ticket with an automatically assigned consecutive number and is added to the end of the queue. The next customer to be served is taken from the beginning of the queue.
+
+1. JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is often used to transmit data between a server and a web application, as well as to store structured data.
+
+   Note the key characteristics of JSON:
+
+   * Readability: JSON is text-based, so it can be easily read by humans.
+   * Simplicity: It is built on key-value pairs.
+   * Language Agnostic: Although it derives from JavaScript, JSON is supported by many programming languages like Python, Java, PHP, C#, and more.
+
+1. The computer.json file contains sample computer data. Open the json file in an editor and review its contents. Notice that the file contains a single dictionary of data.
+
+   Then, write a program that prints information about a computer.
 
    ```python
-   [(2+3)*4+5]/6-{(7*8)+[4]}=
-   [(2+3]/4)
+   import json
+
+   # Open the JSON file in read mode
+   with open('computer.json', 'r', encoding='utf-8') as file:
+      # Load the data from the JSON file into a variable
+      data = json.load(file)
+
+   # Print the JSON data
+   for ... , ... in data.items():
+      print(...,':',value)
    ```
 
-   > Use a stack. Read the next characters of the expression. Skip all but the brackets. If it is an opening bracket, put it on the stack. If it is a closing bracket, pop the item from the stack and compare whether it is a matching opening bracket.
+1. The cities.json file contains data about selected cities in Poland. Open the json file in an editor and review its contents. Notice that the file contains an array of dictionaries.
 
-1. A queue is a linear data structure in which new data is added to the end of the queue, and data is retrieved from the beginning of the queue for further processing. Familiarize yourself in more detail with this data structure. 
+   Then, write a program that prints information about cities.
 
-   ![Queue Data Structure](https://media.geeksforgeeks.org/wp-content/uploads/20240606165428/Introduction-to-Queue-(2).webp)
-
-
-1. Following the example of stack.py, create a queue.py module in which define queue handling. Then, write a program that imports the queue.py module. Add and remove values from the queue. Display its content.
-
-1. Using the queue.py module you created, write a program that manages a queue of files to print.
+   > Note: using the encoding='utf-8' parameter when opening the file is necessary because the json file also contains Polish characters in city names that must be processed correctly. Remember to always use this parameter when opening files that contain characters other than those in the Latin alphabet.
 
    ```python
-   import queue
+   import json
 
-   while True:
-      print('1. Add file to print')
-      print('2. Print file')
-      print('3. View list of files to print')
-      print('0. Quit')
-      menu = input('Select an option: ')
-      ...
-      ...
-      if menu == '1':
-         file_name = input('\nEnter file name to print: ')
-         # add new file to the end of the queue 
-      ...
-      ...
-      ...
+   # Open the JSON file in read mode
+   with open('cities.json', 'r', encoding='utf-8') as file:
+      # Load the data from the JSON file into a variable
+      data = json.load(file)
 
-      elif menu == '0':
-         break
+   # Print the JSON data
+   for city in data:
+      for ... , ... in city. ...():
+         print(key,':',value)
+      print()
    ```
 
-1. Write a program that supports customer service in an office. Use the queue module. Each new customer receives a ticket with an automatically assigned consecutive number and is added to the end of the queue. The next customer to be served is taken from the beginning of the queue.
+1. The file dogs.json contains data about dogs. Write a program that prints information about dogs younger than 5 years.
+
+1. The hotel's IT system contains a list of reserved rooms. The data is contained in the reservations.json file. Write a program that prints the summary information as stated below. Break your program into smaller parts defining functions.
+
+   * number of rooms
+   * number of paid reservations
+   * number of unpaid reservations
+   * total value of paid reservations
+   * total value of unpaid reservations
+
+1. The following program writes data to a json file. Analyze this program. Then, run the program and see if the json file is created. Display the created json file in the editor.
+
+   ```python
+   import json
+
+   data = {
+      "patient_record": {
+         "patient_id": "P001234",
+         "first_name": "John",
+         "last_name": "Doe",
+         "date_of_birth": "1985-05-15",
+         "gender": "Male",
+         "contact_info": {
+               "phone_number": "+1-555-123-4567",
+               "email": "johndoe@example.com",
+               "address": {
+                  "street": "123 Main St",
+                  "city": "New York",
+                  "state": "NY",
+                  "postal_code": "10001",
+                  "country": "USA"
+               }
+         },
+         "medical_history": {
+               "allergies": ["Penicillin", "Peanuts"],
+               "current_medications": ["Lisinopril 10mg", "Metformin 500mg"],
+               "past_illnesses": ["Hypertension", "Type 2 Diabetes"],
+               "surgeries": [
+                  {
+                     "surgery_type": "Appendectomy",
+                     "date": "2015-08-20"
+                  }
+               ]
+         }
+      }
+   }
+
+   # Specify the file path and name
+   file_name = "patient.json"
+
+   # Open the file in write mode and use json.dump() to write the data to the file
+   with open(file_name, 'w') as file:
+      json.dump(data, file, indent=4)
+
+   print("Data has been written to", file_name)
+   ```
+
+1. Create a dictionary that describes your favorite book or movie with at least five key-value pairs. Then, create a program that writes the dictionary data to the favourite.json file.
+
+1. Write a program that takes data from the keyboard about a purchased product:
+
+   * name
+   * price (real number with two decimal places)
+   * paid (yes/no)
+
+   The program then saves the product data in the product.json file. Pay attention to the correct data types describing the product (string, float, bool).
+
+   ```python
+   product = {}
+   
+   # read product data from keyboard
+   ...
+
+   # save product data to json file
+   ...
+   ```
