@@ -76,7 +76,7 @@ stalj@uek.krakow.pl
       print("Name is not present.")
    ```
 
-1. Create a dictionary describing your mobile phone. Use 6 key-value pairs of data. Then, using 'for' loop, display the contents of the dictionary. To read a key and value, use the items() method. Sample result:
+1. Create a dictionary describing your mobile phone. Use 6 key-value pairs of data. Then, using `for` loop, display the contents of the dictionary. To read a key and value, use the `items()` method. Sample result:
 
    ```python
    mobile = {
@@ -212,11 +212,11 @@ stalj@uek.krakow.pl
 1. A set is an unordered collection of unique elements. Sets are useful when you want to store a collection of items and ensure that there are no duplicates. Unlike lists or arrays, sets do not maintain the order of the elements, and you cannot access elements by index. They support fast membership tests, union, intersection, difference, and other set operations.
 
    Set Operations:
-   * & (Intersection): Finds common elements between sets.
-   * | (Union): Combines all elements from both sets (removes duplicates).
-   * - (Difference): Finds elements present in one set but not the other.
-   * ^ (Symmetric Difference): Finds elements present in either set but not in both.
-   * .issubset(): Checks if one set is a subset of another.
+   * `&` (Intersection): Finds common elements between sets.
+   * `|` (Union): Combines all elements from both sets (removes duplicates).
+   * `-` (Difference): Finds elements present in one set but not the other.
+   * `^` (Symmetric Difference): Finds elements present in either set but not in both.
+   * `.issubset()`: Checks if one set is a subset of another.
 
 1. The following program removes duplicate email addresses. Complete and run the program.
 
@@ -284,7 +284,7 @@ stalj@uek.krakow.pl
       1. Sum the last two numbers of the stack and print result
       1. Calculate the sum of the remaining stack elements and print the result. Use a 'while' loop.
       
-1. A back.py program simulates the Back key in a web browser (recording the name of new website or displaying the previously visited web site). Complete the program.
+1. A `back.py` program simulates the Back key in a web browser (recording the name of new website or displaying the previously visited web site). Complete the program.
 
 1. Define a function that returns true if the brackets `()`, `{}`, `[]` are used correctly in the given expression. Otherwise, the function returns false. Then write a program that checks the correctness of the expressions given below.
 
@@ -334,7 +334,7 @@ stalj@uek.krakow.pl
 
    ![Queue Data Structure](https://media.geeksforgeeks.org/wp-content/uploads/20240606165428/Introduction-to-Queue-(2).webp)
 
-   In the queue_example.py file you can find a simple example of how to create and manipulate a queue. Analyze and run the program.
+   In the `queue_example.py` file you can find a simple example of how to create and manipulate a queue. Analyze and run the program.
 
 1. Using a queue, write a program that manages a queue of files to print.
 
@@ -406,7 +406,7 @@ stalj@uek.krakow.pl
 
 1. Write a program that counts how many times each word appears in a paragraph. 
 
-   > Hint: Check the dictionary to see if the next word appears in it. If so, increase the number of times the word appears by 1. You can easily split a paragraph into individual words using the split() method. Search the Internet for how to use it.
+   > Hint: Check the dictionary to see if the next word appears in it. If so, increase the number of times the word appears by 1. You can easily split a paragraph into individual words using the `split()` method. Search the Internet for how to use it.
 
    ```python
    paragraph = "cat dog mouse cat rat cat mouse"
@@ -429,11 +429,11 @@ stalj@uek.krakow.pl
    }
    ```
 
-   Write a program that creates a dictionary called ‘person’ containing data from the two other dictionaries (five key-value pairs). Print the contents of the ‘person’ dictionary.
+   Write a program that creates a dictionary called `person` containing data from the two other dictionaries (five key-value pairs). Print the contents of the ‘person’ dictionary.
 
 1. A program contains two functions:
-   1. hotel_list(hotels) that returns a list of hotel names, separated by a comma sign
-   1. avg_price(hotels) that returns the average room price for a given list of hotels, rounded to an integer value
+   1. `hotel_list(hotels)` that returns a list of hotel names, separated by a comma sign
+   1. `avg_price(hotels)` that returns the average room price for a given list of hotels, rounded to an integer value
 
    Write a program that calculates and displays the average price for a room in hotels in Krakow and Sopot and indicates in which cities hotels are cheaper. Sample result:
 
@@ -475,7 +475,7 @@ stalj@uek.krakow.pl
    ...
    ```
 
-1. A traffic camera records passing vehicles. The camera saves their registration numbers in the file vehicle.txt. Write a program that calculates and prints how many registered cars come from each province of Poland. The list of provinces and the corresponding first letters of the vehicle registration numbers are contained in the file province.csv.
+1. A traffic camera records passing vehicles. The camera saves their registration numbers in the file `vehicle.txt`. Write a program that calculates and prints how many registered cars come from each province of Poland. The list of provinces and the corresponding first letters of the vehicle registration numbers are contained in the file `province.csv`.
 
    > Hint: use the dictionary containing the letters corresponding to the provinces and the numbers of vehicles whose first letters of the registration number match the letters of the province.
 
@@ -484,7 +484,7 @@ stalj@uek.krakow.pl
    <https://youtu.be/pTT7HMqDnJw?feature=shared> 
 
 
-1. The website <https://api.nbp.pl/en.html> contains data on exchange rates published by the National Bank of Poland. The service provides data both in json and xml formats. Display the last ten Euro exchange rates in json format in a web browser. Then, save the data to the euro.json file. Finally, write a program that displays the data from the euro.json file in the following format:
+1. The website <https://api.nbp.pl/en.html> contains data on exchange rates published by the National Bank of Poland. The service provides data both in json and xml formats. Display the last ten Euro exchange rates in json format in a web browser. Then, save the data to the `euro.json` file. Finally, write a program that displays the data from the `euro.json` file in the following format:
 
    ```
    Date            Buying Rate     Selling Rate
