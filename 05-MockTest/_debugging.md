@@ -7,6 +7,23 @@ Debugging is the process of identifying, analyzing, and fixing errors or issues 
 <https://youtu.be/7qZBwhSlfOo?feature=shared>
 
 
+1. The program calculates the sum of integers in a given range. Run the program in debug mode and execute all of its statements step by step. Observe how the values ​​of variables change as the program executes subsequent statements.
+
+    ```python
+    ###
+    # Calculates the sum of numbers from min_value to max_value
+    #
+    total = 0
+    min_value = 1
+    max_value = 5
+    number = min_value
+
+    while number <= max_value:
+        total = total + number
+        number = number + 1
+
+    print(f'The sum of the numbers from {min_value} to {max_value} is {total}')
+    ```
 
 1. The program checks what the temperature is and suggests an action depending on the temperature. Unfortunately, the advice does not match the temperature. Modify the program so that it works correctly. Use debugging mode to follow the program's statements step by step.
 
@@ -29,7 +46,7 @@ Debugging is the process of identifying, analyzing, and fixing errors or issues 
 
     ```python
     n = 5
-    result = 1
+    result = 1 # calculate the factorial for this value
 
     for i in range(n):
         result *= i
@@ -40,15 +57,14 @@ Debugging is the process of identifying, analyzing, and fixing errors or issues 
 1. The program counts the number of vowels, but the count isn't updated correctly. Modify the program so that it works correctly. Use debugging mode to follow the program's statements step by step.
 
     ```python
-    s = "hello universe"
+    sentence = "hello universe"
     vowels = "aeiou"
     count = 0
 
-    for char in s:
+    for char in sentence:
         if char in vowels:
             count = count
 
     print("Vowel count:", count)  # Output is incorrect
     ```
 
-aaa
