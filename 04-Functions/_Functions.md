@@ -397,6 +397,47 @@ stalj@uek.krakow.pl
 
 1. Read the chapter in your class textbook that covers the topics in this section.
 
+1. In Python, the `__name__ == "__main__"` construct is commonly used to control the execution of code when a Python file is run directly versus when it is imported as a module in another file.
+
+    The `if __name__ == "__main__":` block ensures that certain parts of the code are only executed when the file is run directly, and not when it is imported. Look at the following example:
+
+    ```python
+    def add(a, b):
+        return a + b
+
+    def subtract(a, b):
+        return a - b
+
+    if __name__ == "__main__":
+        # This block will only execute when the script is run directly
+        x = 10
+        y = 5
+        print(f"Add: {add(x, y)}")
+        print(f"Subtract: {subtract(x, y)}")
+    ```
+
+    Try using this construction in your future tasks where you define functions. To test the function, place the function call statements in an `if __name__ == "__main__":` block, as in the example above.
+
+    If you want your programs to look really professional, you can also define a main() function. It is considered good practice to define a main() function in larger or more complex programs to improve code organization and readability. It's really very simple. See the example below:
+
+    ```python
+    def add(a, b):
+        return a + b
+
+    def subtract(a, b):
+        return a - b
+
+    def main():
+        # This block will only execute when the script is run directly
+        x = 10
+        y = 5
+        print(f"Add: {add(x, y)}")
+        print(f"Subtract: {subtract(x, y)}")
+
+    if __name__ == "__main__":
+        main()
+    ```
+
 1. Each month of a calendar year can be expressed by its name or by a number that indicates the position of the month in year. In a separate module, define a function month(n) that returns a month name based on the month number (values from 1 to 12). Then, write a program to print the name of the month 7. Import the module with the created function. Sample result:
 
     ```
