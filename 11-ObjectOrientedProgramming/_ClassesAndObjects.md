@@ -1,6 +1,5 @@
-﻿**Classes
-And Objects**
-# **BEFORE CLASS**
+﻿# CLASSES AND OBJECTS
+
 1. Familiarise yourself with object-oriented programming concept. Then watch the video:
 
    <https://youtu.be/SS-9y0H3Si8?feature=shared>
@@ -18,83 +17,96 @@ And Objects**
 
    <https://www.pythontutorial.net/python-oop/python-__str__/>
 
-# **DURING CLASS**
-## **Class and object creation**
+## Class and Object Creation
+
 1. Learn on how to use classes and objects in Python:
 
    <https://youtu.be/f0TrMH9s-VE?feature=shared>
 
-1. Identify at least 3 states and 3 behaviors for a book object. Then, for the listed states and behaviors, create a class with fields (attributes) and methods. Try to use verbs in method names as they describe activities. Finally, create an object, call its methods and display object’s properties.
+1. The file student.py contains the definition of a class that contains attributes describing a student. Modify the class by adding a third attribute. Then make changes to the program by adding a third student. Assign values ​​of all available attributes to all students. Finally, print information about all students.
 
-   class Book():
-   `    `def \_\_init\_\_(self,title,author,pages):
-   `        `self.title = title
-   `        `self.author = author
-   `        `self.pages = pages
-   `        `self.current\_page = 1
-   `        `self.is\_open = False
-   `    `def open(self):
-   `        `self.is\_open = True
-   `    `def close(self):
-   `        `self.is\_open = False
-   `    `def change\_page(self,page):
-   `        `self.current\_page = page
+1. The Square class represents objects describing a geometric figure (square). Complete the class by adding a method to calculate the perimeter of a square. Then write a program that creates two squares with sides of 4 and 6, respectively. Calculate the areas and perimeters of these squares. Print the results.
 
-   book = Book(
-   `        `"Harry Potter and the Philosopher's Stone",
-   `        `"J. K. Rowling",223)
+   ```python
+   class Square:
+      def __init__(self, a):
+         self.a = a
+      def area(self):
+         return self.a * self.a
 
-   print(f"My favourite book is {book.title}, ",end="")
-   print(f"written by {book.author}. ",end="")
-   print(f"This book has {book.pages} pages.")
+   square1 = Square(4)
+   square2 = ...
 
-   book.open()
-   book.change\_page(15)
+   print('Square with side 4:')
+   print('Area is ..., Perimeter is ....')
+   print ('Square with side 6:')
+   ...
+   ...
+   ```
 
-   if book.is\_open:
-   `    `print(f"Reading the book, page {book.current\_page}")
-   else:
-   `    `print("I am going to read the book later.")
+1. The file taxi.py contains the definition of a class describing taxi rides. Complete the class by adding a method print_receipt(self) that prints receipt. It should contain all the information about the ride: distance, rate, and fare. Then write a program in which you create two objects representing two different taxi rides. Calculate the fares for the two rides and print receipts.
 
-1. Identify at least 3 states and 3 behaviors for a telephone object. Then, for the listed states and behaviors, create a class with fields (attributes) and methods. Try to use verbs in method names as they describe activities. Finally, create a object, call its methods and display object’s properties.
+1. A class contained in the `socialmedia.py` models a social media profile, allowing users to add posts and display their timeline. Add a `display_timeline(self)` method to the class that prints the user's name along with a list of posts. Number the list items. Then write a program that creates a user 'johndoe'. Add the following posts. Print the user's name and posts.
 
-   class Phone():
-   `    `…
-   `    `…
-   `    `…
-   `    `…
-   `    `…
-## **String representation of object**
-1. For the convenience and readability of the program code, it is possible to create a text representation of an object in the form of a string. Such an object can then be used wherever string data is required, e.g. when calling print().
+   * Hello, world! 
+   * Had a great day at the park!
+   * What's up, Natalie? How are you?
 
-   Run the program below. Pay attention to the \_\_str\_\_ method and the call of the print() function.
+1. The `Book` class, available in the `book.py` file, contains a collection of attributes and methods describing a book. Make changes so that the class also includes information about the book's price, which can be specified when it is created (specify a price of `48`). Print the price information along with other printed data.
 
-   class University():
-    
-   `    `def \_\_init\_\_(self, name):
-   `        `self.name = name 
-    
-   `    `def \_\_str\_\_(self):
-   `        `return self.name + " is the best!"
-    
-   my\_university = University('KUE')
-   print(my\_university)      
+1. Identify at least 3 states and 3 behaviors for your smartphone. Then, for the listed states and behaviors, create a class with attributes and methods. Try to use verbs in method names as they describe activities. Finally, create a smartphone object, call its methods and display object’s properties.
 
-1. Create a class that represents pieces of music. Define a class constructor that allows you to set the initial values of the music piece (artist, track title, album, year) when the object is created. Complete the class with the \_\_str\_\_ method returning the song data as a string, in the format as below (4 lines). Then, create two objects that represent two different pieces of music. Display these objects. Sample result:
+   ```python
+      class Phone():
+         ...
+         ...
+         ...
+   ```
 
+## String Representation of Object
+
+1. In Python, `__str__()` is a special method that is used to define how an object should be represented as a string. This method is called when you use the `str()` function or `print()` function on an instance of a class. It allows you to control the human-readable string representation of your objects.
+
+   The `__str__()` method should return a string that is a readable or meaningful representation of the object. It is mainly used for displaying the object to users. When you pass the object to `str()` or `print()`, Python internally calls `__str__()` to get a string representation of the object. Look at the example below. Then run this program.
+
+   ```python
+   class Car:
+      def __init__(self, brand, model, year):
+         self.brand = brand
+         self.model = model
+         self.year = year
+
+      def __str__(self):
+         return f"{self.year} {self.brand} {self.model}"
+
+   # Creating an instance of the Car class
+   my_car = Car("Toyota", "Corolla", 2021)
+
+   # Print the object
+   print(my_car)  # Output: 2021 Toyota Corolla
+   ```
+
+1. Create a class that represents pieces of music. Define a class constructor that allows you to set the initial values of the music piece (artist, track title, album, year) when the object is created. Complete the class with the `__str__` method returning the song data as a string, in the format as below (4 lines). Then, create two objects that represent two pieces of music (see below) and print their data. Sample result:
+
+   ```
    Performer: Ed Sheeran
    Song:      Hearts Don't Break Around Here
    Album:     Divide
    Year:      2017
 
-   …
-   …
-   …
-   …
-## **Class with multiple components**
-1. Write a program in which create a TV class that describes a TV set. The class should contain one boolean attribute called 'is\_on' that specifies whether the TV set is turned on. Initially, the TV is turned off. Add turn\_on() and turn\_off() methods in the class to turn the TV on and off, respectively. Also, add a show\_status() method to display whether the TV is on or off. Sample message:
+   Performer: Queen
+   Song:      Bohemian Rhapsody
+   Album:     A Night at the Opera
+   Year:      1975
+   ```
 
+## Class with Multiple Components
+
+1. Write a program in which create a TV class that describes a TV set. The class should contain one boolean attribute called `is_on` that specifies whether the TV set is turned on. Initially, the TV is turned off. Add `turn_on()` and `turn_off()` methods in the class to turn the TV on and off, respectively. Also, add a `show_status()` method to print whether the TV is on or off. Sample message:
+
+   ```
    TV is on
+   ```
 
    Then, try using the TV set in the program:
 
@@ -104,13 +116,23 @@ And Objects**
    1. Show TV status
    1. Turn TV off
    1. Show TV status
-1. In the TV class, add the channel\_no attribute indicating the number of the TV channel displayed by the TV set. Initially, the TV is set to channel 1. Modify the show\_status() method so that it also displays the TV channel number, but only if the TV is turned on:
 
+   ```python
+   class TV:
+      def __init__(self):
+         self.is_on = False
+   ```
+
+1. In the TV class, add the `channel_no` attribute indicating the number of the TV channel displayed by the TV set. Initially, the TV is set to channel 1. Modify the `show_status()` method so that it also prints the TV channel number, but only if the TV is turned on:
+
+   ```
    TV is on, channel 1
+   ```
 
-   <a name="_hlk57031804"></a>Then, try using the TV set.
+   Then, try using the TV set.
 
-1. Add the set\_channel(new\_channel\_no) method in the TV class to set the TV channel number. Then try using the TV set.
+1. Add the `set_channel(new_channel_no)` method in the TV class to set the TV channel number. Then try using the TV set.
+
    1. Create a TV set
    1. Show TV status
    1. Turn TV on
@@ -119,15 +141,18 @@ And Objects**
    1. Show TV status
    1. Turn TV off
    1. Show TV status 
-1. In the TV class, add the channels attribute containing a list of available TV channel names (array). Initially, the array should be empty (TV not programmed, no available channels). Add set\_channels(channels\_list) and show\_channels() methods in the TV class, which allows you to set channels on the TV and display the list of available channels. Sample list of available channels:
 
+1. In the TV class, add the channels attribute containing a list of available TV channel names (array). Initially, the array should be empty (TV not programmed, no available channels). Add `set_channels(channels_list)` and `show_channels() methods in the TV class, which allows you to set channels on the TV and display the list of available channels. Sample list of available channels:
+
+   ```
    Channel list:
-   1\. TVP1
-   2\. TVP2
-   3\. Polsat
-   4\. TVN
-   5\. Filmbox
-   6\. Discovery
+   1. TVP1
+   2. TVP2
+   3. Polsat
+   4. TVN
+   5. Filmbox
+   6. Discovery
+   ```
 
    Then, try using the TV set:
 
@@ -140,14 +165,19 @@ And Objects**
    1. Display the list of available channels
    1. Show TV status
    1. Turn TV offs
-1. In the TV class, make changes to the show\_status() method so that it displays not only the selected channel number but also its name. When the selected channel number exceeds the list of available channels, the channel name is not displayed.
 
+1. In the TV class, make changes to the `show_status()` method so that it displays not only the selected channel number but also its name. When the selected channel number exceeds the list of available channels, the channel name is not displayed.
+
+   ```
    TV is on, channel 4 (TVN)
+   ```
 
    Then, try using the TV. Set at least 7 channels (seven TV stations), change channel numbers and display TV status every time.
-# **AFTER CLASS**
+
 1. Create a class that describes cell phones with at least 3 phone states and 2 behaviors. Define a text representation of an object. Then, create 2 objects. Display their features and call their bahaviors.
+
 1. In the TV class, add support for volume adjustment in the range 0 to 10. The initial value of the volume level is 0. Add two methods to increase and decrease the TV volume level by one. Note that you cannot increase or decrease the volume beyond the specified range. Display the current volume level in the show\_status() method. Then check the operation of the TV by adjusting and displaying its volume level.
+
 1. E-book is a digital book that can be read using a computer or other electronic devices (electronic book readers). Write a program in which define a class that describes states and behaviors of an  e-book. Each book has a title, author, number of pages and the current page number that is currently being read. It is possible to open a book - then we can read it. If a book is open, it is possible to go to the next or previous page.
 
    Place the class describing e-books in a separate file/module. In the main program file, try using the e-book:
@@ -159,6 +189,7 @@ And Objects**
    1. Display a book status
    1. Close a book
    1. Read a few pages (it should not be possible to perform this operation - display the message that the book is closed).
+
 1. The medical thermometer measures the patient's temperature in the range from 34.0 to 42.0 degrees Celsius, with an accuracy of 0.1 degrees. Write a program in which define a class that describes the states and behaviors of the thermometer. The thermometer should enable temperature measurement (do it by generating a random number from the 34.0 to 42.0 range) and display the measured value. If the temperature is at least 37 degrees Celsius, the thermometer should additionally display the 'Fever' message, e.g.
 
    Temperature: 37.2C (fever)
@@ -170,6 +201,7 @@ And Objects**
    1. Measure temperature
    1. Display temperature
    1. Turn thermometer off
+
 1. The bank account has a 26-digit number assigned when creating an account. The initial account balance is PLN 0. You can deposit any amount on the account. You can also withdraw any amount from the account, provided that it does not exceed the account balance. If you try to withdraw a larger amount, the following message will be displayed: "Insufficient funds on the account". At any time, it is possible to display information about the number and balance of the bank account in the following format:
 
    Bank Account No: 11 1111 1111 1111 1111 1111 1111
@@ -184,17 +216,19 @@ And Objects**
    1. Create a sketch of the class without creating any method content.
    1. Create the content of each method.
 
-Then, use the program and:
+   Then, use the program and:
 
-1. Create a bank account with the number 12 3456 5555 9090 1111 0000 7722
-1. Display account balance
-1. Deposit PLN 25,30
-1. Display account balance
-1. Withdraw PLN 31,70
-1. Display account balance
-1. Withdraw PLN 14
-1. Display account balance
+   1. Create a bank account with the number 12 3456 5555 9090 1111 0000 7722
+   1. Display account balance
+   1. Deposit PLN 25,30
+   1. Display account balance
+   1. Withdraw PLN 31,70
+   1. Display account balance
+   1. Withdraw PLN 14
+   1. Display account balance
+
 1. Write a program containing a Statistics class that describes the properties of any set of numbers. The class should allow to:
+
    1. Add to the set of numbers, the next number read from the keyboard (store the numbers in the array)
    1. Display all numbers separated by a space
    1. Determine the greatest number
@@ -203,22 +237,23 @@ Then, use the program and:
    1. Calculate of the median
    1. Display of calculated / determined statistical quantities (minimum, maximum, arithmetic mean, median)
 
-Then, use the program for numbers:
+   Then, use the program for numbers:
 
-12, 37, 6, 9, 17 
+   12, 37, 6, 9, 17 
 
 1. The Contact class contains the 'name', 'email' and 'telephone' fields enabling the description of a single contact on a smartphone. The Contact\_List class allows you to store contacts (store objects describing contacts in an array) and perform the following operations:
+
    1. Adds a new contact
    1. Displays the contact list
 
-Write a program consisting of 3 files (smartphone.py, contact.py, contact\_list.py). In the mail program (smartphone.py) create an object representing a contact list and add the following people data:
+   Write a program consisting of 3 files (smartphone.py, contact.py, contact\_list.py). In the mail program (smartphone.py) create an object representing a contact list and add the following people data:
 
-John Brown     brown@onet.pl       555234000
-Anna May   	am@o2.pl            232000199
-George Small   smallg@google.pl    222999100
-Paola Big      bigpaola@poczta.pl  100200300
+   John Brown     brown@onet.pl       555234000
+   Anna May   	am@o2.pl            232000199
+   George Small   smallg@google.pl    222999100
+   Paola Big      bigpaola@poczta.pl  100200300
 
-Then, display the contact list available on the smartphone.
+   Then, display the contact list available on the smartphone.
 
 1. An object representing an employee contains the following data: name, surname, age, and seniority (the number of years worked). Define a C class that allows you to create an object. Provide employee data at the time of creating the object, in the given order. Define a text representation of an object in the class that contains a string of last name, first letter of first name, and seniority. If the employee is an adult (at least 18 years old), use uppercase letters, otherwise lowercase letters. Sample result:
 
@@ -237,5 +272,3 @@ Then, display the contact list available on the smartphone.
    m1("G",130)
    m2("GD") returns 280
    m2("KEJ") returns 110
-1
-
