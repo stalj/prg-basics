@@ -114,10 +114,10 @@ stalj@uek.krakow.pl
     #
     basic_salary = 5000
     total_salary = 0
-    is_bonus = True # does the employee receive a bonus
     bonus = 0.15 # 15%
-    
-    if ...:
+    is_bonus = input('Does the employee receive a bonus? (Y/N):') == 'Y'
+
+    if is_bonus:
         total_salary = ...
     else:
         ...
@@ -406,16 +406,17 @@ stalj@uek.krakow.pl
     ###
     # Prints the name of university where you are studying
     # with an extra space between characters (add a space between
-    # each character)
+    # each character), e.g.
+    # 'book' -> 'b o o k'
     #
     university = 'Krakow University of Economics'
     university_expanded = ''
 
     for char in university:
-        univerity_expanded = ...university_expanded + ... + ...
+        university_expanded = university_expanded + ... + ...
 
-    print(...)
-    print(...)
+    print(...) # original university name
+    print(...) # expanded university name
     ```
 
     Sample result:
