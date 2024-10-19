@@ -6,7 +6,6 @@ while maksymalna_liczba>=liczby_pierwsze:
     for i in range(2, liczby_pierwsze):
         if liczby_pierwsze%i==0:
             not_prime+=1
-            break
     if not_prime==0:
         print(liczby_pierwsze, end=' ')
     liczby_pierwsze+=1

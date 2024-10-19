@@ -8,6 +8,4 @@ for i in range(1,6):
     y=k+x
     z=x+y
     k=z+y
-
-
     
