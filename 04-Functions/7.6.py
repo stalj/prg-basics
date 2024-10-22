@@ -1,0 +1,1 @@
+def even(liczba1)
