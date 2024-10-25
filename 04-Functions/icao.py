@@ -60,10 +60,14 @@ def icao(letter):
 
     return icao_name
 
-# Function usage
 name = input('Enter your name: ')
 print('ICAO words for spelling out your name:')
 
-for char in ...:
-    word = icao...
-    print(..., end=" ") 
+icao_name = []
+
+for char in name:
+    word = icao(char)
+    icao_name.append(word)
+
+for char in icao_name:
+    print(char, end=' ')
