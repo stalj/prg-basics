@@ -1,4 +1,0 @@
-len()- liczenie znaków
-ord()-sprawdzenie liczby systemowej znaku
-chr()-odwrotność ord
-import random random.randint(a,b) - randomowa całkowita w zakresie a i b
