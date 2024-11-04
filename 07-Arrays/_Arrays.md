@@ -640,8 +640,10 @@ stalj@uek.krakow.pl
    Sample result:
 
    ```python
-   2,4,6
-   7,9,5
+   arr = [7,9,2,4,5,6]
+   ...
+   ...
+   arr = [2,4,6,7,9,5]
    ```
 
 1. Write a program that checks whether the first array is a subset of the second one (whether all elements of the first array appear in the second array).
