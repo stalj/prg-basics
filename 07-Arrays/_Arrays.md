@@ -7,7 +7,7 @@ stalj@uek.krakow.pl
 
 # ARRAYS
 
-## 2. One dimensional arrays
+## 1. One dimensional arrays
 
 1. Watch the video on using lists:
 
@@ -302,7 +302,7 @@ stalj@uek.krakow.pl
       "invoice.pdf", "resume.docx", "budget.xlsx", "meeting.mp4", "schedule.pdf"]
    ```
 
-## 3. Two dimensional arrays
+## 2. Two dimensional arrays
 
 1. Watch the video on using two dimensional (2D) lists in Python:
 
@@ -475,7 +475,7 @@ stalj@uek.krakow.pl
    0 0 1
    ```
 
-## 4. Practice Makes Perfect
+## 3. Practice Makes Perfect
 
 1. Read the chapter in your class textbook that covers the topics in this section.
 
@@ -497,6 +497,7 @@ stalj@uek.krakow.pl
    20-element array filled with 0 or 1 randomly
    two dimensional array with five rows and two columns filled with False
    ```
+ > **Hint: Don't forget to import the random module before using random.randint**
 
 1. An array contains integer numbers: 34,7,19,4,21,8. Create a program that calculates and prints the number of even values in the array. Use the ‘while’ loop statement.
 
@@ -638,8 +639,9 @@ stalj@uek.krakow.pl
 
    Sample result:
 
-   ```
-
+   ```python
+   2,4,6
+   7,9,5
    ```
 
 1. Write a program that checks whether the first array is a subset of the second one (whether all elements of the first array appear in the second array).
