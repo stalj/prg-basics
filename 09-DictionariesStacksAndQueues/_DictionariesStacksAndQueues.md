@@ -484,17 +484,6 @@ stalj@uek.krakow.pl
    <https://youtu.be/pTT7HMqDnJw?feature=shared> 
 
 
-1. The website <https://api.nbp.pl/en.html> contains data on exchange rates published by the National Bank of Poland. The service provides data both in json and xml formats. Display the last ten Euro exchange rates in json format in a web browser. Then, save the data to the `euro.json` file. Finally, write a program that displays the data from the `euro.json` file in the following format:
-
-   ```
-   Date            Buying Rate     Selling Rate
-   ============================================
-   2019-10-25      3.8150          3.9820
-   ...
-   ...
-   ...
-   ```
-
 1. Write a program to record voting. Voting results are saved in the voting.json file with the structure below. The program takes a person's name from the keyboard and increases the number of votes for that person by 1. If this is a new person, they are added to the list with a vote count of 1. You can run the program multiple times to add additional votes to the json file.
 
    ```python
@@ -659,3 +648,17 @@ stalj@uek.krakow.pl
    # save product data to json file
    ...
    ```
+
+1. The website <https://api.nbp.pl/en.html> contains data on exchange rates published by the National Bank of Poland. The service provides data both in json and xml formats. Display the last ten Euro exchange rates in json format in a web browser. Then, save the data to the `euro.json` file. Finally, write a program that displays the data from the `euro.json` file in the following format:
+
+   ```
+   Date            Buying Rate     Selling Rate
+   ============================================
+   2019-10-25      3.8150          3.9820
+   ...
+   ...
+   ...
+   ```
+
+   > Hint: If you are interested in API and Rest API issues, read the following article:
+   > <https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/>
