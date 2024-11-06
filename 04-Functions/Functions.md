@@ -509,7 +509,6 @@ stalj@uek.krakow.pl
     f("12-11-21") returns True
     f("book") returns False
     ```
-
 1. A sentence is an ordered group of words separated by spaces. Define a function f(sentence) that returns a sentence with spaces removed. Sample result:
 
     ```
@@ -528,6 +527,7 @@ stalj@uek.krakow.pl
     f(513553007) returns 21
     ```
 
+
 1. Define the function f(n) that returns the n-th prime number. A prime number is a natural number greater than 1, divisible by 1 and that number. Sample result:
 
     ```
@@ -541,7 +541,6 @@ stalj@uek.krakow.pl
     f(7,4,9) returns 5
     f(2,12,8) returns 10
     ```
-
 1. A text contains any number of words. Define a function f(name) that returns the acronym (first letters of all words). Sample result:
 
     ```
@@ -574,7 +573,6 @@ stalj@uek.krakow.pl
     f(1,20) returns 24
     f(10,30) returns 48
     ```
-
 1. Define a function f(text) that returns the given text with all characters separated by \"-\" (minus sign). Example:
 
     ```
