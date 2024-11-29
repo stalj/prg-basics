@@ -1,0 +1,7 @@
+wonder 1: Chichen Itza
+wonder 2: Christ the Redeemer
+wonder 3: Great Wall of China
+wonder 4: Machu Picchu
+wonder 5: Petra
+wonder 6: Roman Colosseum
+wonder 7: Taj Mahal
