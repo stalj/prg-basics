@@ -269,8 +269,6 @@ stalj@uek.krakow.pl
          add_...
    ```
 
-1. Na podstawie pliku txt, zapisz części zawartości do plików o nazwach*1, *2, itd.
-
 ## 3. Using Regular Expressions
 
 1. Regular expressions (regex) are sequences of characters that define a search pattern. They are used to find, match, and manipulate text. Regular expressions provide a powerful way to perform complex text processing, such as searching for specific patterns in a string, validating input, replacing text, or extracting information from large volumes of data.
@@ -299,6 +297,11 @@ stalj@uek.krakow.pl
    ```
 
 1. A file report.txt contains an email with shopping report. Write a program that calculates the total value of money spent.
+
+
+   > Hint: To open and read a text file that contains special characters (like the Euro sign €), you need to ensure that the file is read using the correct character encoding. The most common encoding for such cases is UTF-8, which supports a wide range of characters, including special symbols. Here is an example use of the open() function:\
+   open("example.txt", "r", encoding="utf-8")
+
 
    ```python
    ###
