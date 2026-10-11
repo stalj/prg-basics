@@ -211,29 +211,6 @@ else:
 
 ---
 
-# Order of Elif Conditions Matters
-
-Conditions are tested from top to bottom.
-
-```python
-temperature = 33
-
-if temperature > 35:
-    print('Extremely hot')
-elif temperature > 30:
-    print('Hot')
-elif temperature >= 15:
-    print('Warm')
-elif temperature >= 0:
-    print('Cold')
-else:
-    print('Warning, frost')
-```
-
-> Put the most specific or highest-priority conditions first.
-
----
-
 # Logical Operators
 
 Logical operators combine conditions.
@@ -279,25 +256,6 @@ else:
 ```
 
 > The word “or” in the task usually becomes the operator `or` in code.
-
----
-
-# Ranges and Boundaries
-
-Many conditions check whether a value is inside an allowed range.
-
-```python
-speed = int(input('Enter vehicle speed: '))
-
-speed_valid = speed >= 40 and speed <= 140
-
-if speed_valid:
-    print('Speed is valid')
-else:
-    print('Warning: invalid speed')
-```
-
-> Always check boundary values such as 40, 140, 39, and 141.
 
 ---
 
@@ -475,7 +433,7 @@ for i in range(1, 11):
 print(total)
 ```
 
-This calculates the sum of even numbers from 1 to 10.
+> This calculates the sum of even numbers from 1 to 10.
 
 ---
 
@@ -588,23 +546,6 @@ Nested loops are useful for:
 - grids,
 - patterns,
 - repeated operations inside repeated operations.
-
----
-
-# Designing Programs with Control Structures
-
-A good beginner algorithm often follows this pattern:
-
-```text
-1. Read input data
-2. Convert input to proper types
-3. Check conditions
-4. Repeat calculations if needed
-5. Store intermediate results
-6. Print clear output
-```
-
-> First describe the algorithm, then write the code.
 
 ---
 

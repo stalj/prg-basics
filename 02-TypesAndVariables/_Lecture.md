@@ -34,10 +34,11 @@ Input data → processing → result
 
 Example:
 
+`BMI = weight / (height/100 * height/100)` # height in cm
+
 ```text
 height, weight → BMI calculation → user information
 ```
-`BMI = weight / (height/100 * height/100)` # height in cm
 
 > Programming means writing this procedure in a language that a computer can execute.
 
@@ -156,8 +157,8 @@ Python follows an order similar to mathematics.
 
 ```python
 4 + 4 / 2 ** 2
-4 + 4 / 4
-4 + 1.0
+4 + 4 % 4
+4 + 1 < 2 + 2
 ```
 
 ---
@@ -251,22 +252,6 @@ Read it as:
 
 ---
 
-# Swapping Variable Values
-
-Problem: `x = 7`, `y = 34`. After swapping, we need `x = 34`, `y = 7`.
-
-```python
-x = 7
-y = 34
-z = x
-x = y
-y = z
-```
-
-> The auxiliary variable `z` acts as a temporary storage place.
-
----
-
 # Modules and Functions
 
 We do not need to write everything ourselves. The language provides ready-made functions, and modules extend its capabilities.
@@ -317,22 +302,6 @@ print(f"In 6 years I will be {age + 6} years old.")
 ```
 
 > This is the clearest way to format simple messages.
-
----
-
-# Number Formatting
-
-Often we want to limit the number of decimal places.
-
-```python
-amount = 15.84
-vat = amount * 0.23
-
-print(f"Amount  : {amount:.2f}")
-print(f"VAT 23% : {vat:.2f}")
-```
-
-> `:.2f` means: display a floating-point number with two decimal places.
 
 ---
 
@@ -528,25 +497,6 @@ A number is even when the remainder after division by 2 is 0.
 number = int(input('Enter number: '))
 even = number % 2 == 0
 print(f'Number is even: {even}')
-```
-
----
-
-# Randomness in a Program
-
-Randomness allows us to simulate events, for example rolling a dice.
-
-```python
-import random
-
-dice_roll = random.randint(1, 6)
-print(dice_roll)
-```
-
-We can combine random values with logical conditions:
-
-```python
-special = dice_roll == 1 or dice_roll == 6
 ```
 
 ---
