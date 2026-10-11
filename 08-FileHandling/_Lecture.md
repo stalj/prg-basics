@@ -460,12 +460,7 @@ while product != '0':
             file.write(product + '\n')
 ```
 
-This combines:
-
-- input,
-- loop,
-- condition,
-- file writing.
+> This combines: input, loop, condition, file writing.
 
 ---
 
@@ -580,30 +575,6 @@ Result:
 
 ---
 
-# Finding Amounts in Text
-
-Example problem:
-
-> Find all money amounts in a shopping report and calculate the total.
-
-```python
-import re
-
-with open('report.txt', 'r', encoding='utf-8') as file:
-    email = file.read()
-
-pattern = r'\d+\.\d{2}'
-amounts = re.findall(pattern, email)
-
-total = 0
-for amount in amounts:
-    total += float(amount)
-
-print(f'Total: {total:.2f}')
-```
-
----
-
 # Why Encoding Matters
 
 Some files contain special characters, for example:
@@ -620,48 +591,6 @@ with open('report.txt', 'r', encoding='utf-8') as file:
 ```
 
 > UTF-8 is a common encoding that supports many international characters.
-
----
-
-# Validating a Username
-
-Requirement:
-
-- at least 6 characters,
-- lowercase letters only.
-
-```python
-import re
-
-username = input('Username: ')
-username_pattern = r'^[a-z]{6,}$'
-
-if re.match(username_pattern, username):
-    print('Username correct')
-else:
-    print('Username incorrect')
-```
-
----
-
-# Validating a Password
-
-Requirement:
-
-- at least 8 characters,
-- letters, digits, and underscore only.
-
-```python
-import re
-
-password = input('Password: ')
-password_pattern = r'^[A-Za-z0-9_]{8,}$'
-
-if re.match(password_pattern, password):
-    print('Password correct')
-else:
-    print('Password incorrect')
-```
 
 ---
 
@@ -737,8 +666,6 @@ Most file-analysis programs use a similar structure:
 ```
 
 Example tasks:
-
-- count parked cars,
 - find employees by job title,
 - calculate money spent,
 - extract email fields.
