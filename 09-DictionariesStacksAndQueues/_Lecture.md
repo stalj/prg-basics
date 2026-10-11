@@ -117,7 +117,7 @@ student['age'] = 23          # modify value
 del student['major']         # remove value
 ```
 
-A dictionary is **mutable**, so it can be changed after creation.
+> A dictionary is **mutable**, so it can be changed after creation.
 
 ---
 
@@ -134,13 +134,7 @@ person = {
 }
 ```
 
-A dictionary value can be:
-
-- a number,
-- text,
-- a Boolean value,
-- a list,
-- another dictionary.
+A dictionary value can be: a number, text, a Boolean value, a list, another dictionary.
 
 ---
 
@@ -197,7 +191,6 @@ Example tasks:
 - print all products and quantities,
 - calculate total stock,
 - update a quantity,
-- check whether a product exists.
 
 ---
 
@@ -273,7 +266,7 @@ unique_emails = set(emails)
 print(unique_emails)
 ```
 
-A set automatically removes duplicates.
+> A set automatically removes duplicates.
 
 ---
 
@@ -282,12 +275,12 @@ A set automatically removes duplicates.
 | Operation | Meaning |
 |---|---|
 | `A & B` | intersection: elements in both sets |
-| `A | B` | union: elements from both sets |
+| `A \| B` | union: elements from both sets |
 | `A - B` | difference: elements in A but not in B |
 | `A ^ B` | symmetric difference |
 | `A.issubset(B)` | checks whether A is inside B |
 
-Sets are useful when membership and uniqueness matter more than order.
+> Sets are useful when membership and uniqueness matter more than order.
 
 ---
 
@@ -322,9 +315,9 @@ merged_contacts = contacts_a | contacts_b
 print(merged_contacts)
 ```
 
-Union is useful when we merge data from different sources.
+> Union is useful when we merge data from different sources.
 
-Duplicates are removed automatically.
+> Duplicates are removed automatically.
 
 ---
 
@@ -447,7 +440,7 @@ for char in expression:
             print('Brackets are not correct')
 ```
 
-A stack remembers what still needs to be closed.
+> A stack remembers what still needs to be closed.
 
 ---
 
@@ -539,7 +532,7 @@ Stack: last added, first removed
 Queue: first added, first removed
 ```
 
-Choosing the right structure makes the algorithm simpler.
+> Choosing the right structure makes the algorithm simpler.
 
 ---
 
@@ -555,13 +548,7 @@ JSON stores structured data as text.
 }
 ```
 
-JSON is based on:
-
-- key-value pairs,
-- arrays,
-- strings,
-- numbers,
-- Boolean values.
+> JSON is based on: key-value pairs, arrays, strings, numbers, Boolean values.
 
 ---
 
@@ -579,7 +566,7 @@ for key, value in data.items():
     print(key, ':', value)
 ```
 
-`json.load()` reads JSON data from a file into Python data structures.
+> `json.load()` reads JSON data from a file into Python data structures.
 
 ---
 
@@ -618,7 +605,7 @@ with open('product.json', 'w', encoding='utf-8') as file:
     json.dump(product, file, indent=4)
 ```
 
-`json.dump()` writes Python data to a JSON file.
+> `json.dump()` writes Python data to a JSON file.
 
 ---
 
@@ -636,43 +623,6 @@ with open('product.json', 'w', encoding='utf-8') as file:
 
 ---
 
-# From Task to Program
-
-### Task
-
-Calculate the total cost of a shopping cart.
-
-### Data
-
-```python
-prices = {'milk': 1.49, 'butter': 2.09, 'juice': 1.19}
-cart = {'juice': 3, 'milk': 2}
-```
-
-### Idea
-
-For each product in the cart, multiply quantity by price.
-
----
-
-# Shopping Cart Example
-
-```python
-prices = {'milk': 1.49, 'butter': 2.09, 'juice': 1.19}
-cart = {'juice': 3, 'milk': 2}
-
-total = 0
-
-for product, quantity in cart.items():
-    total += prices[product] * quantity
-
-print(f'Total cost: {total:.2f}')
-```
-
-This example combines two dictionaries.
-
----
-
 # Common Beginner Mistakes
 
 | Mistake | Example | How to think about it? |
@@ -682,18 +632,6 @@ This example combines two dictionaries.
 | Expecting set order | printing a set | sets are unordered |
 | Popping empty stack | `stack.pop()` | check before removing |
 | Wrong queue rule | newest first | queue means first first |
-
----
-
-# Practice Focus
-
-Students should be able to:
-
-- create and modify dictionaries,
-- iterate over keys, values, and items,
-- use sets for uniqueness and membership tests,
-- implement simple stack and queue algorithms,
-- read and write structured JSON data.
 
 ---
 
