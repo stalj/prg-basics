@@ -1,0 +1,20 @@
+Sub DuplicateSheet()
+'
+' DuplicateSheet Macro
+'
+' Keyboard Shortcut: Ctrl+Shift+S
+'
+For I = 2 To 12
+	N = CStr(I)
+	Sheets("1").Select
+	Sheets("1").Copy After:=Sheets(2)
+	Sheets("1 (2)").Select
+	Application.WindowsState = xlMinimized
+	Application.WindowsState = xlNormal
+	Sheets("2").Select
+	Sheets("1 (2)").Name = N
+	For Each LO In ActivateSheet.ListObjects()
+		LO.Name = Split(LO.Name, "_")(0) + "_" + N
+		Next
+		Calculate
+End Sub

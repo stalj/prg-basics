@@ -1,0 +1,17 @@
+test_p1 (__main__.Test.test_p1) ... ok
+test_p10 (__main__.Test.test_p10) ... ok
+test_p11 (__main__.Test.test_p11) ... ok
+test_p12 (__main__.Test.test_p12) ... ok
+test_p2 (__main__.Test.test_p2) ... ok
+test_p3 (__main__.Test.test_p3) ... ok
+test_p4 (__main__.Test.test_p4) ... ok
+test_p5 (__main__.Test.test_p5) ... ok
+test_p6 (__main__.Test.test_p6) ... ok
+test_p7 (__main__.Test.test_p7) ... ok
+test_p8 (__main__.Test.test_p8) ... ok
+test_p9 (__main__.Test.test_p9) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.010s
+
+OK
